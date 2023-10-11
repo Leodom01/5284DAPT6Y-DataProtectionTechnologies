@@ -1,0 +1,3 @@
+InfectionSuspected,org:group,DiagnosticBlood,DisfuncOrg,SIRSCritTachypnea,Hypotensie,SIRSCritHeartRate,Infusion,DiagnosticArtAstrup,Activity,Age,DiagnosticIC,DiagnosticSputum,DiagnosticLiquor,DiagnosticOther,SIRSCriteria2OrMore,DiagnosticXthorax,SIRSCritTemperature,time:timestamp,DiagnosticUrinaryCulture,SIRSCritLeucos,Oligurie,DiagnosticLacticAcid,lifecycle:transition,Diagnose,Hypoxie,DiagnosticUrinarySediment,DiagnosticECG,Case ID,Leucocytes,CRP,LacticAcid,Duration
+,B,,,,,,,,Leucocytes,,,,,,,,,2014-10-22 09:27:00+00:00,,,,,complete,,,,,A,9.6,,,679.0
+,B,,,,,,,,CRP,,,,,,,,,2014-10-22 09:27:00+00:00,,,,,complete,,,,,A,,21.0,,0.0

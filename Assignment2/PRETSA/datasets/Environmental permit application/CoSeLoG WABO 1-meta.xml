@@ -1,0 +1,154 @@
+<metadata>
+   <doi>doi:10.4121/uuid:c45dcbe9-557b-43ca-b6d0-10561e13dcb5</doi>
+   <name>CoSeLoG WABO 1.xes.gz</name>
+   <description>This data originates from the CoSeLoG project executed under NWO project number 638.001.211. Within the CoSeLoG project the (dis)similarities between several processes of different municipalities in the Netherlands has been investigated. This data is part of a collection of 5 event logs that record the execution of a building permit application process in five different anonymous municipalities. The recording of these processes is comparable which means that activity labels in the different event logs refer to the same activities performed in the five municipalities. The event log contains additional data on the case/trace and event level. In total there are 16 trace level attributes which include the parts the permit consists of, the planned end date and the responsible actor. The event attributes contain the activity label, the timestamp of execution and the human resource involved. Furthermore, information regarding the planned date of execution and the due date is included. Additionally events may contain additional process data. Some attributes contain Dutch terms and phrases.</description>
+   <language>Dutch</language>
+   <log_type>Real-life</log_type>
+   <process_type>Explicitly structured</process_type>
+   <creation>
+   <insitute>Eindhoven University of Technology</insitute>
+   <person>Buijs, J.C.A.M.</person>
+   <place>Eindhoven</place>
+   <time>Fri May 23 00:00:00 CEST 2014</time>
+   </creation>
+   <source>
+   <insitute>Buijs, J.C.A.M. (PhD candidate)</insitute>
+   <institute_type>Municipality</institute_type>
+   <model>WABO reference model</model>
+   <program>Case handling system</program>
+   </source>
+   <rights type="Public">
+   </rights>
+   <lifecycle_model>standard</lifecycle_model>
+   <number_of_traces>937</number_of_traces>
+   <number_of_events>38944</number_of_events>
+   <events_per_trace>41.562</events_per_trace>
+   <min_events_per_trace>2</min_events_per_trace>
+   <max_events_per_trace>95</max_events_per_trace>
+   <global_attributes>
+      <trace_level>
+         <attribute key="IDofConceptCase" default="UNKNOWN"/>
+         <attribute key="Includes_subCases" default="UNKNOWN"/>
+         <attribute key="Responsible_actor" default="UNKNOWN"/>
+         <attribute key="SUMleges" default="-1.0"/>
+         <attribute key="caseProcedure" default="UNKNOWN"/>
+         <attribute key="caseStatus" default="UNKNOWN"/>
+         <attribute key="case_type" default="UNKNOWN"/>
+         <attribute key="concept:name" default="UNKNOWN"/>
+         <attribute key="endDate" default="1970-01-01T00:00:00+01:00"/>
+         <attribute key="endDatePlanned" default="1970-01-01T00:00:00+01:00"/>
+         <attribute key="landRegisterID" default="UNKNOWN"/>
+         <attribute key="last_phase" default="UNKNOWN"/>
+         <attribute key="parts" default="UNKNOWN"/>
+         <attribute key="requestComplete" default="UNKNOWN"/>
+         <attribute key="startDate" default="1970-01-01T00:00:00+01:00"/>
+         <attribute key="termName" default="UNKNOWN"/>
+      </trace_level>
+      <event_level>
+         <attribute key="action_code" default="UNKNOWN"/>
+         <attribute key="concept:name" default="UNKNOWN"/>
+         <attribute key="dateFinished" default="UNKNOWN"/>
+         <attribute key="dateStop" default="UNKNOWN"/>
+         <attribute key="dueDate" default="1970-01-01T00:00:00+01:00"/>
+         <attribute key="lifecycle:transition" default="UNKNOWN"/>
+         <attribute key="monitoringResource" default="UNKNOWN"/>
+         <attribute key="org:resource" default="UNKNOWN"/>
+         <attribute key="planned" default="1970-01-01T00:00:00+01:00"/>
+         <attribute key="question" default="UNKNOWN"/>
+         <attribute key="taskForMainCase" default="true"/>
+         <attribute key="taskName" default="UNKNOWN"/>
+         <attribute key="time:timestamp" default="1970-01-01T00:00:00+01:00"/>
+      </event_level>
+   </global_attributes>
+   <meta_extensions>
+      <MetaData_Concept prefix="meta_concept" uri="http://www.xes-standard.org/meta_concept.xesext">
+         <different_names_average>40.695</different_names_average>
+         <different_names_max>89</different_names_max>
+         <different_names_min>2</different_names_min>
+         <different_names_standard_deviation>16.173</different_names_standard_deviation>
+         <different_names_total>381</different_names_total>
+         <named_events_average>41.562</named_events_average>
+         <named_events_max>95</named_events_max>
+         <named_events_min>2</named_events_min>
+         <named_events_standard_deviation>16.687</named_events_standard_deviation>
+         <named_events_total>38944</named_events_total>
+      </MetaData_Concept>
+      <MetaData_General prefix="meta_general" uri="http://www.xes-standard.org/meta_general.xesext">
+         <classifiers>2</classifiers>
+         <events_average>41.562</events_average>
+         <events_max>95</events_max>
+         <events_min>2</events_min>
+         <events_standard_deviation>16.687</events_standard_deviation>
+         <events_total>38944</events_total>
+         <traces_total>937</traces_total>
+      </MetaData_General>
+      <MetaData_LifeCycle prefix="meta_life" uri="http://www.xes-standard.org/meta_life.xesext">
+         <different_transitions_average>1.0</different_transitions_average>
+         <different_transitions_max>1</different_transitions_max>
+         <different_transitions_min>1</different_transitions_min>
+         <different_transitions_standard_deviation>0.0</different_transitions_standard_deviation>
+         <different_transitions_total>1</different_transitions_total>
+         <transition_events_average>41.562</transition_events_average>
+         <transition_events_max>95</transition_events_max>
+         <transition_events_min>2</transition_events_min>
+         <transition_events_standard_deviation>16.687</transition_events_standard_deviation>
+         <transition_events_total>38944</transition_events_total>
+      </MetaData_LifeCycle>
+      <MetaData_Organization prefix="meta_org" uri="http://www.xes-standard.org/meta_org.xesext">
+         <different_groups_average>1.0</different_groups_average>
+         <different_groups_max>1</different_groups_max>
+         <different_groups_min>1</different_groups_min>
+         <different_groups_standard_deviation>0.0</different_groups_standard_deviation>
+         <different_groups_total>1</different_groups_total>
+         <different_resources_average>2.616</different_resources_average>
+         <different_resources_max>6</different_resources_max>
+         <different_resources_min>1</different_resources_min>
+         <different_resources_standard_deviation>0.893</different_resources_standard_deviation>
+         <different_resources_total>18</different_resources_total>
+         <different_roles_average>1.0</different_roles_average>
+         <different_roles_max>1</different_roles_max>
+         <different_roles_min>1</different_roles_min>
+         <different_roles_standard_deviation>0.0</different_roles_standard_deviation>
+         <different_roles_total>1</different_roles_total>
+         <group_events_average>41.562</group_events_average>
+         <group_events_max>95</group_events_max>
+         <group_events_min>2</group_events_min>
+         <group_events_standard_deviation>16.687</group_events_standard_deviation>
+         <group_events_total>38944</group_events_total>
+         <resource_events_average>41.562</resource_events_average>
+         <resource_events_max>95</resource_events_max>
+         <resource_events_min>2</resource_events_min>
+         <resource_events_standard_deviation>16.687</resource_events_standard_deviation>
+         <resource_events_total>38944</resource_events_total>
+         <role_events_average>41.562</role_events_average>
+         <role_events_max>95</role_events_max>
+         <role_events_min>2</role_events_min>
+         <role_events_standard_deviation>16.687</role_events_standard_deviation>
+         <role_events_total>38944</role_events_total>
+      </MetaData_Organization>
+      <MetaData_Time prefix="meta_time" uri="http://www.xes-standard.org/meta_time.xesext">
+         <duration_average>7768356.492</duration_average>
+         <duration_max>7.62048E7</duration_max>
+         <duration_min>0.0</duration_min>
+         <duration_standard_deviation>8975390.364</duration_standard_deviation>
+         <duration_total>7.278950033E9</duration_total>
+         <log_duration>1.028196E8</log_duration>
+         <log_end_time>2014-01-07T00:00:00+01:00</log_end_time>
+         <log_start_time>2010-10-05T00:00:00+02:00</log_start_time>
+      </MetaData_Time>
+   </meta_extensions>
+   <extensions>
+      <Concept prefix="concept" uri="http://www.xes-standard.org/concept.xesext">
+         <name>CoSeLoG WABO 1</name>
+      </Concept>
+      <Lifecycle prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext">
+         <model>standard</model>
+      </Lifecycle>
+      <Organizational prefix="org" uri="http://www.xes-standard.org/org.xesext">
+      </Organizational>
+      <Semantic prefix="semantic" uri="http://www.xes-standard.org/semantic.xesext">
+      </Semantic>
+      <Time prefix="time" uri="http://www.xes-standard.org/time.xesext">
+      </Time>
+   </extensions>
+</metadata>

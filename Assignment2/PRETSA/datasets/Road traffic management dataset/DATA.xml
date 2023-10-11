@@ -1,0 +1,117 @@
+<metadata>
+  <doi>doi:10.4121/uuid:270fd440-1057-4fb9-89a9-b699b47990f5</doi>
+  <name>Road Traffic Fine Management Process.xes.gz</name>
+  <description>Real-life event log of an information system managing road traffic fines.</description>
+  <language>English</language>
+  <log_type>Real-life</log_type>
+  <process_type>Ad-Hoc structured</process_type>
+  <creation>
+    <insitute>Eindhoven University of Technology</insitute>
+    <person>Massimiliano de Leoni, Felix Mannhardt</person>
+    <place>Eindhoven</place>
+    <time>Thu Jan 09 10:07:49 CET 2014</time>
+  </creation>
+  <source>
+    <insitute>Eindhoven University of Technology</insitute>
+    <institute_type>Government</institute_type>
+    <program>database</program>
+  </source>
+  <rights type="Public"/>
+  <lifecycle_model>standard</lifecycle_model>
+  <number_of_traces>150370</number_of_traces>
+  <number_of_events>561470</number_of_events>
+  <events_per_trace>3.734</events_per_trace>
+  <min_events_per_trace>2</min_events_per_trace>
+  <max_events_per_trace>20</max_events_per_trace>
+  <global_attributes>
+    <trace_level></trace_level>
+    <event_level></event_level>
+  </global_attributes>
+  <meta_extensions>
+    <MetaData_Concept prefix="meta_concept" uri="http://www.xes-standard.org/meta_concept.xesext">
+      <different_names_average>3.681</different_names_average>
+      <different_names_max>10</different_names_max>
+      <different_names_min>2</different_names_min>
+      <different_names_standard_deviation>1.578</different_names_standard_deviation>
+      <different_names_total>11</different_names_total>
+      <named_events_average>3.734</named_events_average>
+      <named_events_max>20</named_events_max>
+      <named_events_min>2</named_events_min>
+      <named_events_standard_deviation>1.641</named_events_standard_deviation>
+      <named_events_total>561470</named_events_total>
+    </MetaData_Concept>
+    <MetaData_General prefix="meta_general" uri="http://www.xes-standard.org/meta_general.xesext">
+      <classifiers>1</classifiers>
+      <events_average>3.734</events_average>
+      <events_max>20</events_max>
+      <events_min>2</events_min>
+      <events_standard_deviation>1.641</events_standard_deviation>
+      <events_total>561470</events_total>
+      <traces_total>150370</traces_total>
+    </MetaData_General>
+    <MetaData_LifeCycle prefix="meta_life" uri="http://www.xes-standard.org/meta_life.xesext">
+      <different_transitions_average>1.0</different_transitions_average>
+      <different_transitions_max>1</different_transitions_max>
+      <different_transitions_min>1</different_transitions_min>
+      <different_transitions_standard_deviation>0.0</different_transitions_standard_deviation>
+      <different_transitions_total>1</different_transitions_total>
+      <transition_events_average>3.734</transition_events_average>
+      <transition_events_max>20</transition_events_max>
+      <transition_events_min>2</transition_events_min>
+      <transition_events_standard_deviation>1.641</transition_events_standard_deviation>
+      <transition_events_total>561470</transition_events_total>
+    </MetaData_LifeCycle>
+    <MetaData_Organization prefix="meta_org" uri="http://www.xes-standard.org/meta_org.xesext">
+      <different_groups_average>1.0</different_groups_average>
+      <different_groups_max>1</different_groups_max>
+      <different_groups_min>1</different_groups_min>
+      <different_groups_standard_deviation>0.0</different_groups_standard_deviation>
+      <different_groups_total>1</different_groups_total>
+      <different_resources_average>2.004</different_resources_average>
+      <different_resources_max>3</different_resources_max>
+      <different_resources_min>2</different_resources_min>
+      <different_resources_standard_deviation>0.061</different_resources_standard_deviation>
+      <different_resources_total>149</different_resources_total>
+      <different_roles_average>1.0</different_roles_average>
+      <different_roles_max>1</different_roles_max>
+      <different_roles_min>1</different_roles_min>
+      <different_roles_standard_deviation>0.0</different_roles_standard_deviation>
+      <different_roles_total>1</different_roles_total>
+      <group_events_average>3.734</group_events_average>
+      <group_events_max>20</group_events_max>
+      <group_events_min>2</group_events_min>
+      <group_events_standard_deviation>1.641</group_events_standard_deviation>
+      <group_events_total>561470</group_events_total>
+      <resource_events_average>3.734</resource_events_average>
+      <resource_events_max>20</resource_events_max>
+      <resource_events_min>2</resource_events_min>
+      <resource_events_standard_deviation>1.641</resource_events_standard_deviation>
+      <resource_events_total>561470</resource_events_total>
+      <role_events_average>3.734</role_events_average>
+      <role_events_max>20</role_events_max>
+      <role_events_min>2</role_events_min>
+      <role_events_standard_deviation>1.641</role_events_standard_deviation>
+      <role_events_total>561470</role_events_total>
+    </MetaData_Organization>
+    <MetaData_Time prefix="meta_time" uri="http://www.xes-standard.org/meta_time.xesext">
+      <duration_average>2.9520829123E7</duration_average>
+      <duration_max>3.777408E8</duration_max>
+      <duration_min>0.0</duration_min>
+      <duration_standard_deviation>2.9985307844E7</duration_standard_deviation>
+      <duration_total>4.4390470752E12</duration_total>
+      <log_duration>4.248252E8</log_duration>
+      <log_end_time>2013-06-18T00:00:00+02:00</log_end_time>
+      <log_start_time>2000-01-01T00:00:00+01:00</log_start_time>
+    </MetaData_Time>
+  </meta_extensions>
+  <extensions>
+    <Concept prefix="concept" uri="http://www.xes-standard.org/concept.xesext">
+      <name>Road Traffic Fine Management Process</name>
+    </Concept>
+    <Lifecycle prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext">
+      <model>standard</model>
+    </Lifecycle>
+    <Organizational prefix="org" uri="http://www.xes-standard.org/org.xesext"/>
+    <Time prefix="time" uri="http://www.xes-standard.org/time.xesext"/>
+  </extensions>
+</metadata>
