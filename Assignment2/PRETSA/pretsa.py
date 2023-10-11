@@ -1,4 +1,4 @@
-from anytree import AnyNode, PreOrderIter
+from anytree import AnyNode, PreOrderIter, RenderTree, ContRoundStyle
 from levenshtein import levenshtein
 import sys
 from scipy.stats import wasserstein_distance
@@ -55,6 +55,7 @@ class Pretsa:
         self.__setMaxDifferences()
         self.__haveAllValuesInActivitityDistributionTheSameValue = dict()
         self._distanceMatrix = self.__generateDistanceMatrixSequences(self._getAllPotentialSequencesTree(self._tree))
+        print(RenderTree(root, style=ContRoundStyle()))
 
     def __addAnnotation(self, annotation, activity):
         dataForActivity = self.__annotationDataOverAll.get(activity, None)
@@ -83,6 +84,8 @@ class Pretsa:
         if maxDifference == 0.0: #All annotations have the same value(most likely= 0.0)
             return
         if self.__normalTCloseness == True:
+            # TODO: Implement other distance metrice (Earth mover and so on...) and then define as t-close only if they
+            # rispettano all of those metrics
             return ((wasserstein_distance(distributionActivity,distributionEquivalenceClass)/maxDifference) >= t)
         else:
             return self._violatesStochasticTCloseness(distributionActivity,distributionEquivalenceClass,t,activity)
@@ -93,6 +96,7 @@ class Pretsa:
             if node != self._tree:
                 node.cases = node.cases.difference(cutOutTraces)
                 if len(node.cases) < k or self._violatesTCloseness(node.name, node.annotations, t, node.cases):
+                    # TODO: If I have slightly less cases than k I can add artificial ones
                     cutOutTraces = cutOutTraces.union(node.cases)
                     self._cutCasesOutOfTreeStartingFromNode(node,cutOutTraces)
                     if self._sequentialPrunning:

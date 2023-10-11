@@ -19,7 +19,7 @@ timeStampColName = "time:timestamp"
 
 with open(filePath) as csvfile:
     with open(writeFilePath,'w') as writeFile:
-        reader = csv.DictReader(csvfile,delimiter=",")
+        reader = csv.DictReader(csvfile,delimiter=";")
         fieldNamesWrite = reader.fieldnames
         fieldNamesWrite.append(durationColName)
         writer = csv.DictWriter(writeFile, fieldnames=fieldNamesWrite,dialect=excel_semicolon)

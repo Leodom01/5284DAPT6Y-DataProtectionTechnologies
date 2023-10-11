@@ -37,7 +37,7 @@ writeFilePath = filePath.replace(".csv","_pretsa_baseline_k%s_t%s.csv" % (kStrin
 timeStampColName = "Complete Timestamp"
 
 with open(filePath) as csvfile:
-    reader = csv.DictReader(csvfile, delimiter=",")
+    reader = csv.DictReader(csvfile, delimiter=";")
     variantsDict = {}
     variantsAnnotationDict = {}
     currentCase = ""
@@ -82,7 +82,7 @@ print(variantsDict)
 
 with open(filePath) as csvfile:
     with open(writeFilePath,'w') as writeFile:
-        reader = csv.DictReader(csvfile,delimiter=",")
+        reader = csv.DictReader(csvfile,delimiter=";")
         fieldNamesWrite = reader.fieldnames
         writer = csv.DictWriter(writeFile, fieldnames=fieldNamesWrite,dialect=excel_semicolon)
         writer.writeheader()

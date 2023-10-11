@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/Assignment2/PRETSA/datasets/Road traffic management dataset/traffic.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/Assignment2/PRETSA/datasets/Sepsis cases/sepsis.csv">
           <value>
             <Attribute>
@@ -31,6 +38,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/Assignment2/PRETSA/datasets/Sepsis cases/sepsis_duration_pretsa_baseline_k2_t0.8.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/Assignment2/PRETSA/datasets/Sepsis cases/sepsis_duration_t0.8_k2_pretsa.csv">
           <value>
             <Attribute>
@@ -39,6 +53,34 @@
           </value>
         </entry>
         <entry key="/Assignment2/PRETSA/datasets/Sepsis cases/sepsis_duration_t1_k2_pretsa.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Assignment2/PRETSA/datasets/Sepsis cases/sepsis_little.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Assignment2/PRETSA/datasets/Sepsis cases/sepsis_shrinked.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Assignment2/PRETSA/datasets/Sepsis cases/sepsis_shrinked_duration.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Assignment2/PRETSA/datasets/Sepsis cases/sepsis_shrinked_duration_t0.8_k5_pretsa.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

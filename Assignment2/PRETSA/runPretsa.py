@@ -11,7 +11,7 @@ targetFilePath = filePath.replace(".csv","_t%s_k%s_pretsa.csv" % (t,k))
 
 
 print("Load Event Log")
-eventLog = pd.read_csv(filePath, delimiter=",")
+eventLog = pd.read_csv(filePath, delimiter=";")
 print("Starting experiments")
 pretsa = Pretsa(eventLog)
 cutOutCases = pretsa.runPretsa(int(k),float(t))

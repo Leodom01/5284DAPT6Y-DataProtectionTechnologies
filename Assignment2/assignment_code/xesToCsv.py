@@ -1,5 +1,6 @@
 import pandas as pd
 import pm4py
+import pandas as pd
 
 # I am aware it's not the best parsing, but it's quick and clear
 
@@ -16,7 +17,6 @@ traffic_log = pm4py.read_xes(
 dataframe = pm4py.convert_to_dataframe(sepsis_log)
 # I manually decided which attribute uniquely represent the cases
 dataframe.rename(columns={'case:concept:name': 'Case ID'}, inplace=True)
-
 dataframe.rename(columns={'concept:name': 'Activity'}, inplace=True)
 # Save the DataFrame to a CSV file
 dataframe.to_csv('../PRETSA/datasets/Sepsis cases/sepsis.csv', index=False)
@@ -25,7 +25,6 @@ dataframe.to_csv('../PRETSA/datasets/Sepsis cases/sepsis.csv', index=False)
 dataframe = pm4py.convert_to_dataframe(environmental_log)
 # I manually decided which attribute uniquely represent the cases
 dataframe.rename(columns={'case:concept:name': 'Case ID'}, inplace=True)
-
 dataframe.rename(columns={'concept:name': 'Activity'}, inplace=True)
 # Save the DataFrame to a CSV file
 dataframe.to_csv('../PRETSA/datasets/Environmental permit application/environmental.csv', index=False)
@@ -34,7 +33,6 @@ dataframe.to_csv('../PRETSA/datasets/Environmental permit application/environmen
 dataframe = pm4py.convert_to_dataframe(traffic_log)
 # I manually decided which attribute uniquely represent the cases
 dataframe.rename(columns={'case:concept:name': 'Case ID'}, inplace=True)
-
 dataframe.rename(columns={'concept:name': 'Activity'}, inplace=True)
 # Save the DataFrame to a CSV file
 dataframe.to_csv('../PRETSA/datasets/Road traffic management dataset/traffic.csv', index=False)
