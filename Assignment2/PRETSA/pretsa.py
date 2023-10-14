@@ -5,7 +5,7 @@ from scipy.stats import wasserstein_distance
 from scipy.stats import normaltest
 import pandas as pd
 import numpy as np
-import time
+import utils
 
 class Pretsa:
     def __init__(self,eventLog):
@@ -22,6 +22,7 @@ class Pretsa:
         self.__normaltest_alpha = 0.05
         self.__normaltest_result_storage = dict()
         self.__normalTCloseness = True
+        self.__extendedTCloseness = False
         for index, row in eventLog.iterrows():
             activity = row[self.__activityColName]
             annotation = row[self.__annotationColName]
@@ -55,7 +56,19 @@ class Pretsa:
         self.__setMaxDifferences()
         self.__haveAllValuesInActivitityDistributionTheSameValue = dict()
         self._distanceMatrix = self.__generateDistanceMatrixSequences(self._getAllPotentialSequencesTree(self._tree))
-        print(RenderTree(root, style=ContRoundStyle()))
+        # print(RenderTree(root, style=ContRoundStyle()))
+
+    def getKvalues(self):
+        # Return min, avg and max k anonimity
+        k_vals = []
+
+        for node in PreOrderIter(self._tree):
+            if node != self._tree:
+                k_vals.append(len(node.cases))
+
+        k_vals = np.asarray(k_vals)
+
+        return np.min(k_vals), np.mean(k_vals), np.max(k_vals)
 
     def __addAnnotation(self, annotation, activity):
         dataForActivity = self.__annotationDataOverAll.get(activity, None)
@@ -71,6 +84,7 @@ class Pretsa:
             minVal = min(self.__annotationDataOverAll[key])
             self.annotationMaxDifferences[key] = abs(maxVal - minVal)
 
+    # node.name, node.annotations, t, node.cases
     def _violatesTCloseness(self, activity, annotations, t, cases):
         distributionActivity = self.__annotationDataOverAll[activity]
         maxDifference = self.annotationMaxDifferences[activity]
@@ -83,18 +97,31 @@ class Pretsa:
             return False
         if maxDifference == 0.0: #All annotations have the same value(most likely= 0.0)
             return
+        distances = []
+        # print("Activity: ", distributionActivity)
+        # print("Equivalcnce class: ", distributionEquivalenceClass)
         if self.__normalTCloseness == True:
-            # TODO: Implement other distance metrice (Earth mover and so on...) and then define as t-close only if they
-            # rispettano all of those metrics
-            return ((wasserstein_distance(distributionActivity,distributionEquivalenceClass)/maxDifference) >= t)
+            wasserstein_dist = wasserstein_distance(distributionActivity,distributionEquivalenceClass)/maxDifference
+            distances.append(wasserstein_dist)
         else:
             return self._violatesStochasticTCloseness(distributionActivity,distributionEquivalenceClass,t,activity)
+        #if self.__extendedTCloseness == True:
+        #    emd_variational_dist = utils.emd_variational_distance(distributionActivity,distributionEquivalenceClass)
+            # TODO Quickly patch this thing and make it a feature
+            distances.append(emd_variational_dist)
+        # Here we can add countless other distances measurements
+
+        # print("Distances: ", distances)
+
+        return any(value > t for value in distances)
 
     def _treePrunning(self, k,t):
         cutOutTraces = set()
         for node in PreOrderIter(self._tree):
             if node != self._tree:
                 node.cases = node.cases.difference(cutOutTraces)
+
+                #print("Length is: ", len(node.cases))
                 if len(node.cases) < k or self._violatesTCloseness(node.name, node.annotations, t, node.cases):
                     # TODO: If I have slightly less cases than k I can add artificial ones
                     cutOutTraces = cutOutTraces.union(node.cases)
@@ -152,6 +179,7 @@ class Pretsa:
                     bestSequence = treeSequence
                     lowestDistance = currentDistance
             self._overallLogDistance += lowestDistance
+            #print("Fed to addCaseToTree: ", trace)
             self._addCaseToTree(trace, bestSequence)
 
 
