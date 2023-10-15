@@ -1,18 +1,28 @@
 Activity;Case ID;Duration;Event_Nr
+Confirmation of receipt-complete;case-10000;0.0;1
+T02 Check confirmation of receipt-complete;case-10000;24.045;2
+T04 Determine confirmation of receipt-complete;case-10000;37.871;3
+T06 Determine necessity of stop advice-complete;case-10000;129.434;3
+T05 Print and send confirmation of receipt-complete;case-10000;55.812;4
+T10 Determine necessity to stop indication-complete;case-10000;19.882;4
+T06 Determine necessity of stop advice-complete;case-10000;335.229;5
+T04 Determine confirmation of receipt-complete;case-10000;14.54;5
+T10 Determine necessity to stop indication-complete;case-10000;23.248;6
+T05 Print and send confirmation of receipt-complete;case-10000;149056.963;6
+T11 Create document X request unlicensed-complete;case-10000;1720.547;7
+T12 Check document X request unlicensed-complete;case-10000;1470.031;8
+T14 Determine document X request unlicensed-complete;case-10000;19.364;9
+T15 Print document X request unlicensed-complete;case-10000;13.206;10
 Confirmation of receipt-complete;case-10011;0.0;1
 T02 Check confirmation of receipt-complete;case-10011;67245.122;2
-T03 Adjust confirmation of receipt-complete;case-10011;3744625.904;3
-T02 Check confirmation of receipt-complete;case-10011;25.251;4
+T04 Determine confirmation of receipt-complete;case-10011;25.198;3
+T06 Determine necessity of stop advice-complete;case-10011;50.538;4
 Confirmation of receipt-complete;case-10017;0.0;1
 T06 Determine necessity of stop advice-complete;case-10017;27.271;2
-T10 Determine necessity to stop indication-complete;case-10017;23.661;3
-T02 Check confirmation of receipt-complete;case-10017;248500.743;4
-T03 Adjust confirmation of receipt-complete;case-10017;2660176.874;5
-T02 Check confirmation of receipt-complete;case-10017;94.393;6
-T03 Adjust confirmation of receipt-complete;case-10017;3732.644;7
-T02 Check confirmation of receipt-complete;case-10017;22.511;8
-T04 Determine confirmation of receipt-complete;case-10017;28.363;9
-T05 Print and send confirmation of receipt-complete;case-10017;18.907;10
+T10 Determine necessity to stop indication-complete;case-10017;539.437;3
+T02 Check confirmation of receipt-complete;case-10017;57.95;4
+T04 Determine confirmation of receipt-complete;case-10017;1075.738;5
+T05 Print and send confirmation of receipt-complete;case-10017;31.969;6
 Confirmation of receipt-complete;case-10024;0.0;1
 T02 Check confirmation of receipt-complete;case-10024;18.376;2
 T04 Determine confirmation of receipt-complete;case-10024;15.67;3
@@ -31,10 +41,6 @@ T04 Determine confirmation of receipt-complete;case-10028;17.705;3
 T05 Print and send confirmation of receipt-complete;case-10028;34.707;4
 T06 Determine necessity of stop advice-complete;case-10028;470.99;5
 T10 Determine necessity to stop indication-complete;case-10028;51.033;6
-T16 Report reasons to hold request-complete;case-10028;52.483;7
-T17 Check report Y to stop indication-complete;case-10028;24.167;8
-T19 Determine report Y to stop indication-complete;case-10028;32.157;9
-T20 Print report Y to stop indication-complete;case-10028;15.91;10
 Confirmation of receipt-complete;case-10059;0.0;1
 T02 Check confirmation of receipt-complete;case-10059;24.045;2
 T04 Determine confirmation of receipt-complete;case-10059;42.976;3
@@ -79,11 +85,9 @@ T05 Print and send confirmation of receipt-complete;case-10069;24.722;4
 T06 Determine necessity of stop advice-complete;case-10069;91.872;5
 T10 Determine necessity to stop indication-complete;case-10069;117.579;6
 Confirmation of receipt-complete;case-10070;0.0;1
-T06 Determine necessity of stop advice-complete;case-10070;25.413;2
-T02 Check confirmation of receipt-complete;case-10070;36.608;3
-T04 Determine confirmation of receipt-complete;case-10070;31.823;4
-T10 Determine necessity to stop indication-complete;case-10070;22.491;5
-T05 Print and send confirmation of receipt-complete;case-10070;207.058;6
+T02 Check confirmation of receipt-complete;case-10070;34.987;2
+T04 Determine confirmation of receipt-complete;case-10070;32.976;3
+T05 Print and send confirmation of receipt-complete;case-10070;36.276;4
 Confirmation of receipt-complete;case-10071;0.0;1
 T02 Check confirmation of receipt-complete;case-10071;44.518;2
 T04 Determine confirmation of receipt-complete;case-10071;35.601;3
@@ -105,11 +109,7 @@ T02 Check confirmation of receipt-complete;case-10073;714.317;2
 T04 Determine confirmation of receipt-complete;case-10073;29.124;3
 T05 Print and send confirmation of receipt-complete;case-10073;39.856;4
 T06 Determine necessity of stop advice-complete;case-10073;58.113;5
-T07-1 Draft intern advice aspect 1-complete;case-10073;72699.863;6
-T08 Draft and send request for advice-complete;case-10073;56.378;7
-T09-4 Process or receive external advice from party 4-complete;case-10073;16.415;8
-T06 Determine necessity of stop advice-complete;case-10073;5571.142;9
-T10 Determine necessity to stop indication-complete;case-10073;82.2;10
+T10 Determine necessity to stop indication-complete;case-10073;22.351;6
 Confirmation of receipt-complete;case-10075;0.0;1
 Confirmation of receipt-complete;case-10087;0.0;1
 T02 Check confirmation of receipt-complete;case-10087;18.375;2
@@ -319,8 +319,7 @@ Confirmation of receipt-complete;case-10259;0.0;1
 Confirmation of receipt-complete;case-10263;0.0;1
 T02 Check confirmation of receipt-complete;case-10263;32.08;2
 T04 Determine confirmation of receipt-complete;case-10263;98.947;3
-T06 Determine necessity of stop advice-complete;case-10263;950762.608;4
-T05 Print and send confirmation of receipt-complete;case-10263;77910.232;5
+T05 Print and send confirmation of receipt-complete;case-10263;25.386;4
 Confirmation of receipt-complete;case-10266;0.0;1
 Confirmation of receipt-complete;case-10273;0.0;1
 Confirmation of receipt-complete;case-10284;0.0;1
@@ -375,7 +374,7 @@ T06 Determine necessity of stop advice-complete;case-10322;14.599;5
 T10 Determine necessity to stop indication-complete;case-10322;21.485;6
 Confirmation of receipt-complete;case-10324;0.0;1
 T06 Determine necessity of stop advice-complete;case-10324;338274.016;2
-T07-1 Draft intern advice aspect 1-complete;case-10324;2941755.27;3
+T02 Check confirmation of receipt-complete;case-10324;29.096;3
 Confirmation of receipt-complete;case-10326;0.0;1
 T02 Check confirmation of receipt-complete;case-10326;48.808;2
 T04 Determine confirmation of receipt-complete;case-10326;69.673;3
@@ -442,10 +441,6 @@ T04 Determine confirmation of receipt-complete;case-10392;499.535;3
 T05 Print and send confirmation of receipt-complete;case-10392;15.26;4
 T06 Determine necessity of stop advice-complete;case-10392;15.874;5
 T10 Determine necessity to stop indication-complete;case-10392;34.092;6
-T16 Report reasons to hold request-complete;case-10392;19.574;7
-T17 Check report Y to stop indication-complete;case-10392;17.829;8
-T19 Determine report Y to stop indication-complete;case-10392;88.231;9
-T20 Print report Y to stop indication-complete;case-10392;15.243;10
 Confirmation of receipt-complete;case-10394;0.0;1
 Confirmation of receipt-complete;case-10407;0.0;1
 T02 Check confirmation of receipt-complete;case-10407;27.416;2
@@ -477,10 +472,6 @@ T04 Determine confirmation of receipt-complete;case-10461;15.472;3
 T05 Print and send confirmation of receipt-complete;case-10461;34.064;4
 T06 Determine necessity of stop advice-complete;case-10461;20.116;5
 T10 Determine necessity to stop indication-complete;case-10461;35.13;6
-T16 Report reasons to hold request-complete;case-10461;16.531;7
-T17 Check report Y to stop indication-complete;case-10461;20.579;8
-T19 Determine report Y to stop indication-complete;case-10461;16.954;9
-T20 Print report Y to stop indication-complete;case-10461;13.721;10
 Confirmation of receipt-complete;case-10463;0.0;1
 T02 Check confirmation of receipt-complete;case-10463;29.415;2
 T04 Determine confirmation of receipt-complete;case-10463;19.508;3
@@ -821,11 +812,9 @@ T05 Print and send confirmation of receipt-complete;case-10777;19.9;4
 T06 Determine necessity of stop advice-complete;case-10777;23.705;5
 T10 Determine necessity to stop indication-complete;case-10777;24.531;6
 Confirmation of receipt-complete;case-10779;0.0;1
-T06 Determine necessity of stop advice-complete;case-10779;247.072;2
-T02 Check confirmation of receipt-complete;case-10779;93.163;3
-T10 Determine necessity to stop indication-complete;case-10779;71.077;4
-T04 Determine confirmation of receipt-complete;case-10779;36.292;5
-T05 Print and send confirmation of receipt-complete;case-10779;29.368;6
+T02 Check confirmation of receipt-complete;case-10779;62.342;2
+T04 Determine confirmation of receipt-complete;case-10779;42.446;3
+T05 Print and send confirmation of receipt-complete;case-10779;10.096;4
 Confirmation of receipt-complete;case-10788;0.0;1
 T02 Check confirmation of receipt-complete;case-10788;44.209;2
 T04 Determine confirmation of receipt-complete;case-10788;37.297;3
@@ -889,13 +878,9 @@ T10 Determine necessity to stop indication-complete;case-10856;46.63;6
 Confirmation of receipt-complete;case-10857;0.0;1
 T06 Determine necessity of stop advice-complete;case-10857;84.673;2
 T10 Determine necessity to stop indication-complete;case-10857;978.563;3
-T16 Report reasons to hold request-complete;case-10857;52.14;4
-T17 Check report Y to stop indication-complete;case-10857;57.013;5
-T19 Determine report Y to stop indication-complete;case-10857;36.403;6
-T20 Print report Y to stop indication-complete;case-10857;36.142;7
-T02 Check confirmation of receipt-complete;case-10857;44544.949;8
-T04 Determine confirmation of receipt-complete;case-10857;16067.338;9
-T05 Print and send confirmation of receipt-complete;case-10857;37.975;10
+T02 Check confirmation of receipt-complete;case-10857;613.602;4
+T04 Determine confirmation of receipt-complete;case-10857;688.336;5
+T05 Print and send confirmation of receipt-complete;case-10857;16.359;6
 Confirmation of receipt-complete;case-10858;0.0;1
 T02 Check confirmation of receipt-complete;case-10858;25.977;2
 T04 Determine confirmation of receipt-complete;case-10858;27.866;3
@@ -967,9 +952,7 @@ T10 Determine necessity to stop indication-complete;case-10951;28.148;6
 Confirmation of receipt-complete;case-10971;0.0;1
 T02 Check confirmation of receipt-complete;case-10971;157.338;2
 T04 Determine confirmation of receipt-complete;case-10971;132.776;3
-T06 Determine necessity of stop advice-complete;case-10971;43.248;4
-T05 Print and send confirmation of receipt-complete;case-10971;112.308;5
-T10 Determine necessity to stop indication-complete;case-10971;179.629;6
+T05 Print and send confirmation of receipt-complete;case-10971;33.479;4
 Confirmation of receipt-complete;case-11006;0.0;1
 T02 Check confirmation of receipt-complete;case-11006;28.421;2
 T04 Determine confirmation of receipt-complete;case-11006;25.518;3
@@ -1037,11 +1020,9 @@ T05 Print and send confirmation of receipt-complete;case-11096;32.037;4
 T06 Determine necessity of stop advice-complete;case-11096;34.88;5
 T10 Determine necessity to stop indication-complete;case-11096;33.948;6
 Confirmation of receipt-complete;case-11115;0.0;1
-T06 Determine necessity of stop advice-complete;case-11115;33.886;2
-T02 Check confirmation of receipt-complete;case-11115;42.542;3
-T04 Determine confirmation of receipt-complete;case-11115;42.682;4
-T10 Determine necessity to stop indication-complete;case-11115;36.262;5
-T05 Print and send confirmation of receipt-complete;case-11115;45.634;6
+T02 Check confirmation of receipt-complete;case-11115;66695.534;2
+T04 Determine confirmation of receipt-complete;case-11115;68391.306;3
+T05 Print and send confirmation of receipt-complete;case-11115;17.801;4
 Confirmation of receipt-complete;case-11129;0.0;1
 T02 Check confirmation of receipt-complete;case-11129;138.161;2
 T04 Determine confirmation of receipt-complete;case-11129;120.355;3
@@ -1075,13 +1056,9 @@ T10 Determine necessity to stop indication-complete;case-11275;42.654;6
 Confirmation of receipt-complete;case-11375;0.0;1
 T02 Check confirmation of receipt-complete;case-11375;73.807;2
 T04 Determine confirmation of receipt-complete;case-11375;43.65;3
-T06 Determine necessity of stop advice-complete;case-11375;77.11;4
-T10 Determine necessity to stop indication-complete;case-11375;106.539;5
-T16 Report reasons to hold request-complete;case-11375;156261.946;6
-T17 Check report Y to stop indication-complete;case-11375;37.4;7
-T19 Determine report Y to stop indication-complete;case-11375;32.544;8
-T20 Print report Y to stop indication-complete;case-11375;35.611;9
-T05 Print and send confirmation of receipt-complete;case-11375;1585.957;10
+T05 Print and send confirmation of receipt-complete;case-11375;40.042;4
+T06 Determine necessity of stop advice-complete;case-11375;12377.379;5
+T10 Determine necessity to stop indication-complete;case-11375;28.572;6
 Confirmation of receipt-complete;case-11376;0.0;1
 T02 Check confirmation of receipt-complete;case-11376;15038.904;2
 T04 Determine confirmation of receipt-complete;case-11376;43.042;3
@@ -1101,15 +1078,11 @@ T05 Print and send confirmation of receipt-complete;case-11380;28.467;4
 T06 Determine necessity of stop advice-complete;case-11380;85.166;5
 T10 Determine necessity to stop indication-complete;case-11380;31.918;6
 Confirmation of receipt-complete;case-11399;0.0;1
-T02 Check confirmation of receipt-complete;case-11399;86.282;2
-T04 Determine confirmation of receipt-complete;case-11399;348.703;3
-T05 Print and send confirmation of receipt-complete;case-11399;51.859;4
-T06 Determine necessity of stop advice-complete;case-11399;16.241;5
-T10 Determine necessity to stop indication-complete;case-11399;31.953;6
-T16 Report reasons to hold request-complete;case-11399;156261.946;7
-T17 Check report Y to stop indication-complete;case-11399;18.272;8
-T19 Determine report Y to stop indication-complete;case-11399;20.068;9
-T20 Print report Y to stop indication-complete;case-11399;17.626;10
+T02 Check confirmation of receipt-complete;case-11399;29.05;2
+T04 Determine confirmation of receipt-complete;case-11399;33.555;3
+T05 Print and send confirmation of receipt-complete;case-11399;5754.828;4
+T06 Determine necessity of stop advice-complete;case-11399;17.995;5
+T10 Determine necessity to stop indication-complete;case-11399;15.454;6
 Confirmation of receipt-complete;case-11427;0.0;1
 T02 Check confirmation of receipt-complete;case-11427;35.759;2
 T04 Determine confirmation of receipt-complete;case-11427;36.504;3
@@ -1153,35 +1126,29 @@ T02 Check confirmation of receipt-complete;case-11517;311.241;2
 T04 Determine confirmation of receipt-complete;case-11517;114.198;3
 T05 Print and send confirmation of receipt-complete;case-11517;39.027;4
 Confirmation of receipt-complete;case-3756;0.0;1
-T02 Check confirmation of receipt-complete;case-3756;20.777;2
-T06 Determine necessity of stop advice-complete;case-3756;16.84;3
-T07-1 Draft intern advice aspect 1-complete;case-3756;55.173;4
-T06 Determine necessity of stop advice-complete;case-3756;72519.875;5
-T10 Determine necessity to stop indication-complete;case-3756;19.231;6
-T04 Determine confirmation of receipt-complete;case-3756;21.457;7
-T05 Print and send confirmation of receipt-complete;case-3756;7213.766;8
+T02 Check confirmation of receipt-complete;case-3756;26321.51;2
+T06 Determine necessity of stop advice-complete;case-3756;13.878;3
+T10 Determine necessity to stop indication-complete;case-3756;79.661;4
+T04 Determine confirmation of receipt-complete;case-3756;13.452;5
+T05 Print and send confirmation of receipt-complete;case-3756;26.155;6
 Confirmation of receipt-complete;case-3766;0.0;1
-T06 Determine necessity of stop advice-complete;case-3766;336.954;2
-T10 Determine necessity to stop indication-complete;case-3766;47.467;3
-T02 Check confirmation of receipt-complete;case-3766;6913.694;4
-T03 Adjust confirmation of receipt-complete;case-3766;1106.605;5
-T02 Check confirmation of receipt-complete;case-3766;275.362;6
-T04 Determine confirmation of receipt-complete;case-3766;63971.022;7
-T05 Print and send confirmation of receipt-complete;case-3766;108246.214;8
+T02 Check confirmation of receipt-complete;case-3766;52.329;2
+T06 Determine necessity of stop advice-complete;case-3766;14.349;3
+T10 Determine necessity to stop indication-complete;case-3766;39.738;4
+T04 Determine confirmation of receipt-complete;case-3766;506876.891;5
+T05 Print and send confirmation of receipt-complete;case-3766;5284.974;6
 Confirmation of receipt-complete;case-3818;0.0;1
-T02 Check confirmation of receipt-complete;case-3818;52.741;2
-T06 Determine necessity of stop advice-complete;case-3818;601.236;3
-T10 Determine necessity to stop indication-complete;case-3818;413.954;4
-T04 Determine confirmation of receipt-complete;case-3818;22.402;5
-T05 Print and send confirmation of receipt-complete;case-3818;864615.32;6
+T02 Check confirmation of receipt-complete;case-3818;16.168;2
+T06 Determine necessity of stop advice-complete;case-3818;250069.452;3
+T10 Determine necessity to stop indication-complete;case-3818;25.036;4
+T04 Determine confirmation of receipt-complete;case-3818;14.41;5
+T05 Print and send confirmation of receipt-complete;case-3818;9.125;6
 Confirmation of receipt-complete;case-3877;0.0;1
 T06 Determine necessity of stop advice-complete;case-3877;86422.657;2
 T02 Check confirmation of receipt-complete;case-3877;202.545;3
 T04 Determine confirmation of receipt-complete;case-3877;65.825;4
 T05 Print and send confirmation of receipt-complete;case-3877;79446.89;5
-T07-2 Draft intern advice aspect 2-complete;case-3877;283.377;6
-T06 Determine necessity of stop advice-complete;case-3877;102.604;7
-T10 Determine necessity to stop indication-complete;case-3877;2815.571;8
+T10 Determine necessity to stop indication-complete;case-3877;23.723;6
 Confirmation of receipt-complete;case-3879;0.0;1
 T02 Check confirmation of receipt-complete;case-3879;701733.256;2
 T06 Determine necessity of stop advice-complete;case-3879;13190.64;3
@@ -1191,13 +1158,8 @@ T05 Print and send confirmation of receipt-complete;case-3879;511805.142;6
 Confirmation of receipt-complete;case-3926;0.0;1
 T02 Check confirmation of receipt-complete;case-3926;8886.253;2
 T06 Determine necessity of stop advice-complete;case-3926;3486.692;3
-T03 Adjust confirmation of receipt-complete;case-3926;6297.833;4
-T02 Check confirmation of receipt-complete;case-3926;937.374;5
-T03 Adjust confirmation of receipt-complete;case-3926;2815.927;6
-T02 Check confirmation of receipt-complete;case-3926;20.316;7
-T04 Determine confirmation of receipt-complete;case-3926;24.978;8
-T05 Print and send confirmation of receipt-complete;case-3926;17.206;9
-T07-5 Draft intern advice aspect 5-complete;case-3926;27.29;10
+T04 Determine confirmation of receipt-complete;case-3926;14.577;4
+T05 Print and send confirmation of receipt-complete;case-3926;343926.209;5
 Confirmation of receipt-complete;case-3927;0.0;1
 T02 Check confirmation of receipt-complete;case-3927;249814.263;2
 T04 Determine confirmation of receipt-complete;case-3927;350745.95;3
@@ -1206,28 +1168,22 @@ T06 Determine necessity of stop advice-complete;case-3927;12253375.515;5
 T10 Determine necessity to stop indication-complete;case-3927;22.333;6
 Confirmation of receipt-complete;case-3961;0.0;1
 T06 Determine necessity of stop advice-complete;case-3961;279.091;2
-T07-1 Draft intern advice aspect 1-complete;case-3961;46.908;3
-T06 Determine necessity of stop advice-complete;case-3961;24.955;4
-T10 Determine necessity to stop indication-complete;case-3961;407.94;5
-T02 Check confirmation of receipt-complete;case-3961;32.228;6
-T04 Determine confirmation of receipt-complete;case-3961;35.555;7
-T05 Print and send confirmation of receipt-complete;case-3961;82.232;8
+T10 Determine necessity to stop indication-complete;case-3961;25.056;3
+T02 Check confirmation of receipt-complete;case-3961;22.302;4
+T04 Determine confirmation of receipt-complete;case-3961;47.421;5
+T05 Print and send confirmation of receipt-complete;case-3961;4497.16;6
 Confirmation of receipt-complete;case-3983;0.0;1
 T02 Check confirmation of receipt-complete;case-3983;143.823;2
-T03 Adjust confirmation of receipt-complete;case-3983;323.033;3
-T02 Check confirmation of receipt-complete;case-3983;27.065;4
-T04 Determine confirmation of receipt-complete;case-3983;22.758;5
-T05 Print and send confirmation of receipt-complete;case-3983;9.966;6
-T06 Determine necessity of stop advice-complete;case-3983;508963.717;7
-T10 Determine necessity to stop indication-complete;case-3983;946303.709;8
+T04 Determine confirmation of receipt-complete;case-3983;18.45;3
+T05 Print and send confirmation of receipt-complete;case-3983;22.678;4
+T06 Determine necessity of stop advice-complete;case-3983;33.743;5
+T10 Determine necessity to stop indication-complete;case-3983;29.473;6
 Confirmation of receipt-complete;case-3984;0.0;1
 T06 Determine necessity of stop advice-complete;case-3984;937.193;2
-T07-1 Draft intern advice aspect 1-complete;case-3984;60.18;3
-T06 Determine necessity of stop advice-complete;case-3984;1480043.304;4
-T10 Determine necessity to stop indication-complete;case-3984;46.521;5
-T02 Check confirmation of receipt-complete;case-3984;61.308;6
-T04 Determine confirmation of receipt-complete;case-3984;12.733;7
-T05 Print and send confirmation of receipt-complete;case-3984;19.452;8
+T10 Determine necessity to stop indication-complete;case-3984;26.74;3
+T02 Check confirmation of receipt-complete;case-3984;39.923;4
+T04 Determine confirmation of receipt-complete;case-3984;93287.84141035315;5
+T05 Print and send confirmation of receipt-complete;case-3984;16.621;6
 Confirmation of receipt-complete;case-3987;0.0;1
 T06 Determine necessity of stop advice-complete;case-3987;5751.503;2
 T10 Determine necessity to stop indication-complete;case-3987;232.936;3
@@ -1237,11 +1193,9 @@ T05 Print and send confirmation of receipt-complete;case-3987;7224.477;6
 Confirmation of receipt-complete;case-3988;0.0;1
 T06 Determine necessity of stop advice-complete;case-3988;68083.374;2
 T10 Determine necessity to stop indication-complete;case-3988;46.746;3
-T02 Check confirmation of receipt-complete;case-3988;92.839;4
-T03 Adjust confirmation of receipt-complete;case-3988;5967762.154;5
-T02 Check confirmation of receipt-complete;case-3988;14.553;6
-T04 Determine confirmation of receipt-complete;case-3988;2935.924;7
-T05 Print and send confirmation of receipt-complete;case-3988;11209.791;8
+T02 Check confirmation of receipt-complete;case-3988;67245.122;4
+T04 Determine confirmation of receipt-complete;case-3988;1986.349;5
+T05 Print and send confirmation of receipt-complete;case-3988;336159.559;6
 Confirmation of receipt-complete;case-3989;0.0;1
 T02 Check confirmation of receipt-complete;case-3989;22.708;2
 T04 Determine confirmation of receipt-complete;case-3989;27.063;3
@@ -1249,11 +1203,9 @@ T05 Print and send confirmation of receipt-complete;case-3989;21.82;4
 T06 Determine necessity of stop advice-complete;case-3989;29.699;5
 T10 Determine necessity to stop indication-complete;case-3989;31.964;6
 Confirmation of receipt-complete;case-3991;0.0;1
-T06 Determine necessity of stop advice-complete;case-3991;398.677;2
-T02 Check confirmation of receipt-complete;case-3991;14.591;3
-T04 Determine confirmation of receipt-complete;case-3991;9.601;4
-T10 Determine necessity to stop indication-complete;case-3991;382.545;5
-T05 Print and send confirmation of receipt-complete;case-3991;252.005;6
+T02 Check confirmation of receipt-complete;case-3991;44.855;2
+T04 Determine confirmation of receipt-complete;case-3991;27.866;3
+T05 Print and send confirmation of receipt-complete;case-3991;45.431;4
 Confirmation of receipt-complete;case-3995;0.0;1
 T02 Check confirmation of receipt-complete;case-3995;21965.247;2
 T04 Determine confirmation of receipt-complete;case-3995;158012.196;3
@@ -1273,13 +1225,11 @@ T05 Print and send confirmation of receipt-complete;case-3998;7213.766;4
 T06 Determine necessity of stop advice-complete;case-3998;438783.462;5
 T10 Determine necessity to stop indication-complete;case-3998;24.652;6
 Confirmation of receipt-complete;case-4000;0.0;1
-T06 Determine necessity of stop advice-complete;case-4000;34.208;2
-T10 Determine necessity to stop indication-complete;case-4000;19.719;3
-T02 Check confirmation of receipt-complete;case-4000;1205380.607;4
-T03 Adjust confirmation of receipt-complete;case-4000;256.97;5
-T02 Check confirmation of receipt-complete;case-4000;268.936;6
-T04 Determine confirmation of receipt-complete;case-4000;520194.118;7
-T05 Print and send confirmation of receipt-complete;case-4000;511946.348;8
+T02 Check confirmation of receipt-complete;case-4000;441.252;2
+T06 Determine necessity of stop advice-complete;case-4000;1399572.245;3
+T10 Determine necessity to stop indication-complete;case-4000;2624.571;4
+T04 Determine confirmation of receipt-complete;case-4000;174.202;5
+T05 Print and send confirmation of receipt-complete;case-4000;9.909;6
 Confirmation of receipt-complete;case-4008;0.0;1
 Confirmation of receipt-complete;case-4010;0.0;1
 T02 Check confirmation of receipt-complete;case-4010;17379.369;2
@@ -1288,15 +1238,11 @@ T05 Print and send confirmation of receipt-complete;case-4010;7237.963;4
 T06 Determine necessity of stop advice-complete;case-4010;600573.509;5
 T10 Determine necessity to stop indication-complete;case-4010;18.86;6
 Confirmation of receipt-complete;case-4011;0.0;1
-T06 Determine necessity of stop advice-complete;case-4011;20.156;2
-T10 Determine necessity to stop indication-complete;case-4011;26.169;3
-T02 Check confirmation of receipt-complete;case-4011;82504.057;4
-T03 Adjust confirmation of receipt-complete;case-4011;1752260.228;5
-T02 Check confirmation of receipt-complete;case-4011;445.344;6
-T03 Adjust confirmation of receipt-complete;case-4011;926421.911;7
-T02 Check confirmation of receipt-complete;case-4011;86.039;8
-T04 Determine confirmation of receipt-complete;case-4011;51.201;9
-T05 Print and send confirmation of receipt-complete;case-4011;10.714;10
+T02 Check confirmation of receipt-complete;case-4011;373.363;2
+T06 Determine necessity of stop advice-complete;case-4011;9.899;3
+T10 Determine necessity to stop indication-complete;case-4011;33.145;4
+T04 Determine confirmation of receipt-complete;case-4011;14.484;5
+T05 Print and send confirmation of receipt-complete;case-4011;19.306;6
 Confirmation of receipt-complete;case-4012;0.0;1
 T06 Determine necessity of stop advice-complete;case-4012;17.79;2
 T10 Determine necessity to stop indication-complete;case-4012;50.979;3
@@ -1331,22 +1277,16 @@ T05 Print and send confirmation of receipt-complete;case-4020;178400.263;6
 Confirmation of receipt-complete;case-4021;0.0;1
 T06 Determine necessity of stop advice-complete;case-4021;82.963;2
 T10 Determine necessity to stop indication-complete;case-4021;148.568;3
-T16 Report reasons to hold request-complete;case-4021;523.691;4
-T17 Check report Y to stop indication-complete;case-4021;784.592;5
-T19 Determine report Y to stop indication-complete;case-4021;56.969;6
-T20 Print report Y to stop indication-complete;case-4021;19.914;7
-T02 Check confirmation of receipt-complete;case-4021;671079.039;8
-T04 Determine confirmation of receipt-complete;case-4021;15459.384;9
-T05 Print and send confirmation of receipt-complete;case-4021;172185.889;10
+T02 Check confirmation of receipt-complete;case-4021;27.365;4
+T04 Determine confirmation of receipt-complete;case-4021;915.216;5
+T05 Print and send confirmation of receipt-complete;case-4021;86.647;6
 Confirmation of receipt-complete;case-4024;0.0;1
 Confirmation of receipt-complete;case-4025;0.0;1
-T06 Determine necessity of stop advice-complete;case-4025;20.485;2
-T10 Determine necessity to stop indication-complete;case-4025;41.725;3
-T02 Check confirmation of receipt-complete;case-4025;23.28;4
-T03 Adjust confirmation of receipt-complete;case-4025;2660176.874;5
-T02 Check confirmation of receipt-complete;case-4025;38.095;6
-T04 Determine confirmation of receipt-complete;case-4025;22.223;7
-T05 Print and send confirmation of receipt-complete;case-4025;362.47;8
+T02 Check confirmation of receipt-complete;case-4025;25.512;2
+T06 Determine necessity of stop advice-complete;case-4025;5088496.721;3
+T10 Determine necessity to stop indication-complete;case-4025;71.077;4
+T04 Determine confirmation of receipt-complete;case-4025;13.9;5
+T05 Print and send confirmation of receipt-complete;case-4025;1871.883;6
 Confirmation of receipt-complete;case-4027;0.0;1
 T06 Determine necessity of stop advice-complete;case-4027;27.754;2
 T10 Determine necessity to stop indication-complete;case-4027;43.305;3
@@ -1360,13 +1300,11 @@ T02 Check confirmation of receipt-complete;case-4028;162922.696;4
 T04 Determine confirmation of receipt-complete;case-4028;19559.632;5
 T05 Print and send confirmation of receipt-complete;case-4028;595516.022;6
 Confirmation of receipt-complete;case-4057;0.0;1
-T06 Determine necessity of stop advice-complete;case-4057;22.363;2
-T10 Determine necessity to stop indication-complete;case-4057;297.8;3
-T02 Check confirmation of receipt-complete;case-4057;543.886;4
-T03 Adjust confirmation of receipt-complete;case-4057;510.504;5
-T02 Check confirmation of receipt-complete;case-4057;95568.573;6
-T04 Determine confirmation of receipt-complete;case-4057;621088.795;7
-T05 Print and send confirmation of receipt-complete;case-4057;414587.945;8
+T02 Check confirmation of receipt-complete;case-4057;202.545;2
+T06 Determine necessity of stop advice-complete;case-4057;25.413;3
+T10 Determine necessity to stop indication-complete;case-4057;201.495;4
+T04 Determine confirmation of receipt-complete;case-4057;23.854;5
+T05 Print and send confirmation of receipt-complete;case-4057;20.855;6
 Confirmation of receipt-complete;case-4058;0.0;1
 T06 Determine necessity of stop advice-complete;case-4058;63.725;2
 T10 Determine necessity to stop indication-complete;case-4058;49.299;3
@@ -1411,12 +1349,10 @@ T06 Determine necessity of stop advice-complete;case-4077;92598.6;5
 T10 Determine necessity to stop indication-complete;case-4077;27.265;6
 Confirmation of receipt-complete;case-4081;0.0;1
 T02 Check confirmation of receipt-complete;case-4081;2466.48;2
-T03 Adjust confirmation of receipt-complete;case-4081;6161.652;3
-T02 Check confirmation of receipt-complete;case-4081;361395.78;4
-T04 Determine confirmation of receipt-complete;case-4081;256619.467;5
-T05 Print and send confirmation of receipt-complete;case-4081;329200.799;6
-T06 Determine necessity of stop advice-complete;case-4081;179721.34;7
-T10 Determine necessity to stop indication-complete;case-4081;14.698;8
+T04 Determine confirmation of receipt-complete;case-4081;455.879;3
+T05 Print and send confirmation of receipt-complete;case-4081;10.686;4
+T06 Determine necessity of stop advice-complete;case-4081;21.461;5
+T10 Determine necessity to stop indication-complete;case-4081;707504.964;6
 Confirmation of receipt-complete;case-4083;0.0;1
 T06 Determine necessity of stop advice-complete;case-4083;226.735;2
 T10 Determine necessity to stop indication-complete;case-4083;69.736;3
@@ -1426,24 +1362,16 @@ T05 Print and send confirmation of receipt-complete;case-4083;329749.784;6
 Confirmation of receipt-complete;case-4084;0.0;1
 T02 Check confirmation of receipt-complete;case-4084;408176.268;2
 T06 Determine necessity of stop advice-complete;case-4084;985.199;3
-T03 Adjust confirmation of receipt-complete;case-4084;617304.172;4
-T02 Check confirmation of receipt-complete;case-4084;5372.621;5
-T03 Adjust confirmation of receipt-complete;case-4084;35.869;6
-T02 Check confirmation of receipt-complete;case-4084;85617.221;7
-T04 Determine confirmation of receipt-complete;case-4084;413225.491;8
-T05 Print and send confirmation of receipt-complete;case-4084;693125.718;9
-T07-5 Draft intern advice aspect 5-complete;case-4084;1740933.932;10
+T10 Determine necessity to stop indication-complete;case-4084;22.312;4
+T04 Determine confirmation of receipt-complete;case-4084;93287.84141035315;5
+T05 Print and send confirmation of receipt-complete;case-4084;10.248;6
 Confirmation of receipt-complete;case-4085;0.0;1
 Confirmation of receipt-complete;case-4100;0.0;1
 T06 Determine necessity of stop advice-complete;case-4100;168.309;2
-T10 Determine necessity to stop indication-complete;case-4100;24.17;3
-T02 Check confirmation of receipt-complete;case-4100;54.3;4
-T03 Adjust confirmation of receipt-complete;case-4100;3732.644;5
-T02 Check confirmation of receipt-complete;case-4100;15.29;6
-T03 Adjust confirmation of receipt-complete;case-4100;258725.47;7
-T02 Check confirmation of receipt-complete;case-4100;25.512;8
-T04 Determine confirmation of receipt-complete;case-4100;43.899;9
-T05 Print and send confirmation of receipt-complete;case-4100;17.163;10
+T10 Determine necessity to stop indication-complete;case-4100;1734.856;3
+T02 Check confirmation of receipt-complete;case-4100;71474.036;4
+T04 Determine confirmation of receipt-complete;case-4100;171.745;5
+T05 Print and send confirmation of receipt-complete;case-4100;571.132;6
 Confirmation of receipt-complete;case-4101;0.0;1
 T06 Determine necessity of stop advice-complete;case-4101;50.865;2
 T10 Determine necessity to stop indication-complete;case-4101;253.456;3
@@ -1452,12 +1380,10 @@ T04 Determine confirmation of receipt-complete;case-4101;260966.245;5
 T05 Print and send confirmation of receipt-complete;case-4101;329366.495;6
 Confirmation of receipt-complete;case-4102;0.0;1
 T02 Check confirmation of receipt-complete;case-4102;578.318;2
-T03 Adjust confirmation of receipt-complete;case-4102;432.521;3
-T02 Check confirmation of receipt-complete;case-4102;367349.753;4
-T04 Determine confirmation of receipt-complete;case-4102;256332.212;5
-T05 Print and send confirmation of receipt-complete;case-4102;329323.854;6
-T06 Determine necessity of stop advice-complete;case-4102;20543.75;7
-T10 Determine necessity to stop indication-complete;case-4102;198.384;8
+T04 Determine confirmation of receipt-complete;case-4102;2410699.672;3
+T05 Print and send confirmation of receipt-complete;case-4102;9.504;4
+T06 Determine necessity of stop advice-complete;case-4102;331.939;5
+T10 Determine necessity to stop indication-complete;case-4102;22.224;6
 Confirmation of receipt-complete;case-4103;0.0;1
 T06 Determine necessity of stop advice-complete;case-4103;17.327;2
 T10 Determine necessity to stop indication-complete;case-4103;35.705;3
@@ -1467,9 +1393,9 @@ T05 Print and send confirmation of receipt-complete;case-4103;329852.678;6
 Confirmation of receipt-complete;case-4111;0.0;1
 T02 Check confirmation of receipt-complete;case-4111;3663.727;2
 T06 Determine necessity of stop advice-complete;case-4111;54.371;3
-T04 Determine confirmation of receipt-complete;case-4111;91906.033;4
-T05 Print and send confirmation of receipt-complete;case-4111;3195.759;5
-T10 Determine necessity to stop indication-complete;case-4111;30.32;6
+T04 Determine confirmation of receipt-complete;case-4111;24.714;4
+T05 Print and send confirmation of receipt-complete;case-4111;2291.798;5
+T10 Determine necessity to stop indication-complete;case-4111;25.807;6
 Confirmation of receipt-complete;case-4114;0.0;1
 T02 Check confirmation of receipt-complete;case-4114;347007.451;2
 T04 Determine confirmation of receipt-complete;case-4114;255820.663;3
@@ -1477,13 +1403,11 @@ T05 Print and send confirmation of receipt-complete;case-4114;329985.805;4
 T06 Determine necessity of stop advice-complete;case-4114;188353.755;5
 T10 Determine necessity to stop indication-complete;case-4114;19.409;6
 Confirmation of receipt-complete;case-4117;0.0;1
-T06 Determine necessity of stop advice-complete;case-4117;298.882;2
-T10 Determine necessity to stop indication-complete;case-4117;371.851;3
-T02 Check confirmation of receipt-complete;case-4117;64714.473;4
-T03 Adjust confirmation of receipt-complete;case-4117;254108.029;5
-T02 Check confirmation of receipt-complete;case-4117;85702.132;6
-T04 Determine confirmation of receipt-complete;case-4117;798337.807;7
-T05 Print and send confirmation of receipt-complete;case-4117;70351.797;8
+T02 Check confirmation of receipt-complete;case-4117;23.505;2
+T06 Determine necessity of stop advice-complete;case-4117;30.605;3
+T10 Determine necessity to stop indication-complete;case-4117;17.469;4
+T04 Determine confirmation of receipt-complete;case-4117;30.825;5
+T05 Print and send confirmation of receipt-complete;case-4117;47.088;6
 Confirmation of receipt-complete;case-4118;0.0;1
 T06 Determine necessity of stop advice-complete;case-4118;27.997;2
 T10 Determine necessity to stop indication-complete;case-4118;18.495;3
@@ -1510,12 +1434,10 @@ T04 Determine confirmation of receipt-complete;case-4146;56.061;5
 T05 Print and send confirmation of receipt-complete;case-4146;21.355;6
 Confirmation of receipt-complete;case-4147;0.0;1
 T02 Check confirmation of receipt-complete;case-4147;581.73;2
-T03 Adjust confirmation of receipt-complete;case-4147;422712.487;3
-T02 Check confirmation of receipt-complete;case-4147;16.367;4
-T04 Determine confirmation of receipt-complete;case-4147;65709.877;5
-T05 Print and send confirmation of receipt-complete;case-4147;1019.299;6
-T06 Determine necessity of stop advice-complete;case-4147;114041.129;7
-T10 Determine necessity to stop indication-complete;case-4147;223.162;8
+T04 Determine confirmation of receipt-complete;case-4147;19.147;3
+T05 Print and send confirmation of receipt-complete;case-4147;11.033;4
+T06 Determine necessity of stop advice-complete;case-4147;24.749;5
+T10 Determine necessity to stop indication-complete;case-4147;81.33;6
 Confirmation of receipt-complete;case-4149;0.0;1
 T06 Determine necessity of stop advice-complete;case-4149;59.807;2
 T10 Determine necessity to stop indication-complete;case-4149;27.479;3
@@ -1524,20 +1446,14 @@ T04 Determine confirmation of receipt-complete;case-4149;256561.169;5
 T05 Print and send confirmation of receipt-complete;case-4149;329107.244;6
 Confirmation of receipt-complete;case-4157;0.0;1
 T06 Determine necessity of stop advice-complete;case-4157;48.278;2
-T06 Determine necessity of stop advice-complete;case-4157;63.055;3
-T06 Determine necessity of stop advice-complete;case-4157;34.61;4
-T07-4 Draft internal advice to hold for type 4-complete;case-4157;50.505;5
-T06 Determine necessity of stop advice-complete;case-4157;44.706;6
-T10 Determine necessity to stop indication-complete;case-4157;61.702;7
-T02 Check confirmation of receipt-complete;case-4157;700693.053;8
-T04 Determine confirmation of receipt-complete;case-4157;60.824;9
-T05 Print and send confirmation of receipt-complete;case-4157;181541.042;10
+T10 Determine necessity to stop indication-complete;case-4157;23.618;3
+T02 Check confirmation of receipt-complete;case-4157;3340.772;4
+T04 Determine confirmation of receipt-complete;case-4157;608897.898;5
+T05 Print and send confirmation of receipt-complete;case-4157;18.407;6
 Confirmation of receipt-complete;case-4158;0.0;1
 T02 Check confirmation of receipt-complete;case-4158;434821.892;2
-T06 Determine necessity of stop advice-complete;case-4158;97687.784;3
-T04 Determine confirmation of receipt-complete;case-4158;47.855;4
-T10 Determine necessity to stop indication-complete;case-4158;108.074;5
-T05 Print and send confirmation of receipt-complete;case-4158;525829.006;6
+T04 Determine confirmation of receipt-complete;case-4158;119.608;3
+T05 Print and send confirmation of receipt-complete;case-4158;15.853;4
 Confirmation of receipt-complete;case-4159;0.0;1
 T06 Determine necessity of stop advice-complete;case-4159;209.379;2
 T10 Determine necessity to stop indication-complete;case-4159;29.473;3
@@ -1553,30 +1469,20 @@ T10 Determine necessity to stop indication-complete;case-416;1649108.853;6
 Confirmation of receipt-complete;case-4161;0.0;1
 T02 Check confirmation of receipt-complete;case-4161;247264.91;2
 T04 Determine confirmation of receipt-complete;case-4161;343254.63;3
-T05 Print and send confirmation of receipt-complete;case-4161;36.235;4
-T06 Determine necessity of stop advice-complete;case-4161;2972.321;5
+T05 Print and send confirmation of receipt-complete;case-4161;39.31;4
+T06 Determine necessity of stop advice-complete;case-4161;353487.409;5
 Confirmation of receipt-complete;case-4175;0.0;1
 T06 Determine necessity of stop advice-complete;case-4175;206.155;2
-T06 Determine necessity of stop advice-complete;case-4175;27.116;3
-T06 Determine necessity of stop advice-complete;case-4175;23239178.127;4
-T07-4 Draft internal advice to hold for type 4-complete;case-4175;36.169;5
-T06 Determine necessity of stop advice-complete;case-4175;773.512;6
-T10 Determine necessity to stop indication-complete;case-4175;70.288;7
-T02 Check confirmation of receipt-complete;case-4175;15.614;8
-T04 Determine confirmation of receipt-complete;case-4175;17.833;9
-T05 Print and send confirmation of receipt-complete;case-4175;68350.763;10
+T10 Determine necessity to stop indication-complete;case-4175;17.599;3
+T02 Check confirmation of receipt-complete;case-4175;31.344;4
+T04 Determine confirmation of receipt-complete;case-4175;3436.797;5
+T05 Print and send confirmation of receipt-complete;case-4175;54.681;6
 Confirmation of receipt-complete;case-4185;0.0;1
 T06 Determine necessity of stop advice-complete;case-4185;17.958;2
 T10 Determine necessity to stop indication-complete;case-4185;117.824;3
 T02 Check confirmation of receipt-complete;case-4185;373.363;4
-T03 Adjust confirmation of receipt-complete;case-4185;97.803;5
-T02 Check confirmation of receipt-complete;case-4185;333.474;6
-T03 Adjust confirmation of receipt-complete;case-4185;19.874;7
-T02 Check confirmation of receipt-complete;case-4185;23.087;8
-T03 Adjust confirmation of receipt-complete;case-4185;6161.652;9
-T02 Check confirmation of receipt-complete;case-4185;21.488;10
-T04 Determine confirmation of receipt-complete;case-4185;595028.624;11
-T05 Print and send confirmation of receipt-complete;case-4185;80127.996;12
+T04 Determine confirmation of receipt-complete;case-4185;27.426;5
+T05 Print and send confirmation of receipt-complete;case-4185;32.692;6
 Confirmation of receipt-complete;case-4186;0.0;1
 T06 Determine necessity of stop advice-complete;case-4186;158.883;2
 T10 Determine necessity to stop indication-complete;case-4186;29.058;3
@@ -1591,12 +1497,10 @@ T04 Determine confirmation of receipt-complete;case-4187;100366.03;5
 T05 Print and send confirmation of receipt-complete;case-4187;523516.62;6
 Confirmation of receipt-complete;case-4188;0.0;1
 T06 Determine necessity of stop advice-complete;case-4188;135.593;2
-T07-1 Draft intern advice aspect 1-complete;case-4188;552.155;3
-T06 Determine necessity of stop advice-complete;case-4188;15.439;4
-T10 Determine necessity to stop indication-complete;case-4188;16.572;5
-T02 Check confirmation of receipt-complete;case-4188;17.01;6
-T04 Determine confirmation of receipt-complete;case-4188;17.083;7
-T05 Print and send confirmation of receipt-complete;case-4188;328367.866;8
+T10 Determine necessity to stop indication-complete;case-4188;72.064;3
+T02 Check confirmation of receipt-complete;case-4188;43.314;4
+T04 Determine confirmation of receipt-complete;case-4188;26.844;5
+T05 Print and send confirmation of receipt-complete;case-4188;0.0;6
 Confirmation of receipt-complete;case-4189;0.0;1
 Confirmation of receipt-complete;case-4208;0.0;1
 T02 Check confirmation of receipt-complete;case-4208;62.943;2
@@ -1611,11 +1515,9 @@ T05 Print and send confirmation of receipt-complete;case-4219;52.863;4
 T06 Determine necessity of stop advice-complete;case-4219;63.019;5
 T10 Determine necessity to stop indication-complete;case-4219;22.15;6
 Confirmation of receipt-complete;case-4243;0.0;1
-T06 Determine necessity of stop advice-complete;case-4243;21.422;2
-T02 Check confirmation of receipt-complete;case-4243;106.316;3
-T10 Determine necessity to stop indication-complete;case-4243;79.425;4
-T04 Determine confirmation of receipt-complete;case-4243;2631.709;5
-T05 Print and send confirmation of receipt-complete;case-4243;182327.662;6
+T02 Check confirmation of receipt-complete;case-4243;44.855;2
+T04 Determine confirmation of receipt-complete;case-4243;12.816;3
+T05 Print and send confirmation of receipt-complete;case-4243;72.911;4
 Confirmation of receipt-complete;case-4247;0.0;1
 T06 Determine necessity of stop advice-complete;case-4247;18.403;2
 T10 Determine necessity to stop indication-complete;case-4247;21.56;3
@@ -1624,11 +1526,9 @@ T04 Determine confirmation of receipt-complete;case-4247;1091.43;5
 T05 Print and send confirmation of receipt-complete;case-4247;3191.526;6
 Confirmation of receipt-complete;case-4248;0.0;1
 Confirmation of receipt-complete;case-4249;0.0;1
-T06 Determine necessity of stop advice-complete;case-4249;785.154;2
-T02 Check confirmation of receipt-complete;case-4249;45.676;3
-T10 Determine necessity to stop indication-complete;case-4249;34.033;4
-T04 Determine confirmation of receipt-complete;case-4249;42.344;5
-T05 Print and send confirmation of receipt-complete;case-4249;15.098;6
+T02 Check confirmation of receipt-complete;case-4249;18.621;2
+T04 Determine confirmation of receipt-complete;case-4249;16.962;3
+T05 Print and send confirmation of receipt-complete;case-4249;822.86;4
 Confirmation of receipt-complete;case-4251;0.0;1
 T06 Determine necessity of stop advice-complete;case-4251;261.329;2
 T10 Determine necessity to stop indication-complete;case-4251;61.178;3
@@ -1694,9 +1594,7 @@ T02 Check confirmation of receipt-complete;case-4346;526.724;2
 T04 Determine confirmation of receipt-complete;case-4346;4500.585;3
 T05 Print and send confirmation of receipt-complete;case-4346;428857.322;4
 T06 Determine necessity of stop advice-complete;case-4346;10811778.148;5
-T07-1 Draft intern advice aspect 1-complete;case-4346;178.541;6
-T06 Determine necessity of stop advice-complete;case-4346;31.934;7
-T10 Determine necessity to stop indication-complete;case-4346;121.128;8
+T10 Determine necessity to stop indication-complete;case-4346;29.811;6
 Confirmation of receipt-complete;case-4347;0.0;1
 Confirmation of receipt-complete;case-4348;0.0;1
 Confirmation of receipt-complete;case-4349;0.0;1
@@ -1809,9 +1707,7 @@ T05 Print and send confirmation of receipt-complete;case-4500;1363.455;6
 Confirmation of receipt-complete;case-4502;0.0;1
 T02 Check confirmation of receipt-complete;case-4502;32.23;2
 T04 Determine confirmation of receipt-complete;case-4502;38.672;3
-T06 Determine necessity of stop advice-complete;case-4502;18.963;4
-T05 Print and send confirmation of receipt-complete;case-4502;57.398;5
-T10 Determine necessity to stop indication-complete;case-4502;18.527;6
+T05 Print and send confirmation of receipt-complete;case-4502;885427.116;4
 Confirmation of receipt-complete;case-4503;0.0;1
 T02 Check confirmation of receipt-complete;case-4503;7802.004;2
 T04 Determine confirmation of receipt-complete;case-4503;3188.276;3
@@ -1863,13 +1759,9 @@ T05 Print and send confirmation of receipt-complete;case-4515;364193.223;6
 Confirmation of receipt-complete;case-4516;0.0;1
 T06 Determine necessity of stop advice-complete;case-4516;81.782;2
 T10 Determine necessity to stop indication-complete;case-4516;6260.405;3
-T02 Check confirmation of receipt-complete;case-4516;24.802;4
-T04 Determine confirmation of receipt-complete;case-4516;3205.046;5
-T05 Print and send confirmation of receipt-complete;case-4516;78203.329;6
-T11 Create document X request unlicensed-complete;case-4516;1202.878;7
-T12 Check document X request unlicensed-complete;case-4516;599894.15;8
-T14 Determine document X request unlicensed-complete;case-4516;11595.886;9
-T15 Print document X request unlicensed-complete;case-4516;413218.157;10
+T02 Check confirmation of receipt-complete;case-4516;28.222;4
+T04 Determine confirmation of receipt-complete;case-4516;31.83;5
+T05 Print and send confirmation of receipt-complete;case-4516;345015.32;6
 Confirmation of receipt-complete;case-4517;0.0;1
 T02 Check confirmation of receipt-complete;case-4517;26.902;2
 T06 Determine necessity of stop advice-complete;case-4517;67.396;3
@@ -1879,13 +1771,13 @@ T05 Print and send confirmation of receipt-complete;case-4517;88683.286;6
 Confirmation of receipt-complete;case-4518;0.0;1
 T02 Check confirmation of receipt-complete;case-4518;39.923;2
 T04 Determine confirmation of receipt-complete;case-4518;44.083;3
-T05 Print and send confirmation of receipt-complete;case-4518;31.208;4
-T06 Determine necessity of stop advice-complete;case-4518;1119672.655;5
-T10 Determine necessity to stop indication-complete;case-4518;16.656;6
-T11 Create document X request unlicensed-complete;case-4518;1331.224;7
-T12 Check document X request unlicensed-complete;case-4518;18.592;8
-T14 Determine document X request unlicensed-complete;case-4518;283544.026;9
-T15 Print document X request unlicensed-complete;case-4518;1014404.362;10
+T05 Print and send confirmation of receipt-complete;case-4518;506252.674;4
+T06 Determine necessity of stop advice-complete;case-4518;11913.382;5
+T10 Determine necessity to stop indication-complete;case-4518;22.175;6
+T11 Create document X request unlicensed-complete;case-4518;0.0;7
+T12 Check document X request unlicensed-complete;case-4518;47561.60419742706;8
+T14 Determine document X request unlicensed-complete;case-4518;90054.55127144104;9
+T15 Print document X request unlicensed-complete;case-4518;761689.6143657216;10
 Confirmation of receipt-complete;case-4519;0.0;1
 T02 Check confirmation of receipt-complete;case-4519;15.449;2
 T06 Determine necessity of stop advice-complete;case-4519;64.232;3
@@ -1913,15 +1805,9 @@ T10 Determine necessity to stop indication-complete;case-4529;20.212;6
 Confirmation of receipt-complete;case-4532;0.0;1
 T02 Check confirmation of receipt-complete;case-4532;115.222;2
 T04 Determine confirmation of receipt-complete;case-4532;18.827;3
-T06 Determine necessity of stop advice-complete;case-4532;48.865;4
-T07-5 Draft intern advice aspect 5-complete;case-4532;25.962;5
-T06 Determine necessity of stop advice-complete;case-4532;21.497;6
-T07-5 Draft intern advice aspect 5-complete;case-4532;74.175;7
-T06 Determine necessity of stop advice-complete;case-4532;123.997;8
-T07-5 Draft intern advice aspect 5-complete;case-4532;99.609;9
-T06 Determine necessity of stop advice-complete;case-4532;13.681;10
-T10 Determine necessity to stop indication-complete;case-4532;18.201;11
-T05 Print and send confirmation of receipt-complete;case-4532;11284.974;12
+T05 Print and send confirmation of receipt-complete;case-4532;185013.189;4
+T06 Determine necessity of stop advice-complete;case-4532;10.79;5
+T10 Determine necessity to stop indication-complete;case-4532;34.542;6
 Confirmation of receipt-complete;case-4533;0.0;1
 T02 Check confirmation of receipt-complete;case-4533;309.303;2
 T04 Determine confirmation of receipt-complete;case-4533;2943.061;3
@@ -1939,11 +1825,7 @@ T02 Check confirmation of receipt-complete;case-4537;241815.967;2
 T04 Determine confirmation of receipt-complete;case-4537;139.848;3
 T05 Print and send confirmation of receipt-complete;case-4537;140.224;4
 T06 Determine necessity of stop advice-complete;case-4537;959093.419;5
-T10 Determine necessity to stop indication-complete;case-4537;24.231;6
-T16 Report reasons to hold request-complete;case-4537;388.02;7
-T17 Check report Y to stop indication-complete;case-4537;30.622;8
-T19 Determine report Y to stop indication-complete;case-4537;152.465;9
-T20 Print report Y to stop indication-complete;case-4537;35.611;10
+T10 Determine necessity to stop indication-complete;case-4537;19.293;6
 Confirmation of receipt-complete;case-4538;0.0;1
 T02 Check confirmation of receipt-complete;case-4538;23.417;2
 T06 Determine necessity of stop advice-complete;case-4538;36.729;3
@@ -1952,12 +1834,10 @@ T04 Determine confirmation of receipt-complete;case-4538;85351.582;5
 T05 Print and send confirmation of receipt-complete;case-4538;10779.554;6
 Confirmation of receipt-complete;case-4539;0.0;1
 T06 Determine necessity of stop advice-complete;case-4539;39.928;2
-T07-1 Draft intern advice aspect 1-complete;case-4539;20.013;3
-T06 Determine necessity of stop advice-complete;case-4539;16.669;4
-T10 Determine necessity to stop indication-complete;case-4539;31.948;5
-T02 Check confirmation of receipt-complete;case-4539;1073.385;6
-T04 Determine confirmation of receipt-complete;case-4539;357.427;7
-T05 Print and send confirmation of receipt-complete;case-4539;27.744;8
+T10 Determine necessity to stop indication-complete;case-4539;22.574;3
+T02 Check confirmation of receipt-complete;case-4539;18.621;4
+T04 Determine confirmation of receipt-complete;case-4539;31.83;5
+T05 Print and send confirmation of receipt-complete;case-4539;15.937;6
 Confirmation of receipt-complete;case-4540;0.0;1
 T06 Determine necessity of stop advice-complete;case-4540;33.987;2
 T02 Check confirmation of receipt-complete;case-4540;33.519;3
@@ -1975,9 +1855,7 @@ T02 Check confirmation of receipt-complete;case-4553;248266.281;2
 T04 Determine confirmation of receipt-complete;case-4553;3205.046;3
 T05 Print and send confirmation of receipt-complete;case-4553;11733.465;4
 T06 Determine necessity of stop advice-complete;case-4553;596357.864;5
-T07-1 Draft intern advice aspect 1-complete;case-4553;100.692;6
-T06 Determine necessity of stop advice-complete;case-4553;24.47;7
-T10 Determine necessity to stop indication-complete;case-4553;42.841;8
+T10 Determine necessity to stop indication-complete;case-4553;19.902;6
 Confirmation of receipt-complete;case-4554;0.0;1
 T02 Check confirmation of receipt-complete;case-4554;17.171;2
 T06 Determine necessity of stop advice-complete;case-4554;278.21;3
@@ -2027,11 +1905,9 @@ T10 Determine necessity to stop indication-complete;case-4582;91.582;4
 T04 Determine confirmation of receipt-complete;case-4582;115.542;5
 T05 Print and send confirmation of receipt-complete;case-4582;13579.474;6
 Confirmation of receipt-complete;case-4583;0.0;1
-T06 Determine necessity of stop advice-complete;case-4583;15.849;2
-T02 Check confirmation of receipt-complete;case-4583;206.323;3
-T10 Determine necessity to stop indication-complete;case-4583;23.661;4
-T04 Determine confirmation of receipt-complete;case-4583;17.513;5
-T05 Print and send confirmation of receipt-complete;case-4583;13024.792;6
+T02 Check confirmation of receipt-complete;case-4583;16714.79;2
+T04 Determine confirmation of receipt-complete;case-4583;13.998;3
+T05 Print and send confirmation of receipt-complete;case-4583;78.622;4
 Confirmation of receipt-complete;case-4584;0.0;1
 T02 Check confirmation of receipt-complete;case-4584;5643.95;2
 T04 Determine confirmation of receipt-complete;case-4584;3040.927;3
@@ -2056,21 +1932,15 @@ T02 Check confirmation of receipt-complete;case-4587;604888.948;4
 T04 Determine confirmation of receipt-complete;case-4587;60633.041;5
 T05 Print and send confirmation of receipt-complete;case-4587;20673.726;6
 Confirmation of receipt-complete;case-4589;0.0;1
-T06 Determine necessity of stop advice-complete;case-4589;143.031;2
-T02 Check confirmation of receipt-complete;case-4589;27.763;3
-T04 Determine confirmation of receipt-complete;case-4589;15.309;4
-T10 Determine necessity to stop indication-complete;case-4589;26.786;5
-T05 Print and send confirmation of receipt-complete;case-4589;15714.254;6
+T02 Check confirmation of receipt-complete;case-4589;425.052;2
+T04 Determine confirmation of receipt-complete;case-4589;30.903;3
+T05 Print and send confirmation of receipt-complete;case-4589;17.188;4
 Confirmation of receipt-complete;case-4592;0.0;1
 T06 Determine necessity of stop advice-complete;case-4592;60.764;2
 T10 Determine necessity to stop indication-complete;case-4592;70.288;3
-T16 Report reasons to hold request-complete;case-4592;188.955;4
-T17 Check report Y to stop indication-complete;case-4592;88.365;5
-T19 Determine report Y to stop indication-complete;case-4592;14.121;6
-T20 Print report Y to stop indication-complete;case-4592;21.174;7
-T02 Check confirmation of receipt-complete;case-4592;168686.421;8
-T04 Determine confirmation of receipt-complete;case-4592;39.06;9
-T05 Print and send confirmation of receipt-complete;case-4592;9.715;10
+T02 Check confirmation of receipt-complete;case-4592;17.999;4
+T04 Determine confirmation of receipt-complete;case-4592;520194.118;5
+T05 Print and send confirmation of receipt-complete;case-4592;10.054;6
 Confirmation of receipt-complete;case-4598;0.0;1
 T02 Check confirmation of receipt-complete;case-4598;81.696;2
 T04 Determine confirmation of receipt-complete;case-4598;54.993;3
@@ -2131,15 +2001,11 @@ T05 Print and send confirmation of receipt-complete;case-4619;258647.457;4
 T06 Determine necessity of stop advice-complete;case-4619;590209.168;5
 T10 Determine necessity to stop indication-complete;case-4619;16.698;6
 Confirmation of receipt-complete;case-4623;0.0;1
-T06 Determine necessity of stop advice-complete;case-4623;233.643;2
-T10 Determine necessity to stop indication-complete;case-4623;694.397;3
-T02 Check confirmation of receipt-complete;case-4623;18435.79;4
-T04 Determine confirmation of receipt-complete;case-4623;7993.826;5
-T05 Print and send confirmation of receipt-complete;case-4623;60872.017;6
-T11 Create document X request unlicensed-complete;case-4623;167614.676;7
-T12 Check document X request unlicensed-complete;case-4623;2072.417;8
-T14 Determine document X request unlicensed-complete;case-4623;3006.447;9
-T15 Print document X request unlicensed-complete;case-4623;10.765;10
+T02 Check confirmation of receipt-complete;case-4623;17.044;2
+T06 Determine necessity of stop advice-complete;case-4623;31.582;3
+T10 Determine necessity to stop indication-complete;case-4623;22.143;4
+T04 Determine confirmation of receipt-complete;case-4623;593.121;5
+T05 Print and send confirmation of receipt-complete;case-4623;82.232;6
 Confirmation of receipt-complete;case-4632;0.0;1
 T06 Determine necessity of stop advice-complete;case-4632;81.899;2
 T10 Determine necessity to stop indication-complete;case-4632;62.565;3
@@ -2160,11 +2026,9 @@ T05 Print and send confirmation of receipt-complete;case-4640;20487.673;4
 T06 Determine necessity of stop advice-complete;case-4640;257183.109;5
 T10 Determine necessity to stop indication-complete;case-4640;72170.767;6
 Confirmation of receipt-complete;case-4641;0.0;1
-T06 Determine necessity of stop advice-complete;case-4641;82.215;2
-T02 Check confirmation of receipt-complete;case-4641;161.8;3
-T10 Determine necessity to stop indication-complete;case-4641;90.894;4
-T04 Determine confirmation of receipt-complete;case-4641;158.528;5
-T05 Print and send confirmation of receipt-complete;case-4641;10.47;6
+T02 Check confirmation of receipt-complete;case-4641;435328.606;2
+T04 Determine confirmation of receipt-complete;case-4641;17.651;3
+T05 Print and send confirmation of receipt-complete;case-4641;258647.457;4
 Confirmation of receipt-complete;case-4653;0.0;1
 T02 Check confirmation of receipt-complete;case-4653;18.152;2
 T04 Determine confirmation of receipt-complete;case-4653;13.885;3
@@ -2172,17 +2036,13 @@ T06 Determine necessity of stop advice-complete;case-4653;664.038;4
 T10 Determine necessity to stop indication-complete;case-4653;90.171;5
 T05 Print and send confirmation of receipt-complete;case-4653;17294.325;6
 Confirmation of receipt-complete;case-4654;0.0;1
-T06 Determine necessity of stop advice-complete;case-4654;19.432;2
-T02 Check confirmation of receipt-complete;case-4654;76.142;3
-T04 Determine confirmation of receipt-complete;case-4654;14.502;4
-T10 Determine necessity to stop indication-complete;case-4654;17.771;5
-T05 Print and send confirmation of receipt-complete;case-4654;11523.745;6
+T02 Check confirmation of receipt-complete;case-4654;20.551;2
+T04 Determine confirmation of receipt-complete;case-4654;30.559;3
+T05 Print and send confirmation of receipt-complete;case-4654;173379.772;4
 Confirmation of receipt-complete;case-4656;0.0;1
 T02 Check confirmation of receipt-complete;case-4656;36.425;2
-T06 Determine necessity of stop advice-complete;case-4656;28.371;3
-T04 Determine confirmation of receipt-complete;case-4656;61.461;4
-T10 Determine necessity to stop indication-complete;case-4656;22.224;5
-T05 Print and send confirmation of receipt-complete;case-4656;60613.428;6
+T04 Determine confirmation of receipt-complete;case-4656;19.936;3
+T05 Print and send confirmation of receipt-complete;case-4656;25.929;4
 Confirmation of receipt-complete;case-4666;0.0;1
 T02 Check confirmation of receipt-complete;case-4666;19.86;2
 T04 Determine confirmation of receipt-complete;case-4666;100589.485;3
@@ -2194,9 +2054,7 @@ T02 Check confirmation of receipt-complete;case-4667;705526.526;2
 T04 Determine confirmation of receipt-complete;case-4667;346.274;3
 T05 Print and send confirmation of receipt-complete;case-4667;157698.3;4
 T06 Determine necessity of stop advice-complete;case-4667;1131494.843;5
-T07-1 Draft intern advice aspect 1-complete;case-4667;128455.3146530442;6
-T06 Determine necessity of stop advice-complete;case-4667;75.311;7
-T10 Determine necessity to stop indication-complete;case-4667;98.408;8
+T10 Determine necessity to stop indication-complete;case-4667;22.312;6
 Confirmation of receipt-complete;case-4677;0.0;1
 T02 Check confirmation of receipt-complete;case-4677;16.196;2
 T04 Determine confirmation of receipt-complete;case-4677;10.681;3
@@ -2247,14 +2105,10 @@ T10 Determine necessity to stop indication-complete;case-4760;16.542;5
 T05 Print and send confirmation of receipt-complete;case-4760;161101.09;6
 Confirmation of receipt-complete;case-4762;0.0;1
 T06 Determine necessity of stop advice-complete;case-4762;97.282;2
-T06 Determine necessity of stop advice-complete;case-4762;34.208;3
-T06 Determine necessity of stop advice-complete;case-4762;21.996;4
-T07-4 Draft internal advice to hold for type 4-complete;case-4762;50.505;5
-T06 Determine necessity of stop advice-complete;case-4762;64.232;6
-T10 Determine necessity to stop indication-complete;case-4762;36.579;7
-T02 Check confirmation of receipt-complete;case-4762;30.817;8
-T04 Determine confirmation of receipt-complete;case-4762;16.299;9
-T05 Print and send confirmation of receipt-complete;case-4762;20.375;10
+T10 Determine necessity to stop indication-complete;case-4762;32.606;3
+T02 Check confirmation of receipt-complete;case-4762;17.84;4
+T04 Determine confirmation of receipt-complete;case-4762;32.116;5
+T05 Print and send confirmation of receipt-complete;case-4762;19.683;6
 Confirmation of receipt-complete;case-4763;0.0;1
 T02 Check confirmation of receipt-complete;case-4763;927.908;2
 T04 Determine confirmation of receipt-complete;case-4763;170.262;3
@@ -2296,13 +2150,7 @@ T02 Check confirmation of receipt-complete;case-4771;616.715;2
 T04 Determine confirmation of receipt-complete;case-4771;688.336;3
 T05 Print and send confirmation of receipt-complete;case-4771;1132134.712;4
 T06 Determine necessity of stop advice-complete;case-4771;422206.18;5
-T07-3 Draft intern advice hold for aspect 3-complete;case-4771;604818.209;6
-T07-2 Draft intern advice aspect 2-complete;case-4771;17377.607;7
-T06 Determine necessity of stop advice-complete;case-4771;157974.793;8
-T07-2 Draft intern advice aspect 2-complete;case-4771;0.691;9
-T07-3 Draft intern advice hold for aspect 3-complete;case-4771;16.796;10
-T06 Determine necessity of stop advice-complete;case-4771;31.474;11
-T10 Determine necessity to stop indication-complete;case-4771;41.48;12
+T10 Determine necessity to stop indication-complete;case-4771;12.088;6
 Confirmation of receipt-complete;case-4773;0.0;1
 T02 Check confirmation of receipt-complete;case-4773;361.531;2
 T04 Determine confirmation of receipt-complete;case-4773;635.613;3
@@ -2360,15 +2208,9 @@ T05 Print and send confirmation of receipt-complete;case-4807;271559.331;6
 Confirmation of receipt-complete;case-4808;0.0;1
 T02 Check confirmation of receipt-complete;case-4808;391.321;2
 T04 Determine confirmation of receipt-complete;case-4808;593.121;3
-T05 Print and send confirmation of receipt-complete;case-4808;5134.468;4
-T06 Determine necessity of stop advice-complete;case-4808;84.849;5
-T07-3 Draft intern advice hold for aspect 3-complete;case-4808;1653.902;6
-T07-2 Draft intern advice aspect 2-complete;case-4808;70.82;7
-T06 Determine necessity of stop advice-complete;case-4808;50.962;8
-T07-2 Draft intern advice aspect 2-complete;case-4808;34.599;9
-T07-3 Draft intern advice hold for aspect 3-complete;case-4808;19.114;10
-T06 Determine necessity of stop advice-complete;case-4808;25.413;11
-T10 Determine necessity to stop indication-complete;case-4808;25.748;12
+T05 Print and send confirmation of receipt-complete;case-4808;11.258;4
+T06 Determine necessity of stop advice-complete;case-4808;624326.716;5
+T10 Determine necessity to stop indication-complete;case-4808;707504.964;6
 Confirmation of receipt-complete;case-4809;0.0;1
 T02 Check confirmation of receipt-complete;case-4809;606.936;2
 T04 Determine confirmation of receipt-complete;case-4809;424.619;3
@@ -2378,9 +2220,7 @@ T05 Print and send confirmation of receipt-complete;case-4809;490997.719;6
 Confirmation of receipt-complete;case-4810;0.0;1
 T02 Check confirmation of receipt-complete;case-4810;419.963;2
 T04 Determine confirmation of receipt-complete;case-4810;61.943;3
-T06 Determine necessity of stop advice-complete;case-4810;624702.978;4
-T05 Print and send confirmation of receipt-complete;case-4810;491161.931;5
-T10 Determine necessity to stop indication-complete;case-4810;431755.452;6
+T05 Print and send confirmation of receipt-complete;case-4810;32.058;4
 Confirmation of receipt-complete;case-4811;0.0;1
 T02 Check confirmation of receipt-complete;case-4811;786.198;2
 T04 Determine confirmation of receipt-complete;case-4811;307.875;3
@@ -2399,7 +2239,6 @@ T04 Determine confirmation of receipt-complete;case-4827;424.722;3
 T06 Determine necessity of stop advice-complete;case-4827;871547.408;4
 T10 Determine necessity to stop indication-complete;case-4827;95.695;5
 T05 Print and send confirmation of receipt-complete;case-4827;243593.946;6
-T11 Create document X request unlicensed-complete;case-4827;1322967.016;7
 Confirmation of receipt-complete;case-4832;0.0;1
 T02 Check confirmation of receipt-complete;case-4832;2572.596;2
 T04 Determine confirmation of receipt-complete;case-4832;27.843;3
@@ -2505,27 +2344,21 @@ T05 Print and send confirmation of receipt-complete;case-4922;5438.815;6
 Confirmation of receipt-complete;case-4923;0.0;1
 T02 Check confirmation of receipt-complete;case-4923;47.797;2
 T04 Determine confirmation of receipt-complete;case-4923;1043.59;3
-T06 Determine necessity of stop advice-complete;case-4923;78026.353;4
-T07-1 Draft intern advice aspect 1-complete;case-4923;47.047;5
-T06 Determine necessity of stop advice-complete;case-4923;18.235;6
-T10 Determine necessity to stop indication-complete;case-4923;14.212;7
-T05 Print and send confirmation of receipt-complete;case-4923;1171.122;8
+T05 Print and send confirmation of receipt-complete;case-4923;8518.773;4
+T06 Determine necessity of stop advice-complete;case-4923;74920.237;5
+T10 Determine necessity to stop indication-complete;case-4923;77.321;6
 Confirmation of receipt-complete;case-4924;0.0;1
-T06 Determine necessity of stop advice-complete;case-4924;60.376;2
-T10 Determine necessity to stop indication-complete;case-4924;30.135;3
-T02 Check confirmation of receipt-complete;case-4924;1737490.561;4
-T03 Adjust confirmation of receipt-complete;case-4924;167242.925;5
-T02 Check confirmation of receipt-complete;case-4924;3930.205;6
-T04 Determine confirmation of receipt-complete;case-4924;16.569;7
-T05 Print and send confirmation of receipt-complete;case-4924;149500.812;8
+T02 Check confirmation of receipt-complete;case-4924;14.413;2
+T06 Determine necessity of stop advice-complete;case-4924;37.127;3
+T10 Determine necessity to stop indication-complete;case-4924;337.787;4
+T04 Determine confirmation of receipt-complete;case-4924;36.321;5
+T05 Print and send confirmation of receipt-complete;case-4924;7632.714;6
 Confirmation of receipt-complete;case-4925;0.0;1
 T02 Check confirmation of receipt-complete;case-4925;27.344;2
 T04 Determine confirmation of receipt-complete;case-4925;8466.846;3
 T05 Print and send confirmation of receipt-complete;case-4925;338116.238;4
 T06 Determine necessity of stop advice-complete;case-4925;426437.707;5
-T07-1 Draft intern advice aspect 1-complete;case-4925;90744.808;6
-T06 Determine necessity of stop advice-complete;case-4925;21.356;7
-T10 Determine necessity to stop indication-complete;case-4925;40.62;8
+T10 Determine necessity to stop indication-complete;case-4925;55.424;6
 Confirmation of receipt-complete;case-4926;0.0;1
 T06 Determine necessity of stop advice-complete;case-4926;1614.405;2
 T10 Determine necessity to stop indication-complete;case-4926;18.068;3
@@ -2552,12 +2385,10 @@ T04 Determine confirmation of receipt-complete;case-4939;4837.144;5
 T05 Print and send confirmation of receipt-complete;case-4939;92266.499;6
 Confirmation of receipt-complete;case-4941;0.0;1
 T06 Determine necessity of stop advice-complete;case-4941;338.888;2
-T07-1 Draft intern advice aspect 1-complete;case-4941;52.274;3
-T06 Determine necessity of stop advice-complete;case-4941;1399572.245;4
-T10 Determine necessity to stop indication-complete;case-4941;157.34;5
-T02 Check confirmation of receipt-complete;case-4941;1197.981;6
-T04 Determine confirmation of receipt-complete;case-4941;10.681;7
-T05 Print and send confirmation of receipt-complete;case-4941;14.892;8
+T10 Determine necessity to stop indication-complete;case-4941;291.581;3
+T02 Check confirmation of receipt-complete;case-4941;95.439;4
+T04 Determine confirmation of receipt-complete;case-4941;18.23;5
+T05 Print and send confirmation of receipt-complete;case-4941;523516.62;6
 Confirmation of receipt-complete;case-4943;0.0;1
 T06 Determine necessity of stop advice-complete;case-4943;15.624;2
 T10 Determine necessity to stop indication-complete;case-4943;12.124;3
@@ -2627,9 +2458,9 @@ T05 Print and send confirmation of receipt-complete;case-4976;81459.301;6
 Confirmation of receipt-complete;case-4978;0.0;1
 T02 Check confirmation of receipt-complete;case-4978;76.81;2
 T04 Determine confirmation of receipt-complete;case-4978;124.88;3
-T05 Print and send confirmation of receipt-complete;case-4978;39.913;4
-T06 Determine necessity of stop advice-complete;case-4978;1755.337;5
-T10 Determine necessity to stop indication-complete;case-4978;307.332;6
+T05 Print and send confirmation of receipt-complete;case-4978;86005.691;4
+T06 Determine necessity of stop advice-complete;case-4978;24.711;5
+T10 Determine necessity to stop indication-complete;case-4978;33.579;6
 Confirmation of receipt-complete;case-4980;0.0;1
 T06 Determine necessity of stop advice-complete;case-4980;67.758;2
 T10 Determine necessity to stop indication-complete;case-4980;1383.966;3
@@ -2655,13 +2486,11 @@ T02 Check confirmation of receipt-complete;case-4995;4138.356;4
 T04 Determine confirmation of receipt-complete;case-4995;10.236;5
 T05 Print and send confirmation of receipt-complete;case-4995;6188.672;6
 Confirmation of receipt-complete;case-4997;0.0;1
-T02 Check confirmation of receipt-complete;case-4997;18.294;2
-T04 Determine confirmation of receipt-complete;case-4997;32.116;3
-T06 Determine necessity of stop advice-complete;case-4997;23.693;4
-T07-1 Draft intern advice aspect 1-complete;case-4997;72699.863;5
-T06 Determine necessity of stop advice-complete;case-4997;17.303;6
-T10 Determine necessity to stop indication-complete;case-4997;30.053;7
-T05 Print and send confirmation of receipt-complete;case-4997;17.995;8
+T02 Check confirmation of receipt-complete;case-4997;48.322;2
+T04 Determine confirmation of receipt-complete;case-4997;6615.531;3
+T06 Determine necessity of stop advice-complete;case-4997;226.735;4
+T10 Determine necessity to stop indication-complete;case-4997;21.881;5
+T05 Print and send confirmation of receipt-complete;case-4997;16.134;6
 Confirmation of receipt-complete;case-4998;0.0;1
 T02 Check confirmation of receipt-complete;case-4998;12.885;2
 T06 Determine necessity of stop advice-complete;case-4998;17.577;3
@@ -2669,11 +2498,9 @@ T10 Determine necessity to stop indication-complete;case-4998;16.277;4
 T04 Determine confirmation of receipt-complete;case-4998;954.03;5
 T05 Print and send confirmation of receipt-complete;case-4998;77911.982;6
 Confirmation of receipt-complete;case-4999;0.0;1
-T06 Determine necessity of stop advice-complete;case-4999;104.115;2
-T02 Check confirmation of receipt-complete;case-4999;118.258;3
-T10 Determine necessity to stop indication-complete;case-4999;598.478;4
-T04 Determine confirmation of receipt-complete;case-4999;148.434;5
-T05 Print and send confirmation of receipt-complete;case-4999;364075.443;6
+T02 Check confirmation of receipt-complete;case-4999;22.307;2
+T04 Determine confirmation of receipt-complete;case-4999;38.672;3
+T05 Print and send confirmation of receipt-complete;case-4999;7213.766;4
 Confirmation of receipt-complete;case-5000;0.0;1
 T06 Determine necessity of stop advice-complete;case-5000;424.535;2
 T10 Determine necessity to stop indication-complete;case-5000;16.276;3
@@ -2701,10 +2528,8 @@ T04 Determine confirmation of receipt-complete;case-5014;7403.031;5
 T05 Print and send confirmation of receipt-complete;case-5014;92526.746;6
 Confirmation of receipt-complete;case-5021;0.0;1
 T02 Check confirmation of receipt-complete;case-5021;12.758;2
-T06 Determine necessity of stop advice-complete;case-5021;10.307;3
-T04 Determine confirmation of receipt-complete;case-5021;2510.961;4
-T10 Determine necessity to stop indication-complete;case-5021;56.042;5
-T05 Print and send confirmation of receipt-complete;case-5021;1361.292;6
+T04 Determine confirmation of receipt-complete;case-5021;119.608;3
+T05 Print and send confirmation of receipt-complete;case-5021;64302.428;4
 Confirmation of receipt-complete;case-5024;0.0;1
 T02 Check confirmation of receipt-complete;case-5024;87678.06;2
 T06 Determine necessity of stop advice-complete;case-5024;88334.942;3
@@ -2738,11 +2563,9 @@ Confirmation of receipt-complete;case-5041;0.0;1
 Confirmation of receipt-complete;case-5042;0.0;1
 T02 Check confirmation of receipt-complete;case-5042;61.308;2
 T04 Determine confirmation of receipt-complete;case-5042;285.552;3
-T05 Print and send confirmation of receipt-complete;case-5042;32.037;4
-T06 Determine necessity of stop advice-complete;case-5042;274687.092;5
-T07-1 Draft intern advice aspect 1-complete;case-5042;60.18;6
-T06 Determine necessity of stop advice-complete;case-5042;25.134;7
-T10 Determine necessity to stop indication-complete;case-5042;1596.27;8
+T05 Print and send confirmation of receipt-complete;case-5042;17.132;4
+T06 Determine necessity of stop advice-complete;case-5042;30.969;5
+T10 Determine necessity to stop indication-complete;case-5042;33.579;6
 Confirmation of receipt-complete;case-5043;0.0;1
 T02 Check confirmation of receipt-complete;case-5043;65673.36;2
 T04 Determine confirmation of receipt-complete;case-5043;20.545;3
@@ -2752,11 +2575,9 @@ T10 Determine necessity to stop indication-complete;case-5043;26.197;6
 Confirmation of receipt-complete;case-5044;0.0;1
 T02 Check confirmation of receipt-complete;case-5044;58.462;2
 T06 Determine necessity of stop advice-complete;case-5044;149.7;3
-T07-1 Draft intern advice aspect 1-complete;case-5044;57.019;4
-T06 Determine necessity of stop advice-complete;case-5044;22.008;5
-T10 Determine necessity to stop indication-complete;case-5044;35.606;6
-T04 Determine confirmation of receipt-complete;case-5044;455.879;7
-T05 Print and send confirmation of receipt-complete;case-5044;12112.098;8
+T10 Determine necessity to stop indication-complete;case-5044;19.858;4
+T04 Determine confirmation of receipt-complete;case-5044;11.877;5
+T05 Print and send confirmation of receipt-complete;case-5044;26.155;6
 Confirmation of receipt-complete;case-5045;0.0;1
 T06 Determine necessity of stop advice-complete;case-5045;67.612;2
 T10 Determine necessity to stop indication-complete;case-5045;19.596;3
@@ -2764,13 +2585,11 @@ T02 Check confirmation of receipt-complete;case-5045;14951.474;4
 T04 Determine confirmation of receipt-complete;case-5045;59548.148;5
 T05 Print and send confirmation of receipt-complete;case-5045;29233.015;6
 Confirmation of receipt-complete;case-5046;0.0;1
-T02 Check confirmation of receipt-complete;case-5046;25.597;2
-T04 Determine confirmation of receipt-complete;case-5046;35.594;3
-T06 Determine necessity of stop advice-complete;case-5046;25.181;4
-T07-1 Draft intern advice aspect 1-complete;case-5046;552.155;5
-T06 Determine necessity of stop advice-complete;case-5046;30.891;6
-T10 Determine necessity to stop indication-complete;case-5046;883489.345;7
-T05 Print and send confirmation of receipt-complete;case-5046;328733.675;8
+T02 Check confirmation of receipt-complete;case-5046;343515.0099382432;2
+T04 Determine confirmation of receipt-complete;case-5046;1080.525;3
+T06 Determine necessity of stop advice-complete;case-5046;27.708;4
+T10 Determine necessity to stop indication-complete;case-5046;26.189;5
+T05 Print and send confirmation of receipt-complete;case-5046;85445.657;6
 Confirmation of receipt-complete;case-5091;0.0;1
 T02 Check confirmation of receipt-complete;case-5091;66755.499;2
 T04 Determine confirmation of receipt-complete;case-5091;5298.659;3
@@ -2831,14 +2650,10 @@ T06 Determine necessity of stop advice-complete;case-5133;614078.82;5
 T10 Determine necessity to stop indication-complete;case-5133;16.628;6
 Confirmation of receipt-complete;case-5135;0.0;1
 T02 Check confirmation of receipt-complete;case-5135;109.059;2
-T06 Determine necessity of stop advice-complete;case-5135;54397.231;3
-T07-1 Draft intern advice aspect 1-complete;case-5135;552.155;4
-T06 Determine necessity of stop advice-complete;case-5135;18.875;5
-T07-1 Draft intern advice aspect 1-complete;case-5135;24.107;6
-T06 Determine necessity of stop advice-complete;case-5135;24.749;7
-T10 Determine necessity to stop indication-complete;case-5135;23.612;8
-T04 Determine confirmation of receipt-complete;case-5135;523.601;9
-T05 Print and send confirmation of receipt-complete;case-5135;27309.356;10
+T04 Determine confirmation of receipt-complete;case-5135;30.873;3
+T06 Determine necessity of stop advice-complete;case-5135;23.096;4
+T10 Determine necessity to stop indication-complete;case-5135;29.411;5
+T05 Print and send confirmation of receipt-complete;case-5135;256660.206;6
 Confirmation of receipt-complete;case-5137;0.0;1
 T06 Determine necessity of stop advice-complete;case-5137;54.168;2
 T10 Determine necessity to stop indication-complete;case-5137;16.312;3
@@ -2849,14 +2664,8 @@ Confirmation of receipt-complete;case-5141;0.0;1
 T06 Determine necessity of stop advice-complete;case-5141;29.31;2
 T10 Determine necessity to stop indication-complete;case-5141;29.668;3
 T02 Check confirmation of receipt-complete;case-5141;1643143.888;4
-T03 Adjust confirmation of receipt-complete;case-5141;3616606.375;5
-T02 Check confirmation of receipt-complete;case-5141;3756.481;6
-T03 Adjust confirmation of receipt-complete;case-5141;224.216;7
-T02 Check confirmation of receipt-complete;case-5141;92.839;8
-T03 Adjust confirmation of receipt-complete;case-5141;2090.177;9
-T02 Check confirmation of receipt-complete;case-5141;107.814;10
-T04 Determine confirmation of receipt-complete;case-5141;17.833;11
-T05 Print and send confirmation of receipt-complete;case-5141;14.85;12
+T04 Determine confirmation of receipt-complete;case-5141;29.641;5
+T05 Print and send confirmation of receipt-complete;case-5141;329323.854;6
 Confirmation of receipt-complete;case-5144;0.0;1
 T06 Determine necessity of stop advice-complete;case-5144;80778.401;2
 T10 Determine necessity to stop indication-complete;case-5144;31.302;3
@@ -2938,12 +2747,10 @@ T04 Determine confirmation of receipt-complete;case-5196;172404.614;5
 T05 Print and send confirmation of receipt-complete;case-5196;169646.749;6
 Confirmation of receipt-complete;case-5235;0.0;1
 T06 Determine necessity of stop advice-complete;case-5235;238.823;2
-T07-1 Draft intern advice aspect 1-complete;case-5235;56.656;3
-T06 Determine necessity of stop advice-complete;case-5235;160.988;4
-T10 Determine necessity to stop indication-complete;case-5235;33.579;5
-T02 Check confirmation of receipt-complete;case-5235;511.668;6
-T04 Determine confirmation of receipt-complete;case-5235;613.448;7
-T05 Print and send confirmation of receipt-complete;case-5235;14.824;8
+T10 Determine necessity to stop indication-complete;case-5235;44.977;3
+T02 Check confirmation of receipt-complete;case-5235;17.853;4
+T04 Determine confirmation of receipt-complete;case-5235;17.15;5
+T05 Print and send confirmation of receipt-complete;case-5235;10.096;6
 Confirmation of receipt-complete;case-5243;0.0;1
 T02 Check confirmation of receipt-complete;case-5243;22.527;2
 T06 Determine necessity of stop advice-complete;case-5243;20.405;3
@@ -2988,22 +2795,18 @@ T05 Print and send confirmation of receipt-complete;case-5273;409245.34;4
 T06 Determine necessity of stop advice-complete;case-5273;519988.57;5
 T10 Determine necessity to stop indication-complete;case-5273;169.91;6
 Confirmation of receipt-complete;case-5275;0.0;1
-T06 Determine necessity of stop advice-complete;case-5275;234212.886;2
-T10 Determine necessity to stop indication-complete;case-5275;151.944;3
-T02 Check confirmation of receipt-complete;case-5275;16714.79;4
-T03 Adjust confirmation of receipt-complete;case-5275;258725.47;5
-T02 Check confirmation of receipt-complete;case-5275;15.986;6
-T04 Determine confirmation of receipt-complete;case-5275;83.231;7
-T05 Print and send confirmation of receipt-complete;case-5275;336200.68;8
+T02 Check confirmation of receipt-complete;case-5275;15.613;2
+T06 Determine necessity of stop advice-complete;case-5275;55.872;3
+T10 Determine necessity to stop indication-complete;case-5275;18.977;4
+T04 Determine confirmation of receipt-complete;case-5275;21.505;5
+T05 Print and send confirmation of receipt-complete;case-5275;301.573;6
 Confirmation of receipt-complete;case-5285;0.0;1
 Confirmation of receipt-complete;case-5286;0.0;1
 T02 Check confirmation of receipt-complete;case-5286;960.776;2
 T04 Determine confirmation of receipt-complete;case-5286;64185.042;3
 T05 Print and send confirmation of receipt-complete;case-5286;255.357;4
 T06 Determine necessity of stop advice-complete;case-5286;85.509;5
-T07-1 Draft intern advice aspect 1-complete;case-5286;64.495;6
-T06 Determine necessity of stop advice-complete;case-5286;33.365;7
-T10 Determine necessity to stop indication-complete;case-5286;26.438;8
+T10 Determine necessity to stop indication-complete;case-5286;95.101;6
 Confirmation of receipt-complete;case-5287;0.0;1
 T02 Check confirmation of receipt-complete;case-5287;38.267;2
 T06 Determine necessity of stop advice-complete;case-5287;64.52;3
@@ -3061,12 +2864,10 @@ T05 Print and send confirmation of receipt-complete;case-5311;418781.129;6
 Confirmation of receipt-complete;case-5337;0.0;1
 Confirmation of receipt-complete;case-5351;0.0;1
 T06 Determine necessity of stop advice-complete;case-5351;301.645;2
-T07-1 Draft intern advice aspect 1-complete;case-5351;85647.726;3
-T06 Determine necessity of stop advice-complete;case-5351;29.149;4
-T10 Determine necessity to stop indication-complete;case-5351;44.713;5
-T02 Check confirmation of receipt-complete;case-5351;6115892.514;6
-T04 Determine confirmation of receipt-complete;case-5351;4468.481;7
-T05 Print and send confirmation of receipt-complete;case-5351;77673.216;8
+T10 Determine necessity to stop indication-complete;case-5351;15.454;3
+T02 Check confirmation of receipt-complete;case-5351;246755.923;4
+T04 Determine confirmation of receipt-complete;case-5351;247262.832;5
+T05 Print and send confirmation of receipt-complete;case-5351;17.184;6
 Confirmation of receipt-complete;case-5355;0.0;1
 T02 Check confirmation of receipt-complete;case-5355;67395.37;2
 T06 Determine necessity of stop advice-complete;case-5355;354.473;3
@@ -3095,13 +2896,9 @@ T10 Determine necessity to stop indication-complete;case-5379;12.2;6
 Confirmation of receipt-complete;case-5380;0.0;1
 T02 Check confirmation of receipt-complete;case-5380;113.298;2
 T06 Determine necessity of stop advice-complete;case-5380;59674.683;3
-T07-1 Draft intern advice aspect 1-complete;case-5380;417.53;4
-T06 Determine necessity of stop advice-complete;case-5380;167.149;5
-T07-1 Draft intern advice aspect 1-complete;case-5380;60.18;6
-T06 Determine necessity of stop advice-complete;case-5380;47.953;7
-T10 Determine necessity to stop indication-complete;case-5380;106.731;8
-T04 Determine confirmation of receipt-complete;case-5380;16.427;9
-T05 Print and send confirmation of receipt-complete;case-5380;43.343;10
+T10 Determine necessity to stop indication-complete;case-5380;15.682;4
+T04 Determine confirmation of receipt-complete;case-5380;25.014;5
+T05 Print and send confirmation of receipt-complete;case-5380;5754.828;6
 Confirmation of receipt-complete;case-5381;0.0;1
 T02 Check confirmation of receipt-complete;case-5381;175.05;2
 T04 Determine confirmation of receipt-complete;case-5381;17.882;3
@@ -3169,7 +2966,6 @@ T10 Determine necessity to stop indication-complete;case-5462;22.361;3
 T02 Check confirmation of receipt-complete;case-5462;92621.035;4
 T04 Determine confirmation of receipt-complete;case-5462;13.818;5
 T05 Print and send confirmation of receipt-complete;case-5462;91746.052;6
-T11 Create document X request unlicensed-complete;case-5462;0.481;7
 Confirmation of receipt-complete;case-5469;0.0;1
 Confirmation of receipt-complete;case-5482;0.0;1
 Confirmation of receipt-complete;case-5483;0.0;1
@@ -3199,10 +2995,6 @@ T04 Determine confirmation of receipt-complete;case-5517;13.985;3
 T05 Print and send confirmation of receipt-complete;case-5517;506252.674;4
 T06 Determine necessity of stop advice-complete;case-5517;17.775;5
 T10 Determine necessity to stop indication-complete;case-5517;23.151;6
-T16 Report reasons to hold request-complete;case-5517;287.952;7
-T17 Check report Y to stop indication-complete;case-5517;72.911;8
-T19 Determine report Y to stop indication-complete;case-5517;41.941;9
-T20 Print report Y to stop indication-complete;case-5517;17.626;10
 Confirmation of receipt-complete;case-5519;0.0;1
 T02 Check confirmation of receipt-complete;case-5519;30.862;2
 T06 Determine necessity of stop advice-complete;case-5519;22.608;3
@@ -3251,14 +3043,14 @@ T10 Determine necessity to stop indication-complete;case-5532;83.354;5
 T05 Print and send confirmation of receipt-complete;case-5532;16281.027;6
 Confirmation of receipt-complete;case-5533;0.0;1
 T02 Check confirmation of receipt-complete;case-5533;41.281;2
-T04 Determine confirmation of receipt-complete;case-5533;79812.62;3
-T05 Print and send confirmation of receipt-complete;case-5533;1168.452;4
-T06 Determine necessity of stop advice-complete;case-5533;9.18;5
-T10 Determine necessity to stop indication-complete;case-5533;43.802;6
-T11 Create document X request unlicensed-complete;case-5533;2059.746;7
-T12 Check document X request unlicensed-complete;case-5533;18.274;8
-T14 Determine document X request unlicensed-complete;case-5533;112.103;9
-T15 Print document X request unlicensed-complete;case-5533;1376242.227;10
+T04 Determine confirmation of receipt-complete;case-5533;22.969;3
+T05 Print and send confirmation of receipt-complete;case-5533;9.883;4
+T06 Determine necessity of stop advice-complete;case-5533;28.474;5
+T10 Determine necessity to stop indication-complete;case-5533;95.103;6
+T11 Create document X request unlicensed-complete;case-5533;1113.922;7
+T12 Check document X request unlicensed-complete;case-5533;10.472;8
+T14 Determine document X request unlicensed-complete;case-5533;14.427;9
+T15 Print document X request unlicensed-complete;case-5533;13.206;10
 Confirmation of receipt-complete;case-5534;0.0;1
 T02 Check confirmation of receipt-complete;case-5534;46.916;2
 T04 Determine confirmation of receipt-complete;case-5534;15.809;3
@@ -3358,13 +3150,11 @@ T02 Check confirmation of receipt-complete;case-5559;520888.208;4
 T04 Determine confirmation of receipt-complete;case-5559;507427.699;5
 T05 Print and send confirmation of receipt-complete;case-5559;79637.977;6
 Confirmation of receipt-complete;case-5560;0.0;1
-T02 Check confirmation of receipt-complete;case-5560;30.745;2
-T04 Determine confirmation of receipt-complete;case-5560;24.199;3
-T05 Print and send confirmation of receipt-complete;case-5560;36.174;4
-T06 Determine necessity of stop advice-complete;case-5560;419905.782;5
-T07-1 Draft intern advice aspect 1-complete;case-5560;1279.567;6
-T06 Determine necessity of stop advice-complete;case-5560;29.149;7
-T10 Determine necessity to stop indication-complete;case-5560;21.268;8
+T02 Check confirmation of receipt-complete;case-5560;66935.279;2
+T04 Determine confirmation of receipt-complete;case-5560;65.633;3
+T05 Print and send confirmation of receipt-complete;case-5560;64302.428;4
+T06 Determine necessity of stop advice-complete;case-5560;519988.57;5
+T10 Determine necessity to stop indication-complete;case-5560;13.919;6
 Confirmation of receipt-complete;case-5561;0.0;1
 T02 Check confirmation of receipt-complete;case-5561;17.056;2
 T06 Determine necessity of stop advice-complete;case-5561;33.556;3
@@ -3380,11 +3170,9 @@ T10 Determine necessity to stop indication-complete;case-5566;159.517;6
 Confirmation of receipt-complete;case-5573;0.0;1
 T02 Check confirmation of receipt-complete;case-5573;146.675;2
 T06 Determine necessity of stop advice-complete;case-5573;32.802;3
-T07-1 Draft intern advice aspect 1-complete;case-5573;1279.567;4
-T06 Determine necessity of stop advice-complete;case-5573;38.59;5
-T10 Determine necessity to stop indication-complete;case-5573;21.614;6
-T04 Determine confirmation of receipt-complete;case-5573;14275.013;7
-T05 Print and send confirmation of receipt-complete;case-5573;157396.838;8
+T10 Determine necessity to stop indication-complete;case-5573;29.323;4
+T04 Determine confirmation of receipt-complete;case-5573;43.65;5
+T05 Print and send confirmation of receipt-complete;case-5573;2567.344;6
 Confirmation of receipt-complete;case-5574;0.0;1
 Confirmation of receipt-complete;case-5576;0.0;1
 T02 Check confirmation of receipt-complete;case-5576;82.561;2
@@ -3414,12 +3202,10 @@ T05 Print and send confirmation of receipt-complete;case-5582;83512.216;6
 Confirmation of receipt-complete;case-5583;0.0;1
 Confirmation of receipt-complete;case-5585;0.0;1
 T06 Determine necessity of stop advice-complete;case-5585;27.091;2
-T07-1 Draft intern advice aspect 1-complete;case-5585;2742527.974;3
-T06 Determine necessity of stop advice-complete;case-5585;15.395;4
-T10 Determine necessity to stop indication-complete;case-5585;12.859;5
-T02 Check confirmation of receipt-complete;case-5585;155.411;6
-T04 Determine confirmation of receipt-complete;case-5585;28.197;7
-T05 Print and send confirmation of receipt-complete;case-5585;14.223;8
+T10 Determine necessity to stop indication-complete;case-5585;19.849;3
+T02 Check confirmation of receipt-complete;case-5585;21.896;4
+T04 Determine confirmation of receipt-complete;case-5585;32.274;5
+T05 Print and send confirmation of receipt-complete;case-5585;329852.678;6
 Confirmation of receipt-complete;case-5594;0.0;1
 T02 Check confirmation of receipt-complete;case-5594;59150.771;2
 T04 Determine confirmation of receipt-complete;case-5594;17.6;3
@@ -3428,12 +3214,10 @@ T06 Determine necessity of stop advice-complete;case-5594;440505.855;5
 T10 Determine necessity to stop indication-complete;case-5594;201.495;6
 Confirmation of receipt-complete;case-5595;0.0;1
 T06 Determine necessity of stop advice-complete;case-5595;79.66;2
-T07-1 Draft intern advice aspect 1-complete;case-5595;82654.836;3
-T06 Determine necessity of stop advice-complete;case-5595;424497.092;4
-T10 Determine necessity to stop indication-complete;case-5595;20.623;5
-T02 Check confirmation of receipt-complete;case-5595;93.163;6
-T04 Determine confirmation of receipt-complete;case-5595;18.921;7
-T05 Print and send confirmation of receipt-complete;case-5595;83902.021;8
+T10 Determine necessity to stop indication-complete;case-5595;17.208;3
+T02 Check confirmation of receipt-complete;case-5595;17.318;4
+T04 Determine confirmation of receipt-complete;case-5595;405.882;5
+T05 Print and send confirmation of receipt-complete;case-5595;618354.978;6
 Confirmation of receipt-complete;case-5597;0.0;1
 T02 Check confirmation of receipt-complete;case-5597;22.771;2
 T04 Determine confirmation of receipt-complete;case-5597;50.895;3
@@ -3530,12 +3314,10 @@ T06 Determine necessity of stop advice-complete;case-5714;1104798.742;5
 T10 Determine necessity to stop indication-complete;case-5714;23.6;6
 Confirmation of receipt-complete;case-5721;0.0;1
 T02 Check confirmation of receipt-complete;case-5721;20.642;2
-T03 Adjust confirmation of receipt-complete;case-5721;14.017;3
-T02 Check confirmation of receipt-complete;case-5721;19.367;4
-T04 Determine confirmation of receipt-complete;case-5721;30.968;5
-T05 Print and send confirmation of receipt-complete;case-5721;13.109;6
-T06 Determine necessity of stop advice-complete;case-5721;24.063;7
-T10 Determine necessity to stop indication-complete;case-5721;32.382;8
+T04 Determine confirmation of receipt-complete;case-5721;5399.379;3
+T05 Print and send confirmation of receipt-complete;case-5721;11.043;4
+T06 Determine necessity of stop advice-complete;case-5721;20543.75;5
+T10 Determine necessity to stop indication-complete;case-5721;41.623;6
 Confirmation of receipt-complete;case-5737;0.0;1
 T06 Determine necessity of stop advice-complete;case-5737;2762.542;2
 T10 Determine necessity to stop indication-complete;case-5737;16.364;3
@@ -3551,17 +3333,13 @@ T10 Determine necessity to stop indication-complete;case-5743;22.422;6
 Confirmation of receipt-complete;case-5748;0.0;1
 T02 Check confirmation of receipt-complete;case-5748;20.271;2
 T04 Determine confirmation of receipt-complete;case-5748;31.5;3
-T05 Print and send confirmation of receipt-complete;case-5748;12112.098;4
-T06 Determine necessity of stop advice-complete;case-5748;17.556;5
-T07-1 Draft intern advice aspect 1-complete;case-5748;49.36;6
-T06 Determine necessity of stop advice-complete;case-5748;1091.844;7
-T10 Determine necessity to stop indication-complete;case-5748;944725.436;8
+T05 Print and send confirmation of receipt-complete;case-5748;13.249;4
+T06 Determine necessity of stop advice-complete;case-5748;15144.883;5
+T10 Determine necessity to stop indication-complete;case-5748;16.119;6
 Confirmation of receipt-complete;case-5749;0.0;1
 T02 Check confirmation of receipt-complete;case-5749;85484.85;2
-T06 Determine necessity of stop advice-complete;case-5749;788.961;3
-T04 Determine confirmation of receipt-complete;case-5749;3974.009;4
-T10 Determine necessity to stop indication-complete;case-5749;1685.455;5
-T05 Print and send confirmation of receipt-complete;case-5749;85445.657;6
+T04 Determine confirmation of receipt-complete;case-5749;22.611;3
+T05 Print and send confirmation of receipt-complete;case-5749;16.59;4
 Confirmation of receipt-complete;case-5750;0.0;1
 T06 Determine necessity of stop advice-complete;case-5750;241.676;2
 T10 Determine necessity to stop indication-complete;case-5750;40.813;3
@@ -3627,11 +3405,9 @@ T05 Print and send confirmation of receipt-complete;case-5877;15.142;4
 T06 Determine necessity of stop advice-complete;case-5877;46.647;5
 T10 Determine necessity to stop indication-complete;case-5877;70.061;6
 Confirmation of receipt-complete;case-5878;0.0;1
-T06 Determine necessity of stop advice-complete;case-5878;55.289;2
-T02 Check confirmation of receipt-complete;case-5878;13.667;3
-T10 Determine necessity to stop indication-complete;case-5878;16.604;4
-T04 Determine confirmation of receipt-complete;case-5878;8878.789;5
-T05 Print and send confirmation of receipt-complete;case-5878;82982.645;6
+T02 Check confirmation of receipt-complete;case-5878;254.417;2
+T04 Determine confirmation of receipt-complete;case-5878;53.415;3
+T05 Print and send confirmation of receipt-complete;case-5878;18.217;4
 Confirmation of receipt-complete;case-5879;0.0;1
 T02 Check confirmation of receipt-complete;case-5879;38.42;2
 T06 Determine necessity of stop advice-complete;case-5879;5281.929;3
@@ -3659,9 +3435,7 @@ T10 Determine necessity to stop indication-complete;case-5919;49.913;6
 Confirmation of receipt-complete;case-5921;0.0;1
 T02 Check confirmation of receipt-complete;case-5921;15.416;2
 T04 Determine confirmation of receipt-complete;case-5921;10.672;3
-T06 Determine necessity of stop advice-complete;case-5921;16.313;4
-T05 Print and send confirmation of receipt-complete;case-5921;11.462;5
-T10 Determine necessity to stop indication-complete;case-5921;78.389;6
+T05 Print and send confirmation of receipt-complete;case-5921;0.0;4
 Confirmation of receipt-complete;case-5922;0.0;1
 T06 Determine necessity of stop advice-complete;case-5922;28.239;2
 T10 Determine necessity to stop indication-complete;case-5922;190.219;3
@@ -3751,13 +3525,9 @@ T10 Determine necessity to stop indication-complete;case-5983;18.41;6
 Confirmation of receipt-complete;case-5986;0.0;1
 T02 Check confirmation of receipt-complete;case-5986;38.498;2
 T04 Determine confirmation of receipt-complete;case-5986;519.131;3
-T06 Determine necessity of stop advice-complete;case-5986;57871.809;4
-T10 Determine necessity to stop indication-complete;case-5986;259.634;5
-T16 Report reasons to hold request-complete;case-5986;281.482;6
-T17 Check report Y to stop indication-complete;case-5986;60.178;7
-T19 Determine report Y to stop indication-complete;case-5986;17.889;8
-T20 Print report Y to stop indication-complete;case-5986;22.882;9
-T05 Print and send confirmation of receipt-complete;case-5986;6311.181;10
+T05 Print and send confirmation of receipt-complete;case-5986;491161.931;4
+T06 Determine necessity of stop advice-complete;case-5986;37.54;5
+T10 Determine necessity to stop indication-complete;case-5986;24.541;6
 Confirmation of receipt-complete;case-5987;0.0;1
 Confirmation of receipt-complete;case-5994;0.0;1
 T02 Check confirmation of receipt-complete;case-5994;20.893;2
@@ -3773,14 +3543,10 @@ T06 Determine necessity of stop advice-complete;case-5997;10.687;5
 T10 Determine necessity to stop indication-complete;case-5997;16.913;6
 Confirmation of receipt-complete;case-5998;0.0;1
 T02 Check confirmation of receipt-complete;case-5998;20.624;2
-T06 Determine necessity of stop advice-complete;case-5998;335.229;3
-T07-1 Draft intern advice aspect 1-complete;case-5998;39.08;4
-T06 Determine necessity of stop advice-complete;case-5998;13.157;5
-T07-1 Draft intern advice aspect 1-complete;case-5998;10.542;6
-T06 Determine necessity of stop advice-complete;case-5998;10.6;7
-T10 Determine necessity to stop indication-complete;case-5998;262.95;8
-T04 Determine confirmation of receipt-complete;case-5998;78404.803;9
-T05 Print and send confirmation of receipt-complete;case-5998;5164.698;10
+T04 Determine confirmation of receipt-complete;case-5998;185.809;3
+T06 Determine necessity of stop advice-complete;case-5998;67.758;4
+T10 Determine necessity to stop indication-complete;case-5998;1417.707;5
+T05 Print and send confirmation of receipt-complete;case-5998;511946.348;6
 Confirmation of receipt-complete;case-6009;0.0;1
 T02 Check confirmation of receipt-complete;case-6009;40.38;2
 T04 Determine confirmation of receipt-complete;case-6009;19.046;3
@@ -3789,12 +3555,10 @@ T06 Determine necessity of stop advice-complete;case-6009;328.456;5
 T10 Determine necessity to stop indication-complete;case-6009;433.699;6
 Confirmation of receipt-complete;case-6010;0.0;1
 T06 Determine necessity of stop advice-complete;case-6010;999.318;2
-T07-1 Draft intern advice aspect 1-complete;case-6010;29.13;3
-T06 Determine necessity of stop advice-complete;case-6010;15.846;4
-T10 Determine necessity to stop indication-complete;case-6010;53.707;5
-T02 Check confirmation of receipt-complete;case-6010;329.731;6
-T04 Determine confirmation of receipt-complete;case-6010;26.969;7
-T05 Print and send confirmation of receipt-complete;case-6010;2090.318;8
+T10 Determine necessity to stop indication-complete;case-6010;375.573;3
+T02 Check confirmation of receipt-complete;case-6010;813.339;4
+T04 Determine confirmation of receipt-complete;case-6010;22.611;5
+T05 Print and send confirmation of receipt-complete;case-6010;10.248;6
 Confirmation of receipt-complete;case-6012;0.0;1
 T02 Check confirmation of receipt-complete;case-6012;18.643;2
 T04 Determine confirmation of receipt-complete;case-6012;9.226;3
@@ -3804,19 +3568,15 @@ T10 Determine necessity to stop indication-complete;case-6012;16.096;6
 Confirmation of receipt-complete;case-6015;0.0;1
 T02 Check confirmation of receipt-complete;case-6015;986.506;2
 T04 Determine confirmation of receipt-complete;case-6015;13.7;3
-T06 Determine necessity of stop advice-complete;case-6015;23.87;4
-T07-1 Draft intern advice aspect 1-complete;case-6015;46.908;5
-T06 Determine necessity of stop advice-complete;case-6015;26.781;6
-T10 Determine necessity to stop indication-complete;case-6015;48.937;7
-T05 Print and send confirmation of receipt-complete;case-6015;80111.979;8
+T05 Print and send confirmation of receipt-complete;case-6015;0.0;4
+T06 Determine necessity of stop advice-complete;case-6015;134.513;5
+T10 Determine necessity to stop indication-complete;case-6015;115.252;6
 Confirmation of receipt-complete;case-6028;0.0;1
 T06 Determine necessity of stop advice-complete;case-6028;2226.715;2
-T07-1 Draft intern advice aspect 1-complete;case-6028;72699.863;3
-T06 Determine necessity of stop advice-complete;case-6028;13368.292;4
-T10 Determine necessity to stop indication-complete;case-6028;19.079;5
-T02 Check confirmation of receipt-complete;case-6028;14.791;6
-T04 Determine confirmation of receipt-complete;case-6028;12.376;7
-T05 Print and send confirmation of receipt-complete;case-6028;27.377;8
+T10 Determine necessity to stop indication-complete;case-6028;25.601;3
+T02 Check confirmation of receipt-complete;case-6028;54.831;4
+T04 Determine confirmation of receipt-complete;case-6028;14.698;5
+T05 Print and send confirmation of receipt-complete;case-6028;19727.537;6
 Confirmation of receipt-complete;case-6032;0.0;1
 T02 Check confirmation of receipt-complete;case-6032;14.695;2
 T04 Determine confirmation of receipt-complete;case-6032;16.224;3
@@ -3861,14 +3621,14 @@ T06 Determine necessity of stop advice-complete;case-6069;22.338;5
 T10 Determine necessity to stop indication-complete;case-6069;2093.781;6
 Confirmation of receipt-complete;case-6070;0.0;1
 T02 Check confirmation of receipt-complete;case-6070;57.95;2
-T04 Determine confirmation of receipt-complete;case-6070;74404.396;3
-T05 Print and send confirmation of receipt-complete;case-6070;255.357;4
-T06 Determine necessity of stop advice-complete;case-6070;55.093;5
-T10 Determine necessity to stop indication-complete;case-6070;31.621;6
-T11 Create document X request unlicensed-complete;case-6070;6662.86;7
-T12 Check document X request unlicensed-complete;case-6070;20.588;8
-T14 Determine document X request unlicensed-complete;case-6070;12.27;9
-T15 Print document X request unlicensed-complete;case-6070;1304.135;10
+T04 Determine confirmation of receipt-complete;case-6070;21.256;3
+T05 Print and send confirmation of receipt-complete;case-6070;22691.718;4
+T06 Determine necessity of stop advice-complete;case-6070;9.634;5
+T10 Determine necessity to stop indication-complete;case-6070;16.009;6
+T11 Create document X request unlicensed-complete;case-6070;0.481;7
+T12 Check document X request unlicensed-complete;case-6070;24.9;8
+T14 Determine document X request unlicensed-complete;case-6070;23.114;9
+T15 Print document X request unlicensed-complete;case-6070;13.52;10
 Confirmation of receipt-complete;case-6071;0.0;1
 Confirmation of receipt-complete;case-6078;0.0;1
 T02 Check confirmation of receipt-complete;case-6078;66.883;2
@@ -3946,11 +3706,9 @@ T04 Determine confirmation of receipt-complete;case-6146;63696.517;5
 T05 Print and send confirmation of receipt-complete;case-6146;19727.537;6
 Confirmation of receipt-complete;case-6147;0.0;1
 Confirmation of receipt-complete;case-6148;0.0;1
-T06 Determine necessity of stop advice-complete;case-6148;36.483;2
-T02 Check confirmation of receipt-complete;case-6148;18.217;3
-T10 Determine necessity to stop indication-complete;case-6148;997.958;4
-T04 Determine confirmation of receipt-complete;case-6148;3780.84;5
-T05 Print and send confirmation of receipt-complete;case-6148;14440.595;6
+T02 Check confirmation of receipt-complete;case-6148;41.281;2
+T04 Determine confirmation of receipt-complete;case-6148;14.944;3
+T05 Print and send confirmation of receipt-complete;case-6148;27.437;4
 Confirmation of receipt-complete;case-6149;0.0;1
 T02 Check confirmation of receipt-complete;case-6149;24.368;2
 T04 Determine confirmation of receipt-complete;case-6149;18.419;3
@@ -4142,14 +3900,10 @@ T06 Determine necessity of stop advice-complete;case-6317;1049907.931;5
 T10 Determine necessity to stop indication-complete;case-6317;52.174;6
 Confirmation of receipt-complete;case-6319;0.0;1
 T02 Check confirmation of receipt-complete;case-6319;688.36;2
-T06 Determine necessity of stop advice-complete;case-6319;10.737;3
-T10 Determine necessity to stop indication-complete;case-6319;21.603;4
-T04 Determine confirmation of receipt-complete;case-6319;188.651;5
-T05 Print and send confirmation of receipt-complete;case-6319;10.258;6
-T11 Create document X request unlicensed-complete;case-6319;8.931;7
-T12 Check document X request unlicensed-complete;case-6319;24.9;8
-T14 Determine document X request unlicensed-complete;case-6319;10722.885;9
-T15 Print document X request unlicensed-complete;case-6319;154149.496;10
+T04 Determine confirmation of receipt-complete;case-6319;5845.016;3
+T06 Determine necessity of stop advice-complete;case-6319;81.899;4
+T10 Determine necessity to stop indication-complete;case-6319;22.569;5
+T05 Print and send confirmation of receipt-complete;case-6319;1222801.088;6
 Confirmation of receipt-complete;case-6320;0.0;1
 T02 Check confirmation of receipt-complete;case-6320;50.578;2
 T04 Determine confirmation of receipt-complete;case-6320;15.924;3
@@ -4183,14 +3937,6 @@ T04 Determine confirmation of receipt-complete;case-6335;12.162;3
 T05 Print and send confirmation of receipt-complete;case-6335;10.078;4
 T06 Determine necessity of stop advice-complete;case-6335;1117200.049;5
 T10 Determine necessity to stop indication-complete;case-6335;51.294;6
-T16 Report reasons to hold request-complete;case-6335;14844.856;7
-T17 Check report Y to stop indication-complete;case-6335;38.585;8
-T18 Adjust report Y to stop indicition-complete;case-6335;12.616;9
-T17 Check report Y to stop indication-complete;case-6335;39.234;10
-T18 Adjust report Y to stop indicition-complete;case-6335;19.308;11
-T17 Check report Y to stop indication-complete;case-6335;52.28;12
-T19 Determine report Y to stop indication-complete;case-6335;44.939;13
-T20 Print report Y to stop indication-complete;case-6335;16.076;14
 Confirmation of receipt-complete;case-6339;0.0;1
 T06 Determine necessity of stop advice-complete;case-6339;286.745;2
 T02 Check confirmation of receipt-complete;case-6339;596989.595;3
@@ -4246,8 +3992,7 @@ T02 Check confirmation of receipt-complete;case-6374;249528.366;2
 T04 Determine confirmation of receipt-complete;case-6374;2036.292;3
 T05 Print and send confirmation of receipt-complete;case-6374;334693.203;4
 T06 Determine necessity of stop advice-complete;case-6374;5088496.721;5
-T07-1 Draft intern advice aspect 1-complete;case-6374;17.241;6
-T08 Draft and send request for advice-complete;case-6374;28171.46652087703;7
+T10 Determine necessity to stop indication-complete;case-6374;56.683;6
 Confirmation of receipt-complete;case-6375;0.0;1
 T06 Determine necessity of stop advice-complete;case-6375;30.461;2
 T10 Determine necessity to stop indication-complete;case-6375;18.552;3
@@ -4293,10 +4038,8 @@ T10 Determine necessity to stop indication-complete;case-6383;27.043;6
 Confirmation of receipt-complete;case-6384;0.0;1
 Confirmation of receipt-complete;case-6385;0.0;1
 T02 Check confirmation of receipt-complete;case-6385;208.583;2
-T06 Determine necessity of stop advice-complete;case-6385;393.572;3
-T04 Determine confirmation of receipt-complete;case-6385;14.645;4
-T10 Determine necessity to stop indication-complete;case-6385;105.774;5
-T05 Print and send confirmation of receipt-complete;case-6385;340021.936;6
+T04 Determine confirmation of receipt-complete;case-6385;37.871;3
+T05 Print and send confirmation of receipt-complete;case-6385;30.433;4
 Confirmation of receipt-complete;case-6386;0.0;1
 T02 Check confirmation of receipt-complete;case-6386;19.618;2
 T04 Determine confirmation of receipt-complete;case-6386;16.867;3
@@ -4351,10 +4094,6 @@ T04 Determine confirmation of receipt-complete;case-6413;1382.66;3
 T05 Print and send confirmation of receipt-complete;case-6413;322254.965;4
 T06 Determine necessity of stop advice-complete;case-6413;102942.635;5
 T10 Determine necessity to stop indication-complete;case-6413;57.95;6
-T16 Report reasons to hold request-complete;case-6413;82.55;7
-T17 Check report Y to stop indication-complete;case-6413;14.478;8
-T19 Determine report Y to stop indication-complete;case-6413;48.814;9
-T20 Print report Y to stop indication-complete;case-6413;16.076;10
 Confirmation of receipt-complete;case-6415;0.0;1
 T02 Check confirmation of receipt-complete;case-6415;26.898;2
 T06 Determine necessity of stop advice-complete;case-6415;740.456;3
@@ -4373,11 +4112,9 @@ T02 Check confirmation of receipt-complete;case-6437;0.592;3
 Confirmation of receipt-complete;case-6438;0.0;1
 T02 Check confirmation of receipt-complete;case-6438;254.163;2
 T06 Determine necessity of stop advice-complete;case-6438;689.274;3
-T07-1 Draft intern advice aspect 1-complete;case-6438;68.43;4
-T06 Determine necessity of stop advice-complete;case-6438;17.79;5
-T10 Determine necessity to stop indication-complete;case-6438;44.5;6
-T04 Determine confirmation of receipt-complete;case-6438;17.453;7
-T05 Print and send confirmation of receipt-complete;case-6438;24.652;8
+T10 Determine necessity to stop indication-complete;case-6438;34.872;4
+T04 Determine confirmation of receipt-complete;case-6438;2069.881;5
+T05 Print and send confirmation of receipt-complete;case-6438;109760.817;6
 Confirmation of receipt-complete;case-6459;0.0;1
 T02 Check confirmation of receipt-complete;case-6459;33.435;2
 T06 Determine necessity of stop advice-complete;case-6459;66.797;3
@@ -4546,7 +4283,6 @@ T04 Determine confirmation of receipt-complete;case-6644;75.969;3
 T06 Determine necessity of stop advice-complete;case-6644;274687.092;4
 T10 Determine necessity to stop indication-complete;case-6644;22.811;5
 T05 Print and send confirmation of receipt-complete;case-6644;176061.963;6
-T11 Create document X request unlicensed-complete;case-6644;1278115.641;7
 Confirmation of receipt-complete;case-6645;0.0;1
 T06 Determine necessity of stop advice-complete;case-6645;44.422;2
 T10 Determine necessity to stop indication-complete;case-6645;26.593;3
@@ -4716,13 +4452,11 @@ T05 Print and send confirmation of receipt-complete;case-6715;10.017;4
 T06 Determine necessity of stop advice-complete;case-6715;9.48;5
 T10 Determine necessity to stop indication-complete;case-6715;14.284;6
 Confirmation of receipt-complete;case-6719;0.0;1
-T06 Determine necessity of stop advice-complete;case-6719;35.538;2
-T10 Determine necessity to stop indication-complete;case-6719;15.173;3
-T02 Check confirmation of receipt-complete;case-6719;167945.705;4
-T03 Adjust confirmation of receipt-complete;case-6719;2357924.811;5
-T02 Check confirmation of receipt-complete;case-6719;167.135;6
-T04 Determine confirmation of receipt-complete;case-6719;11.994;7
-T05 Print and send confirmation of receipt-complete;case-6719;14.487;8
+T02 Check confirmation of receipt-complete;case-6719;39.01;2
+T06 Determine necessity of stop advice-complete;case-6719;75.311;3
+T10 Determine necessity to stop indication-complete;case-6719;192.644;4
+T04 Determine confirmation of receipt-complete;case-6719;16.678;5
+T05 Print and send confirmation of receipt-complete;case-6719;25.943;6
 Confirmation of receipt-complete;case-6724;0.0;1
 Confirmation of receipt-complete;case-6737;0.0;1
 T02 Check confirmation of receipt-complete;case-6737;18.337;2
@@ -4767,7 +4501,6 @@ T05 Print and send confirmation of receipt-complete;case-6749;75108.384;6
 Confirmation of receipt-complete;case-6751;0.0;1
 T02 Check confirmation of receipt-complete;case-6751;74.052;2
 T06 Determine necessity of stop advice-complete;case-6751;1235444.189;3
-T03 Adjust confirmation of receipt-complete;case-6751;0.707;4
 Confirmation of receipt-complete;case-6757;0.0;1
 T02 Check confirmation of receipt-complete;case-6757;36.721;2
 T04 Determine confirmation of receipt-complete;case-6757;20.766;3
@@ -4871,12 +4604,10 @@ T06 Determine necessity of stop advice-complete;case-6848;11.149;5
 T10 Determine necessity to stop indication-complete;case-6848;15.485;6
 Confirmation of receipt-complete;case-6862;0.0;1
 T06 Determine necessity of stop advice-complete;case-6862;657.313;2
-T07-1 Draft intern advice aspect 1-complete;case-6862;2742527.974;3
-T06 Determine necessity of stop advice-complete;case-6862;19.495;4
-T10 Determine necessity to stop indication-complete;case-6862;77.823;5
-T02 Check confirmation of receipt-complete;case-6862;4874.137;6
-T04 Determine confirmation of receipt-complete;case-6862;16.401;7
-T05 Print and send confirmation of receipt-complete;case-6862;10224.91;8
+T10 Determine necessity to stop indication-complete;case-6862;27.102;3
+T02 Check confirmation of receipt-complete;case-6862;19.833;4
+T04 Determine confirmation of receipt-complete;case-6862;24.214;5
+T05 Print and send confirmation of receipt-complete;case-6862;12.384;6
 Confirmation of receipt-complete;case-6864;0.0;1
 T02 Check confirmation of receipt-complete;case-6864;19.702;2
 T04 Determine confirmation of receipt-complete;case-6864;16.021;3
@@ -4908,15 +4639,9 @@ Confirmation of receipt-complete;case-6901;0.0;1
 Confirmation of receipt-complete;case-6902;0.0;1
 T02 Check confirmation of receipt-complete;case-6902;47.145;2
 T04 Determine confirmation of receipt-complete;case-6902;63.221;3
-T06 Determine necessity of stop advice-complete;case-6902;10.093;4
-T07-5 Draft intern advice aspect 5-complete;case-6902;417587.9451929494;5
-T06 Determine necessity of stop advice-complete;case-6902;34.228;6
-T07-5 Draft intern advice aspect 5-complete;case-6902;283.498;7
-T06 Determine necessity of stop advice-complete;case-6902;0.727;8
-T07-5 Draft intern advice aspect 5-complete;case-6902;43.624;9
-T06 Determine necessity of stop advice-complete;case-6902;18.791;10
-T10 Determine necessity to stop indication-complete;case-6902;16.483;11
-T05 Print and send confirmation of receipt-complete;case-6902;241916.244;12
+T05 Print and send confirmation of receipt-complete;case-6902;23.134;4
+T06 Determine necessity of stop advice-complete;case-6902;66.589;5
+T10 Determine necessity to stop indication-complete;case-6902;17.338;6
 Confirmation of receipt-complete;case-6904;0.0;1
 T02 Check confirmation of receipt-complete;case-6904;22.686;2
 T04 Determine confirmation of receipt-complete;case-6904;12.553;3
@@ -4995,11 +4720,9 @@ T06 Determine necessity of stop advice-complete;case-6987;13.363;4
 T10 Determine necessity to stop indication-complete;case-6987;16.823;5
 T05 Print and send confirmation of receipt-complete;case-6987;19899.603;6
 Confirmation of receipt-complete;case-6988;0.0;1
-T06 Determine necessity of stop advice-complete;case-6988;509.004;2
-T02 Check confirmation of receipt-complete;case-6988;15.717;3
-T10 Determine necessity to stop indication-complete;case-6988;15.287;4
-T04 Determine confirmation of receipt-complete;case-6988;32.976;5
-T05 Print and send confirmation of receipt-complete;case-6988;13.764;6
+T02 Check confirmation of receipt-complete;case-6988;1227.156;2
+T04 Determine confirmation of receipt-complete;case-6988;24.746;3
+T05 Print and send confirmation of receipt-complete;case-6988;11015.853;4
 Confirmation of receipt-complete;case-6989;0.0;1
 T02 Check confirmation of receipt-complete;case-6989;14.199;2
 T04 Determine confirmation of receipt-complete;case-6989;16.473;3
@@ -5041,11 +4764,9 @@ T04 Determine confirmation of receipt-complete;case-6997;14.548;4
 T05 Print and send confirmation of receipt-complete;case-6997;13.441;5
 T10 Determine necessity to stop indication-complete;case-6997;874971.016;6
 Confirmation of receipt-complete;case-6998;0.0;1
-T06 Determine necessity of stop advice-complete;case-6998;49.665;2
-T02 Check confirmation of receipt-complete;case-6998;16.612;3
-T10 Determine necessity to stop indication-complete;case-6998;46.312;4
-T04 Determine confirmation of receipt-complete;case-6998;608897.898;5
-T05 Print and send confirmation of receipt-complete;case-6998;108617.149;6
+T02 Check confirmation of receipt-complete;case-6998;18.388;2
+T04 Determine confirmation of receipt-complete;case-6998;12.598;3
+T05 Print and send confirmation of receipt-complete;case-6998;22.405;4
 Confirmation of receipt-complete;case-6999;0.0;1
 T02 Check confirmation of receipt-complete;case-6999;284.696;2
 T04 Determine confirmation of receipt-complete;case-6999;41.342;3
@@ -5099,11 +4820,7 @@ T02 Check confirmation of receipt-complete;case-7016;2883.685;2
 T04 Determine confirmation of receipt-complete;case-7016;26.515;3
 T05 Print and send confirmation of receipt-complete;case-7016;147.008;4
 T06 Determine necessity of stop advice-complete;case-7016;477.095;5
-T07-1 Draft intern advice aspect 1-complete;case-7016;61.805;6
-T08 Draft and send request for advice-complete;case-7016;50.232;7
-T09-4 Process or receive external advice from party 4-complete;case-7016;22.824;8
-T06 Determine necessity of stop advice-complete;case-7016;36.76;9
-T10 Determine necessity to stop indication-complete;case-7016;35.994;10
+T10 Determine necessity to stop indication-complete;case-7016;34.545;6
 Confirmation of receipt-complete;case-7036;0.0;1
 Confirmation of receipt-complete;case-7037;0.0;1
 T02 Check confirmation of receipt-complete;case-7037;17.116;2
@@ -5119,11 +4836,9 @@ T05 Print and send confirmation of receipt-complete;case-7043;11.28;4
 T06 Determine necessity of stop advice-complete;case-7043;64834.328;5
 T10 Determine necessity to stop indication-complete;case-7043;172.697;6
 Confirmation of receipt-complete;case-7045;0.0;1
-T06 Determine necessity of stop advice-complete;case-7045;16.681;2
-T02 Check confirmation of receipt-complete;case-7045;70.801;3
-T10 Determine necessity to stop indication-complete;case-7045;16.676;4
-T04 Determine confirmation of receipt-complete;case-7045;52.054;5
-T05 Print and send confirmation of receipt-complete;case-7045;16.59;6
+T02 Check confirmation of receipt-complete;case-7045;27.763;2
+T04 Determine confirmation of receipt-complete;case-7045;12.416;3
+T05 Print and send confirmation of receipt-complete;case-7045;571.132;4
 Confirmation of receipt-complete;case-7047;0.0;1
 T02 Check confirmation of receipt-complete;case-7047;39.132;2
 T04 Determine confirmation of receipt-complete;case-7047;16.173;3
@@ -5213,9 +4928,7 @@ T02 Check confirmation of receipt-complete;case-709;126.581;2
 T04 Determine confirmation of receipt-complete;case-709;24.063;3
 T05 Print and send confirmation of receipt-complete;case-709;34.696;4
 T06 Determine necessity of stop advice-complete;case-709;531135.379;5
-T07-1 Draft intern advice aspect 1-complete;case-709;41.431;6
-T06 Determine necessity of stop advice-complete;case-709;81.899;7
-T10 Determine necessity to stop indication-complete;case-709;53.004;8
+T10 Determine necessity to stop indication-complete;case-709;402.16;6
 Confirmation of receipt-complete;case-7091;0.0;1
 T02 Check confirmation of receipt-complete;case-7091;1959.802;2
 T04 Determine confirmation of receipt-complete;case-7091;12.089;3
@@ -5240,10 +4953,6 @@ T04 Determine confirmation of receipt-complete;case-7094;22.507;3
 T05 Print and send confirmation of receipt-complete;case-7094;20.486;4
 T06 Determine necessity of stop advice-complete;case-7094;21.716;5
 T10 Determine necessity to stop indication-complete;case-7094;59.503;6
-T16 Report reasons to hold request-complete;case-7094;172.269;7
-T17 Check report Y to stop indication-complete;case-7094;85.854;8
-T19 Determine report Y to stop indication-complete;case-7094;92.714;9
-T20 Print report Y to stop indication-complete;case-7094;13.442;10
 Confirmation of receipt-complete;case-7108;0.0;1
 T02 Check confirmation of receipt-complete;case-7108;24.115;2
 T04 Determine confirmation of receipt-complete;case-7108;18.183;3
@@ -5300,10 +5009,8 @@ T06 Determine necessity of stop advice-complete;case-7131;19.69;5
 T10 Determine necessity to stop indication-complete;case-7131;946303.709;6
 Confirmation of receipt-complete;case-7132;0.0;1
 T02 Check confirmation of receipt-complete;case-7132;259179.305;2
-T06 Determine necessity of stop advice-complete;case-7132;13.42;3
-T04 Determine confirmation of receipt-complete;case-7132;16.919;4
-T10 Determine necessity to stop indication-complete;case-7132;12.248;5
-T05 Print and send confirmation of receipt-complete;case-7132;33.273;6
+T04 Determine confirmation of receipt-complete;case-7132;15.944;3
+T05 Print and send confirmation of receipt-complete;case-7132;34.064;4
 Confirmation of receipt-complete;case-7134;0.0;1
 T02 Check confirmation of receipt-complete;case-7134;13.501;2
 T04 Determine confirmation of receipt-complete;case-7134;10.408;3
@@ -5380,10 +5087,8 @@ T10 Determine necessity to stop indication-complete;case-7264;30.816;5
 T05 Print and send confirmation of receipt-complete;case-7264;12715.137;6
 Confirmation of receipt-complete;case-7265;0.0;1
 T02 Check confirmation of receipt-complete;case-7265;84.546;2
-T06 Determine necessity of stop advice-complete;case-7265;84.849;3
-T04 Determine confirmation of receipt-complete;case-7265;15.527;4
-T10 Determine necessity to stop indication-complete;case-7265;19.144;5
-T05 Print and send confirmation of receipt-complete;case-7265;5284.974;6
+T04 Determine confirmation of receipt-complete;case-7265;18.883;3
+T05 Print and send confirmation of receipt-complete;case-7265;10972.673;4
 Confirmation of receipt-complete;case-7266;0.0;1
 T02 Check confirmation of receipt-complete;case-7266;46.828;2
 T06 Determine necessity of stop advice-complete;case-7266;65612.057;3
@@ -5451,15 +5156,15 @@ T05 Print and send confirmation of receipt-complete;case-7301;12.833;4
 T06 Determine necessity of stop advice-complete;case-7301;28.286;5
 T10 Determine necessity to stop indication-complete;case-7301;14.459;6
 Confirmation of receipt-complete;case-7305;0.0;1
-T02 Check confirmation of receipt-complete;case-7305;23.279;2
-T04 Determine confirmation of receipt-complete;case-7305;13.227;3
-T05 Print and send confirmation of receipt-complete;case-7305;367841.873;4
-T06 Determine necessity of stop advice-complete;case-7305;24.481;5
-T10 Determine necessity to stop indication-complete;case-7305;43.305;6
-T11 Create document X request unlicensed-complete;case-7305;4783.855;7
-T12 Check document X request unlicensed-complete;case-7305;99.107;8
-T14 Determine document X request unlicensed-complete;case-7305;3575.129;9
-T15 Print document X request unlicensed-complete;case-7305;72.824;10
+T02 Check confirmation of receipt-complete;case-7305;1117.241;2
+T04 Determine confirmation of receipt-complete;case-7305;21.89;3
+T05 Print and send confirmation of receipt-complete;case-7305;19.685;4
+T06 Determine necessity of stop advice-complete;case-7305;1964706.047;5
+T10 Determine necessity to stop indication-complete;case-7305;591.978;6
+T11 Create document X request unlicensed-complete;case-7305;7764094.62;7
+T12 Check document X request unlicensed-complete;case-7305;35.679;8
+T14 Determine document X request unlicensed-complete;case-7305;23.114;9
+T15 Print document X request unlicensed-complete;case-7305;69033.639;10
 Confirmation of receipt-complete;case-7310;0.0;1
 T02 Check confirmation of receipt-complete;case-7310;40.384;2
 T04 Determine confirmation of receipt-complete;case-7310;35.662;3
@@ -5509,13 +5214,11 @@ T06 Determine necessity of stop advice-complete;case-7349;14.142;4
 T10 Determine necessity to stop indication-complete;case-7349;20.295;5
 T05 Print and send confirmation of receipt-complete;case-7349;92214.059;6
 Confirmation of receipt-complete;case-7358;0.0;1
-T06 Determine necessity of stop advice-complete;case-7358;96.853;2
-T02 Check confirmation of receipt-complete;case-7358;54.231;3
-T04 Determine confirmation of receipt-complete;case-7358;14.398;4
-T05 Print and send confirmation of receipt-complete;case-7358;87042.977;5
-T07-2 Draft intern advice aspect 2-complete;case-7358;1641065.74;6
-T06 Determine necessity of stop advice-complete;case-7358;6286.163;7
-T10 Determine necessity to stop indication-complete;case-7358;19.135;8
+T02 Check confirmation of receipt-complete;case-7358;14.508;2
+T04 Determine confirmation of receipt-complete;case-7358;147.122;3
+T05 Print and send confirmation of receipt-complete;case-7358;419124.105;4
+T06 Determine necessity of stop advice-complete;case-7358;5571.142;5
+T10 Determine necessity to stop indication-complete;case-7358;71.177;6
 Confirmation of receipt-complete;case-7362;0.0;1
 T06 Determine necessity of stop advice-complete;case-7362;27.317;2
 T02 Check confirmation of receipt-complete;case-7362;17.624;3
@@ -5571,9 +5274,7 @@ T05 Print and send confirmation of receipt-complete;case-7425;17.08;6
 Confirmation of receipt-complete;case-7426;0.0;1
 T02 Check confirmation of receipt-complete;case-7426;18.42;2
 T04 Determine confirmation of receipt-complete;case-7426;24.199;3
-T06 Determine necessity of stop advice-complete;case-7426;35.244;4
-T05 Print and send confirmation of receipt-complete;case-7426;17.956;5
-T10 Determine necessity to stop indication-complete;case-7426;22.47;6
+T05 Print and send confirmation of receipt-complete;case-7426;38.874;4
 Confirmation of receipt-complete;case-7442;0.0;1
 T02 Check confirmation of receipt-complete;case-7442;12.776;2
 T04 Determine confirmation of receipt-complete;case-7442;15.358;3
@@ -5633,15 +5334,11 @@ T05 Print and send confirmation of receipt-complete;case-7525;12.654;4
 T06 Determine necessity of stop advice-complete;case-7525;6544.164;5
 T10 Determine necessity to stop indication-complete;case-7525;11341.931;6
 Confirmation of receipt-complete;case-7535;0.0;1
-T06 Determine necessity of stop advice-complete;case-7535;41.294;2
-T10 Determine necessity to stop indication-complete;case-7535;23.713;3
-T02 Check confirmation of receipt-complete;case-7535;65.06;4
-T04 Determine confirmation of receipt-complete;case-7535;32.192;5
-T05 Print and send confirmation of receipt-complete;case-7535;43.98;6
-T11 Create document X request unlicensed-complete;case-7535;67832.681;7
-T12 Check document X request unlicensed-complete;case-7535;5525.051;8
-T14 Determine document X request unlicensed-complete;case-7535;57.49;9
-T15 Print document X request unlicensed-complete;case-7535;599086.115;10
+T02 Check confirmation of receipt-complete;case-7535;964.3;2
+T06 Determine necessity of stop advice-complete;case-7535;31.934;3
+T10 Determine necessity to stop indication-complete;case-7535;21.085;4
+T04 Determine confirmation of receipt-complete;case-7535;16.772;5
+T05 Print and send confirmation of receipt-complete;case-7535;70481.169;6
 Confirmation of receipt-complete;case-7541;0.0;1
 T06 Determine necessity of stop advice-complete;case-7541;15.475;2
 T02 Check confirmation of receipt-complete;case-7541;12.471;3
@@ -5722,10 +5419,10 @@ T04 Determine confirmation of receipt-complete;case-7590;13.652;5
 T05 Print and send confirmation of receipt-complete;case-7590;12.964;6
 Confirmation of receipt-complete;case-7612;0.0;1
 T06 Determine necessity of stop advice-complete;case-7612;38.496;2
-T02 Check confirmation of receipt-complete;case-7612;408176.268;3
-T04 Determine confirmation of receipt-complete;case-7612;50.895;4
-T05 Print and send confirmation of receipt-complete;case-7612;116.489;5
-T10 Determine necessity to stop indication-complete;case-7612;1396.749;6
+T02 Check confirmation of receipt-complete;case-7612;49.056;3
+T04 Determine confirmation of receipt-complete;case-7612;25.31;4
+T05 Print and send confirmation of receipt-complete;case-7612;57.195;5
+T10 Determine necessity to stop indication-complete;case-7612;28.415;6
 Confirmation of receipt-complete;case-7628;0.0;1
 T02 Check confirmation of receipt-complete;case-7628;17.01;2
 T04 Determine confirmation of receipt-complete;case-7628;30.903;3
@@ -5829,15 +5526,11 @@ T10 Determine necessity to stop indication-complete;case-7699;12.685;6
 Confirmation of receipt-complete;case-7700;0.0;1
 T02 Check confirmation of receipt-complete;case-7700;75.149;2
 T04 Determine confirmation of receipt-complete;case-7700;17.893;3
-T06 Determine necessity of stop advice-complete;case-7700;12.803;4
-T05 Print and send confirmation of receipt-complete;case-7700;13.549;5
-T10 Determine necessity to stop indication-complete;case-7700;56.397;6
+T05 Print and send confirmation of receipt-complete;case-7700;106.484;4
 Confirmation of receipt-complete;case-7750;0.0;1
 T02 Check confirmation of receipt-complete;case-7750;33.373;2
-T06 Determine necessity of stop advice-complete;case-7750;22.193;3
-T04 Determine confirmation of receipt-complete;case-7750;33.714;4
-T10 Determine necessity to stop indication-complete;case-7750;15.133;5
-T05 Print and send confirmation of receipt-complete;case-7750;239.95;6
+T04 Determine confirmation of receipt-complete;case-7750;19.127;3
+T05 Print and send confirmation of receipt-complete;case-7750;12.093;4
 Confirmation of receipt-complete;case-7751;0.0;1
 T02 Check confirmation of receipt-complete;case-7751;30.251;2
 T04 Determine confirmation of receipt-complete;case-7751;24.894;3
@@ -5924,14 +5617,6 @@ T04 Determine confirmation of receipt-complete;case-7815;17.99;3
 T05 Print and send confirmation of receipt-complete;case-7815;15.17;4
 T06 Determine necessity of stop advice-complete;case-7815;44.772;5
 T10 Determine necessity to stop indication-complete;case-7815;37.483;6
-T16 Report reasons to hold request-complete;case-7815;388.02;7
-T17 Check report Y to stop indication-complete;case-7815;29.137;8
-T18 Adjust report Y to stop indicition-complete;case-7815;22.141;9
-T17 Check report Y to stop indication-complete;case-7815;14.348;10
-T18 Adjust report Y to stop indicition-complete;case-7815;18.508;11
-T17 Check report Y to stop indication-complete;case-7815;30.622;12
-T19 Determine report Y to stop indication-complete;case-7815;39.849;13
-T20 Print report Y to stop indication-complete;case-7815;21.831;14
 Confirmation of receipt-complete;case-7817;0.0;1
 T02 Check confirmation of receipt-complete;case-7817;435328.606;2
 T04 Determine confirmation of receipt-complete;case-7817;50.628;3
@@ -6010,10 +5695,10 @@ T06 Determine necessity of stop advice-complete;case-7915;42.403;5
 T10 Determine necessity to stop indication-complete;case-7915;84.959;6
 Confirmation of receipt-complete;case-7917;0.0;1
 T02 Check confirmation of receipt-complete;case-7917;23.949;2
-T04 Determine confirmation of receipt-complete;case-7917;736.918;3
-T05 Print and send confirmation of receipt-complete;case-7917;14.197;4
-T06 Determine necessity of stop advice-complete;case-7917;21.503;5
-T10 Determine necessity to stop indication-complete;case-7917;15.173;6
+T04 Determine confirmation of receipt-complete;case-7917;498163.588;3
+T05 Print and send confirmation of receipt-complete;case-7917;12.813;4
+T06 Determine necessity of stop advice-complete;case-7917;45.646;5
+T10 Determine necessity to stop indication-complete;case-7917;18.409;6
 Confirmation of receipt-complete;case-7918;0.0;1
 T02 Check confirmation of receipt-complete;case-7918;47.572;2
 T04 Determine confirmation of receipt-complete;case-7918;16.456;3
@@ -6046,17 +5731,11 @@ T05 Print and send confirmation of receipt-complete;case-7929;446.332;4
 T06 Determine necessity of stop advice-complete;case-7929;22.3;5
 T10 Determine necessity to stop indication-complete;case-7929;27.749;6
 Confirmation of receipt-complete;case-7953;0.0;1
-T06 Determine necessity of stop advice-complete;case-7953;233856.834;2
-T10 Determine necessity to stop indication-complete;case-7953;21.518;3
-T02 Check confirmation of receipt-complete;case-7953;21.098;4
-T03 Adjust confirmation of receipt-complete;case-7953;323.033;5
-T02 Check confirmation of receipt-complete;case-7953;329.731;6
-T03 Adjust confirmation of receipt-complete;case-7953;6161.652;7
-T02 Check confirmation of receipt-complete;case-7953;50.262;8
-T03 Adjust confirmation of receipt-complete;case-7953;1106.605;9
-T02 Check confirmation of receipt-complete;case-7953;41.108;10
-T04 Determine confirmation of receipt-complete;case-7953;31.38;11
-T05 Print and send confirmation of receipt-complete;case-7953;171962.824;12
+T06 Determine necessity of stop advice-complete;case-7953;18.951;2
+T10 Determine necessity to stop indication-complete;case-7953;29.811;3
+T02 Check confirmation of receipt-complete;case-7953;21.753;4
+T04 Determine confirmation of receipt-complete;case-7953;74.144;5
+T05 Print and send confirmation of receipt-complete;case-7953;11637.352;6
 Confirmation of receipt-complete;case-7956;0.0;1
 T02 Check confirmation of receipt-complete;case-7956;41.781;2
 T04 Determine confirmation of receipt-complete;case-7956;24.214;3
@@ -6083,12 +5762,10 @@ T06 Determine necessity of stop advice-complete;case-7960;45.532;5
 T10 Determine necessity to stop indication-complete;case-7960;26.438;6
 Confirmation of receipt-complete;case-7961;0.0;1
 T02 Check confirmation of receipt-complete;case-7961;34.471;2
-T03 Adjust confirmation of receipt-complete;case-7961;17.778;3
-T02 Check confirmation of receipt-complete;case-7961;1039660.844;4
-T04 Determine confirmation of receipt-complete;case-7961;27.648;5
-T05 Print and send confirmation of receipt-complete;case-7961;26.158;6
-T06 Determine necessity of stop advice-complete;case-7961;22.952;7
-T10 Determine necessity to stop indication-complete;case-7961;42.479;8
+T04 Determine confirmation of receipt-complete;case-7961;519.131;3
+T05 Print and send confirmation of receipt-complete;case-7961;241916.244;4
+T06 Determine necessity of stop advice-complete;case-7961;118.791;5
+T10 Determine necessity to stop indication-complete;case-7961;14.698;6
 Confirmation of receipt-complete;case-7976;0.0;1
 T06 Determine necessity of stop advice-complete;case-7976;23.92;2
 T02 Check confirmation of receipt-complete;case-7976;16.26;3
@@ -6104,11 +5781,9 @@ T05 Print and send confirmation of receipt-complete;case-7978;618354.978;6
 Confirmation of receipt-complete;case-7980;0.0;1
 T02 Check confirmation of receipt-complete;case-7980;9158.791;2
 T06 Determine necessity of stop advice-complete;case-7980;29.839;3
-T07-1 Draft intern advice aspect 1-complete;case-7980;37.707;4
-T06 Determine necessity of stop advice-complete;case-7980;396.668;5
-T10 Determine necessity to stop indication-complete;case-7980;1098.997;6
-T04 Determine confirmation of receipt-complete;case-7980;17.732;7
-T05 Print and send confirmation of receipt-complete;case-7980;241916.244;8
+T10 Determine necessity to stop indication-complete;case-7980;694.397;4
+T04 Determine confirmation of receipt-complete;case-7980;2263.465;5
+T05 Print and send confirmation of receipt-complete;case-7980;16.541;6
 Confirmation of receipt-complete;case-7981;0.0;1
 T02 Check confirmation of receipt-complete;case-7981;1197.981;2
 T04 Determine confirmation of receipt-complete;case-7981;19.764;3
@@ -6153,9 +5828,7 @@ T10 Determine necessity to stop indication-complete;case-8012;61.667;6
 Confirmation of receipt-complete;case-8014;0.0;1
 T02 Check confirmation of receipt-complete;case-8014;187.269;2
 T04 Determine confirmation of receipt-complete;case-8014;25.31;3
-T06 Determine necessity of stop advice-complete;case-8014;33.177;4
-T05 Print and send confirmation of receipt-complete;case-8014;82.232;5
-T10 Determine necessity to stop indication-complete;case-8014;49.906;6
+T05 Print and send confirmation of receipt-complete;case-8014;22.745;4
 Confirmation of receipt-complete;case-8015;0.0;1
 T02 Check confirmation of receipt-complete;case-8015;62.342;2
 T04 Determine confirmation of receipt-complete;case-8015;32.768;3
@@ -6198,16 +5871,13 @@ T02 Check confirmation of receipt-complete;case-8047;7865.669;2
 T06 Determine necessity of stop advice-complete;case-8047;3407.196;3
 T10 Determine necessity to stop indication-complete;case-8047;231.309;4
 T04 Determine confirmation of receipt-complete;case-8047;32401.758;5
-T03 Adjust confirmation of receipt-complete;case-8047;20.223;6
-T02 Check confirmation of receipt-complete;case-8047;242.916;7
+T05 Print and send confirmation of receipt-complete;case-8047;82961.682;6
 Confirmation of receipt-complete;case-8061;0.0;1
 T02 Check confirmation of receipt-complete;case-8061;209.763;2
 T04 Determine confirmation of receipt-complete;case-8061;66497.992;3
 T05 Print and send confirmation of receipt-complete;case-8061;1364.387;4
 T06 Determine necessity of stop advice-complete;case-8061;1733.787;5
-T07-1 Draft intern advice aspect 1-complete;case-8061;72699.863;6
-T06 Determine necessity of stop advice-complete;case-8061;14.303;7
-T10 Determine necessity to stop indication-complete;case-8061;23.564;8
+T10 Determine necessity to stop indication-complete;case-8061;26.654;6
 Confirmation of receipt-complete;case-8068;0.0;1
 T06 Determine necessity of stop advice-complete;case-8068;35.211;2
 T02 Check confirmation of receipt-complete;case-8068;173.259;3
@@ -6222,8 +5892,8 @@ T06 Determine necessity of stop advice-complete;case-8077;257.269;5
 T10 Determine necessity to stop indication-complete;case-8077;167.044;6
 Confirmation of receipt-complete;case-8079;0.0;1
 T02 Check confirmation of receipt-complete;case-8079;26321.51;2
-T03 Adjust confirmation of receipt-complete;case-8079;38.107;3
-T02 Check confirmation of receipt-complete;case-8079;57600.807;4
+T04 Determine confirmation of receipt-complete;case-8079;29.958;3
+T06 Determine necessity of stop advice-complete;case-8079;1066.741;4
 Confirmation of receipt-complete;case-8081;0.0;1
 T02 Check confirmation of receipt-complete;case-8081;28.489;2
 T04 Determine confirmation of receipt-complete;case-8081;23.154;3
@@ -6249,11 +5919,9 @@ T05 Print and send confirmation of receipt-complete;case-8084;22.465;4
 T06 Determine necessity of stop advice-complete;case-8084;25.918;5
 T10 Determine necessity to stop indication-complete;case-8084;40.593;6
 Confirmation of receipt-complete;case-8092;0.0;1
-T06 Determine necessity of stop advice-complete;case-8092;282.429;2
-T02 Check confirmation of receipt-complete;case-8092;32.87;3
-T10 Determine necessity to stop indication-complete;case-8092;18.777;4
-T04 Determine confirmation of receipt-complete;case-8092;47.996;5
-T05 Print and send confirmation of receipt-complete;case-8092;57.401;6
+T02 Check confirmation of receipt-complete;case-8092;65.06;2
+T04 Determine confirmation of receipt-complete;case-8092;775.393;3
+T05 Print and send confirmation of receipt-complete;case-8092;15.963;4
 Confirmation of receipt-complete;case-8093;0.0;1
 T02 Check confirmation of receipt-complete;case-8093;31.611;2
 T04 Determine confirmation of receipt-complete;case-8093;32.287;3
@@ -6276,9 +5944,7 @@ T10 Determine necessity to stop indication-complete;case-8100;5995.242;6
 Confirmation of receipt-complete;case-8102;0.0;1
 T02 Check confirmation of receipt-complete;case-8102;94.476;2
 T04 Determine confirmation of receipt-complete;case-8102;32.116;3
-T06 Determine necessity of stop advice-complete;case-8102;24.166;4
-T05 Print and send confirmation of receipt-complete;case-8102;29.467;5
-T10 Determine necessity to stop indication-complete;case-8102;23.428;6
+T05 Print and send confirmation of receipt-complete;case-8102;21.004;4
 Confirmation of receipt-complete;case-8104;0.0;1
 Confirmation of receipt-complete;case-8105;0.0;1
 T02 Check confirmation of receipt-complete;case-8105;813.339;2
@@ -6444,12 +6110,9 @@ T10 Determine necessity to stop indication-complete;case-8297;33.247;6
 Confirmation of receipt-complete;case-8318;0.0;1
 T02 Check confirmation of receipt-complete;case-8318;33.996;2
 T06 Determine necessity of stop advice-complete;case-8318;104.985;3
-T10 Determine necessity to stop indication-complete;case-8318;15.812;4
-T04 Determine confirmation of receipt-complete;case-8318;16.054;5
-T03 Adjust confirmation of receipt-complete;case-8318;1752260.228;6
-T02 Check confirmation of receipt-complete;case-8318;15.449;7
-T04 Determine confirmation of receipt-complete;case-8318;22.719;8
-T05 Print and send confirmation of receipt-complete;case-8318;64302.428;9
+T10 Determine necessity to stop indication-complete;case-8318;24.948;4
+T04 Determine confirmation of receipt-complete;case-8318;48.551;5
+T05 Print and send confirmation of receipt-complete;case-8318;14.223;6
 Confirmation of receipt-complete;case-8320;0.0;1
 T06 Determine necessity of stop advice-complete;case-8320;17544.095;2
 T02 Check confirmation of receipt-complete;case-8320;27.363;3
@@ -6463,11 +6126,10 @@ T05 Print and send confirmation of receipt-complete;case-8321;67.349;4
 T06 Determine necessity of stop advice-complete;case-8321;66.062;5
 T10 Determine necessity to stop indication-complete;case-8321;75.004;6
 Confirmation of receipt-complete;case-8323;0.0;1
-T02 Check confirmation of receipt-complete;case-8323;21.794;2
-T04 Determine confirmation of receipt-complete;case-8323;73.834;3
-T06 Determine necessity of stop advice-complete;case-8323;155931.282;4
-T05 Print and send confirmation of receipt-complete;case-8323;5067.09;5
-T10 Determine necessity to stop indication-complete;case-8323;18.249;6
+T02 Check confirmation of receipt-complete;case-8323;34.105;2
+T04 Determine confirmation of receipt-complete;case-8323;74.144;3
+T06 Determine necessity of stop advice-complete;case-8323;9114.587;4
+T10 Determine necessity to stop indication-complete;case-8323;44.156;5
 Confirmation of receipt-complete;case-8342;0.0;1
 T02 Check confirmation of receipt-complete;case-8342;602743.652;2
 T04 Determine confirmation of receipt-complete;case-8342;18.355;3
@@ -6615,9 +6277,7 @@ T10 Determine necessity to stop indication-complete;case-8425;33.664;6
 Confirmation of receipt-complete;case-8427;0.0;1
 T02 Check confirmation of receipt-complete;case-8427;21.428;2
 T04 Determine confirmation of receipt-complete;case-8427;17.152;3
-T06 Determine necessity of stop advice-complete;case-8427;30.605;4
-T05 Print and send confirmation of receipt-complete;case-8427;16.932;5
-T10 Determine necessity to stop indication-complete;case-8427;17.302;6
+T05 Print and send confirmation of receipt-complete;case-8427;39.824;4
 Confirmation of receipt-complete;case-8441;0.0;1
 T06 Determine necessity of stop advice-complete;case-8441;691806.045;2
 T02 Check confirmation of receipt-complete;case-8441;0.772;3
@@ -6798,12 +6458,10 @@ T06 Determine necessity of stop advice-complete;case-8639;21.503;5
 T10 Determine necessity to stop indication-complete;case-8639;19.029;6
 Confirmation of receipt-complete;case-8642;0.0;1
 T02 Check confirmation of receipt-complete;case-8642;355315.909;2
-T03 Adjust confirmation of receipt-complete;case-8642;18.853;3
-T02 Check confirmation of receipt-complete;case-8642;126.358;4
-T04 Determine confirmation of receipt-complete;case-8642;572.138;5
-T05 Print and send confirmation of receipt-complete;case-8642;25.09;6
-T06 Determine necessity of stop advice-complete;case-8642;509233.97;7
-T10 Determine necessity to stop indication-complete;case-8642;6460.541;8
+T04 Determine confirmation of receipt-complete;case-8642;17.705;3
+T05 Print and send confirmation of receipt-complete;case-8642;27.286;4
+T06 Determine necessity of stop advice-complete;case-8642;63112.868;5
+T10 Determine necessity to stop indication-complete;case-8642;35.461;6
 Confirmation of receipt-complete;case-8645;0.0;1
 T02 Check confirmation of receipt-complete;case-8645;854355.384;2
 T04 Determine confirmation of receipt-complete;case-8645;29.379;3
@@ -6898,9 +6556,7 @@ T10 Determine necessity to stop indication-complete;case-8745;16.729;6
 Confirmation of receipt-complete;case-8746;0.0;1
 T02 Check confirmation of receipt-complete;case-8746;1045947.726;2
 T04 Determine confirmation of receipt-complete;case-8746;23.416;3
-T06 Determine necessity of stop advice-complete;case-8746;18.842;4
-T05 Print and send confirmation of receipt-complete;case-8746;23.94;5
-T10 Determine necessity to stop indication-complete;case-8746;1639110.285;6
+T05 Print and send confirmation of receipt-complete;case-8746;85891.747;4
 Confirmation of receipt-complete;case-8749;0.0;1
 T02 Check confirmation of receipt-complete;case-8749;20.564;2
 T04 Determine confirmation of receipt-complete;case-8749;17.721;3
@@ -6920,11 +6576,9 @@ T05 Print and send confirmation of receipt-complete;case-8754;38.863;4
 T06 Determine necessity of stop advice-complete;case-8754;54.55;5
 T10 Determine necessity to stop indication-complete;case-8754;183.666;6
 Confirmation of receipt-complete;case-8755;0.0;1
-T06 Determine necessity of stop advice-complete;case-8755;5055.578;2
-T02 Check confirmation of receipt-complete;case-8755;28.779;3
-T04 Determine confirmation of receipt-complete;case-8755;22.493;4
-T10 Determine necessity to stop indication-complete;case-8755;21.021;5
-T05 Print and send confirmation of receipt-complete;case-8755;116.489;6
+T02 Check confirmation of receipt-complete;case-8755;26.17;2
+T04 Determine confirmation of receipt-complete;case-8755;15.793;3
+T05 Print and send confirmation of receipt-complete;case-8755;434.825;4
 Confirmation of receipt-complete;case-8770;0.0;1
 T02 Check confirmation of receipt-complete;case-8770;30.264;2
 T04 Determine confirmation of receipt-complete;case-8770;22.573;3
@@ -7162,14 +6816,10 @@ T06 Determine necessity of stop advice-complete;case-8905;129.434;5
 T10 Determine necessity to stop indication-complete;case-8905;31.239;6
 Confirmation of receipt-complete;case-891;0.0;1
 T02 Check confirmation of receipt-complete;case-891;47.322;2
-T03 Adjust confirmation of receipt-complete;case-891;586.248;3
-T02 Check confirmation of receipt-complete;case-891;27.324;4
-T03 Adjust confirmation of receipt-complete;case-891;21.241;5
-T02 Check confirmation of receipt-complete;case-891;3303711.162;6
-T04 Determine confirmation of receipt-complete;case-891;17.453;7
-T05 Print and send confirmation of receipt-complete;case-891;12.612;8
-T06 Determine necessity of stop advice-complete;case-891;14.672;9
-T10 Determine necessity to stop indication-complete;case-891;27.894;10
+T04 Determine confirmation of receipt-complete;case-891;39.815;3
+T05 Print and send confirmation of receipt-complete;case-891;15.948;4
+T06 Determine necessity of stop advice-complete;case-891;13.742;5
+T10 Determine necessity to stop indication-complete;case-891;108.132;6
 Confirmation of receipt-complete;case-8919;0.0;1
 T02 Check confirmation of receipt-complete;case-8919;466.347;2
 T04 Determine confirmation of receipt-complete;case-8919;44.9;3
@@ -7276,13 +6926,7 @@ T02 Check confirmation of receipt-complete;case-8989;47.267;2
 T04 Determine confirmation of receipt-complete;case-8989;46.589;3
 T05 Print and send confirmation of receipt-complete;case-8989;61.41;4
 T06 Determine necessity of stop advice-complete;case-8989;314.613;5
-T07-3 Draft intern advice hold for aspect 3-complete;case-8989;129.478;6
-T07-2 Draft intern advice aspect 2-complete;case-8989;627.914;7
-T06 Determine necessity of stop advice-complete;case-8989;50.538;8
-T07-2 Draft intern advice aspect 2-complete;case-8989;28.32;9
-T07-3 Draft intern advice hold for aspect 3-complete;case-8989;19.114;10
-T06 Determine necessity of stop advice-complete;case-8989;23.581;11
-T10 Determine necessity to stop indication-complete;case-8989;48.622;12
+T10 Determine necessity to stop indication-complete;case-8989;34.143;6
 Confirmation of receipt-complete;case-8992;0.0;1
 Confirmation of receipt-complete;case-8993;0.0;1
 T02 Check confirmation of receipt-complete;case-8993;27.884;2
@@ -7376,10 +7020,10 @@ T06 Determine necessity of stop advice-complete;case-9075;96.573;5
 T10 Determine necessity to stop indication-complete;case-9075;112.976;6
 Confirmation of receipt-complete;case-9076;0.0;1
 T02 Check confirmation of receipt-complete;case-9076;8220.75;2
-T04 Determine confirmation of receipt-complete;case-9076;17.6;3
-T05 Print and send confirmation of receipt-complete;case-9076;19.326;4
-T06 Determine necessity of stop advice-complete;case-9076;427454.274;5
-T10 Determine necessity to stop indication-complete;case-9076;20.718;6
+T04 Determine confirmation of receipt-complete;case-9076;14.805;3
+T05 Print and send confirmation of receipt-complete;case-9076;9.322;4
+T06 Determine necessity of stop advice-complete;case-9076;1190380.857;5
+T10 Determine necessity to stop indication-complete;case-9076;67.332;6
 Confirmation of receipt-complete;case-9078;0.0;1
 T02 Check confirmation of receipt-complete;case-9078;31.457;2
 T04 Determine confirmation of receipt-complete;case-9078;48.972;3
@@ -7440,14 +7084,10 @@ T06 Determine necessity of stop advice-complete;case-9201;20.426;5
 T10 Determine necessity to stop indication-complete;case-9201;19.426;6
 Confirmation of receipt-complete;case-9203;0.0;1
 T02 Check confirmation of receipt-complete;case-9203;25.746;2
-T03 Adjust confirmation of receipt-complete;case-9203;22.626;3
-T02 Check confirmation of receipt-complete;case-9203;31.704;4
-T03 Adjust confirmation of receipt-complete;case-9203;120.02;5
-T02 Check confirmation of receipt-complete;case-9203;30.513;6
-T04 Determine confirmation of receipt-complete;case-9203;23.343;7
-T05 Print and send confirmation of receipt-complete;case-9203;18.117;8
-T06 Determine necessity of stop advice-complete;case-9203;48.535;9
-T10 Determine necessity to stop indication-complete;case-9203;91.225;10
+T04 Determine confirmation of receipt-complete;case-9203;17.834;3
+T05 Print and send confirmation of receipt-complete;case-9203;21.332;4
+T06 Determine necessity of stop advice-complete;case-9203;3486.692;5
+T10 Determine necessity to stop indication-complete;case-9203;944725.436;6
 Confirmation of receipt-complete;case-9206;0.0;1
 T02 Check confirmation of receipt-complete;case-9206;19.328;2
 T04 Determine confirmation of receipt-complete;case-9206;18.632;3
@@ -7511,10 +7151,8 @@ T06 Determine necessity of stop advice-complete;case-9270;25.666;5
 T10 Determine necessity to stop indication-complete;case-9270;22.054;6
 Confirmation of receipt-complete;case-9271;0.0;1
 T02 Check confirmation of receipt-complete;case-9271;34.105;2
-T06 Determine necessity of stop advice-complete;case-9271;34.045;3
-T04 Determine confirmation of receipt-complete;case-9271;26.75;4
-T10 Determine necessity to stop indication-complete;case-9271;72.064;5
-T05 Print and send confirmation of receipt-complete;case-9271;481.43;6
+T04 Determine confirmation of receipt-complete;case-9271;18.984;3
+T05 Print and send confirmation of receipt-complete;case-9271;14.287;4
 Confirmation of receipt-complete;case-9274;0.0;1
 T02 Check confirmation of receipt-complete;case-9274;24.94;2
 T06 Determine necessity of stop advice-complete;case-9274;27.527;3
@@ -7534,10 +7172,9 @@ T05 Print and send confirmation of receipt-complete;case-9281;17402.485;4
 T06 Determine necessity of stop advice-complete;case-9281;501413.126;5
 Confirmation of receipt-complete;case-9289;0.0;1
 T02 Check confirmation of receipt-complete;case-9289;124.445;2
-T04 Determine confirmation of receipt-complete;case-9289;14.93;3
-T06 Determine necessity of stop advice-complete;case-9289;20.166;4
-T05 Print and send confirmation of receipt-complete;case-9289;28.894;5
-T10 Determine necessity to stop indication-complete;case-9289;20.619;6
+T04 Determine confirmation of receipt-complete;case-9289;19.269;3
+T06 Determine necessity of stop advice-complete;case-9289;16.543;4
+T10 Determine necessity to stop indication-complete;case-9289;37.186;5
 Confirmation of receipt-complete;case-9290;0.0;1
 T02 Check confirmation of receipt-complete;case-9290;306.067;2
 T04 Determine confirmation of receipt-complete;case-9290;19.641;3
@@ -7553,9 +7190,7 @@ T10 Determine necessity to stop indication-complete;case-9292;34.639;6
 Confirmation of receipt-complete;case-9294;0.0;1
 T02 Check confirmation of receipt-complete;case-9294;85.678;2
 T04 Determine confirmation of receipt-complete;case-9294;279.825;3
-T06 Determine necessity of stop advice-complete;case-9294;117.104;4
-T05 Print and send confirmation of receipt-complete;case-9294;232.864;5
-T10 Determine necessity to stop indication-complete;case-9294;121.669;6
+T05 Print and send confirmation of receipt-complete;case-9294;14.05;4
 Confirmation of receipt-complete;case-9295;0.0;1
 T02 Check confirmation of receipt-complete;case-9295;25.009;2
 T04 Determine confirmation of receipt-complete;case-9295;19.936;3
@@ -7632,22 +7267,14 @@ Confirmation of receipt-complete;case-9395;0.0;1
 T02 Check confirmation of receipt-complete;case-9395;42.591;2
 T06 Determine necessity of stop advice-complete;case-9395;115.287;3
 T10 Determine necessity to stop indication-complete;case-9395;293.61;4
-T04 Determine confirmation of receipt-complete;case-9395;20.414;5
-T05 Print and send confirmation of receipt-complete;case-9395;41719.551;6
-T11 Create document X request unlicensed-complete;case-9395;4783.855;7
-T12 Check document X request unlicensed-complete;case-9395;29.204;8
-T14 Determine document X request unlicensed-complete;case-9395;13.82;9
-T15 Print document X request unlicensed-complete;case-9395;872112.184;10
+T04 Determine confirmation of receipt-complete;case-9395;18.675;5
+T05 Print and send confirmation of receipt-complete;case-9395;17.996;6
 Confirmation of receipt-complete;case-9407;0.0;1
 T02 Check confirmation of receipt-complete;case-9407;61.897;2
-T06 Determine necessity of stop advice-complete;case-9407;81.63;3
-T10 Determine necessity to stop indication-complete;case-9407;19.193;4
-T04 Determine confirmation of receipt-complete;case-9407;535236.277;5
-T05 Print and send confirmation of receipt-complete;case-9407;41719.551;6
-T11 Create document X request unlicensed-complete;case-9407;746.437;7
-T12 Check document X request unlicensed-complete;case-9407;38.839;8
-T14 Determine document X request unlicensed-complete;case-9407;20.751;9
-T15 Print document X request unlicensed-complete;case-9407;15.873;10
+T04 Determine confirmation of receipt-complete;case-9407;1440.994;3
+T06 Determine necessity of stop advice-complete;case-9407;34.397;4
+T10 Determine necessity to stop indication-complete;case-9407;26.189;5
+T05 Print and send confirmation of receipt-complete;case-9407;329107.244;6
 Confirmation of receipt-complete;case-9408;0.0;1
 T02 Check confirmation of receipt-complete;case-9408;24.542;2
 T04 Determine confirmation of receipt-complete;case-9408;25.874;3
@@ -7749,7 +7376,7 @@ T02 Check confirmation of receipt-complete;case-9532;30.335;2
 T04 Determine confirmation of receipt-complete;case-9532;22.762;3
 T05 Print and send confirmation of receipt-complete;case-9532;19.068;4
 T06 Determine necessity of stop advice-complete;case-9532;27.362;5
-T10 Determine necessity to stop indication-complete;case-9532;19.029;6
+T10 Determine necessity to stop indication-complete;case-9532;21.087;6
 Confirmation of receipt-complete;case-9542;0.0;1
 T02 Check confirmation of receipt-complete;case-9542;50.262;2
 T04 Determine confirmation of receipt-complete;case-9542;34.149;3
@@ -7780,10 +7407,6 @@ T04 Determine confirmation of receipt-complete;case-9554;31.295;3
 T05 Print and send confirmation of receipt-complete;case-9554;20.218;4
 T06 Determine necessity of stop advice-complete;case-9554;18.829;5
 T10 Determine necessity to stop indication-complete;case-9554;36.674;6
-T16 Report reasons to hold request-complete;case-9554;62.135;7
-T17 Check report Y to stop indication-complete;case-9554;600.377;8
-T19 Determine report Y to stop indication-complete;case-9554;58.84;9
-T20 Print report Y to stop indication-complete;case-9554;56.523;10
 Confirmation of receipt-complete;case-9557;0.0;1
 T02 Check confirmation of receipt-complete;case-9557;35.155;2
 T04 Determine confirmation of receipt-complete;case-9557;18.914;3
@@ -7804,14 +7427,10 @@ T06 Determine necessity of stop advice-complete;case-9563;17.995;5
 T10 Determine necessity to stop indication-complete;case-9563;17.506;6
 Confirmation of receipt-complete;case-9574;0.0;1
 T02 Check confirmation of receipt-complete;case-9574;18.621;2
-T06 Determine necessity of stop advice-complete;case-9574;315.335;3
-T10 Determine necessity to stop indication-complete;case-9574;19.956;4
-T04 Determine confirmation of receipt-complete;case-9574;83683.959;5
-T05 Print and send confirmation of receipt-complete;case-9574;2567.344;6
-T11 Create document X request unlicensed-complete;case-9574;229.573;7
-T12 Check document X request unlicensed-complete;case-9574;18.592;8
-T14 Determine document X request unlicensed-complete;case-9574;23.386;9
-T15 Print document X request unlicensed-complete;case-9574;15.135;10
+T04 Determine confirmation of receipt-complete;case-9574;45.459;3
+T06 Determine necessity of stop advice-complete;case-9574;18.055;4
+T10 Determine necessity to stop indication-complete;case-9574;32.402;5
+T05 Print and send confirmation of receipt-complete;case-9574;926.772;6
 Confirmation of receipt-complete;case-9623;0.0;1
 T02 Check confirmation of receipt-complete;case-9623;18.529;2
 T04 Determine confirmation of receipt-complete;case-9623;16.962;3
@@ -7842,10 +7461,6 @@ T04 Determine confirmation of receipt-complete;case-9631;224.366;3
 T05 Print and send confirmation of receipt-complete;case-9631;15.327;4
 T06 Determine necessity of stop advice-complete;case-9631;24.523;5
 T10 Determine necessity to stop indication-complete;case-9631;32.421;6
-T16 Report reasons to hold request-complete;case-9631;254939.61;7
-T17 Check report Y to stop indication-complete;case-9631;18.765;8
-T19 Determine report Y to stop indication-complete;case-9631;17.73;9
-T20 Print report Y to stop indication-complete;case-9631;18.312;10
 Confirmation of receipt-complete;case-9633;0.0;1
 T02 Check confirmation of receipt-complete;case-9633;49.571;2
 T04 Determine confirmation of receipt-complete;case-9633;50.019;3
@@ -8031,12 +7646,11 @@ T05 Print and send confirmation of receipt-complete;case-9767;32.058;4
 T06 Determine necessity of stop advice-complete;case-9767;25.418;5
 T10 Determine necessity to stop indication-complete;case-9767;20.793;6
 Confirmation of receipt-complete;case-9776;0.0;1
-T02 Check confirmation of receipt-complete;case-9776;70.814;2
-T04 Determine confirmation of receipt-complete;case-9776;1470.213;3
-T06 Determine necessity of stop advice-complete;case-9776;15.908;4
-T10 Determine necessity to stop indication-complete;case-9776;73.801;5
-T05 Print and send confirmation of receipt-complete;case-9776;322254.965;6
-T11 Create document X request unlicensed-complete;case-9776;1113.922;7
+T02 Check confirmation of receipt-complete;case-9776;1106.562;2
+T04 Determine confirmation of receipt-complete;case-9776;14.684;3
+T06 Determine necessity of stop advice-complete;case-9776;16.924;4
+T10 Determine necessity to stop indication-complete;case-9776;95.103;5
+T05 Print and send confirmation of receipt-complete;case-9776;21.436;6
 Confirmation of receipt-complete;case-9777;0.0;1
 T02 Check confirmation of receipt-complete;case-9777;21.233;2
 T04 Determine confirmation of receipt-complete;case-9777;20.288;3
@@ -8053,9 +7667,7 @@ Confirmation of receipt-complete;case-9781;0.0;1
 Confirmation of receipt-complete;case-9782;0.0;1
 T02 Check confirmation of receipt-complete;case-9782;29.912;2
 T04 Determine confirmation of receipt-complete;case-9782;56.771;3
-T06 Determine necessity of stop advice-complete;case-9782;103.363;4
-T05 Print and send confirmation of receipt-complete;case-9782;2291.798;5
-T10 Determine necessity to stop indication-complete;case-9782;35.165;6
+T05 Print and send confirmation of receipt-complete;case-9782;92266.499;4
 Confirmation of receipt-complete;case-9786;0.0;1
 T02 Check confirmation of receipt-complete;case-9786;26.075;2
 T04 Determine confirmation of receipt-complete;case-9786;26.954;3
@@ -8084,10 +7696,8 @@ T14 Determine document X request unlicensed-complete;case-9793;17.153;9
 T15 Print document X request unlicensed-complete;case-9793;14.589;10
 Confirmation of receipt-complete;case-9794;0.0;1
 T02 Check confirmation of receipt-complete;case-9794;43.007;2
-T06 Determine necessity of stop advice-complete;case-9794;20.806;3
-T04 Determine confirmation of receipt-complete;case-9794;23.706;4
-T10 Determine necessity to stop indication-complete;case-9794;25.125;5
-T05 Print and send confirmation of receipt-complete;case-9794;38.702;6
+T04 Determine confirmation of receipt-complete;case-9794;94.293;3
+T05 Print and send confirmation of receipt-complete;case-9794;21.507;4
 Confirmation of receipt-complete;case-9796;0.0;1
 T02 Check confirmation of receipt-complete;case-9796;2209.539;2
 T04 Determine confirmation of receipt-complete;case-9796;22.906;3
@@ -8101,11 +7711,9 @@ T04 Determine confirmation of receipt-complete;case-9804;125.611;4
 T05 Print and send confirmation of receipt-complete;case-9804;69.731;5
 T10 Determine necessity to stop indication-complete;case-9804;35.818;6
 Confirmation of receipt-complete;case-9823;0.0;1
-T06 Determine necessity of stop advice-complete;case-9823;39.054;2
-T02 Check confirmation of receipt-complete;case-9823;20.771;3
-T10 Determine necessity to stop indication-complete;case-9823;19.641;4
-T04 Determine confirmation of receipt-complete;case-9823;23.854;5
-T05 Print and send confirmation of receipt-complete;case-9823;24.247;6
+T02 Check confirmation of receipt-complete;case-9823;569.757;2
+T04 Determine confirmation of receipt-complete;case-9823;105.084;3
+T05 Print and send confirmation of receipt-complete;case-9823;9.966;4
 Confirmation of receipt-complete;case-9826;0.0;1
 Confirmation of receipt-complete;case-9837;0.0;1
 Confirmation of receipt-complete;case-9839;0.0;1
@@ -8175,12 +7783,10 @@ T06 Determine necessity of stop advice-complete;case-9894;91958.245;2
 T02 Check confirmation of receipt-complete;case-9894;0.585;3
 Confirmation of receipt-complete;case-9895;0.0;1
 T06 Determine necessity of stop advice-complete;case-9895;24.834;2
-T07-1 Draft intern advice aspect 1-complete;case-9895;23.694;3
-T06 Determine necessity of stop advice-complete;case-9895;238.089;4
-T10 Determine necessity to stop indication-complete;case-9895;29.711;5
-T02 Check confirmation of receipt-complete;case-9895;29.681;6
-T04 Determine confirmation of receipt-complete;case-9895;15.924;7
-T05 Print and send confirmation of receipt-complete;case-9895;14.383;8
+T10 Determine necessity to stop indication-complete;case-9895;16.277;3
+T02 Check confirmation of receipt-complete;case-9895;208.583;4
+T04 Determine confirmation of receipt-complete;case-9895;36.244;5
+T05 Print and send confirmation of receipt-complete;case-9895;328733.675;6
 Confirmation of receipt-complete;case-9896;0.0;1
 Confirmation of receipt-complete;case-9897;0.0;1
 T02 Check confirmation of receipt-complete;case-9897;35.521;2
@@ -8199,9 +7805,7 @@ T02 Check confirmation of receipt-complete;case-9916;27.976;2
 T04 Determine confirmation of receipt-complete;case-9916;24.719;3
 T05 Print and send confirmation of receipt-complete;case-9916;15.694;4
 T06 Determine necessity of stop advice-complete;case-9916;23.924;5
-T07-1 Draft intern advice aspect 1-complete;case-9916;68.094;6
-T06 Determine necessity of stop advice-complete;case-9916;1054979.524;7
-T10 Determine necessity to stop indication-complete;case-9916;59.503;8
+T10 Determine necessity to stop indication-complete;case-9916;117.579;6
 Confirmation of receipt-complete;case-9919;0.0;1
 T02 Check confirmation of receipt-complete;case-9919;29.899;2
 T04 Determine confirmation of receipt-complete;case-9919;25.491;3
@@ -8217,13 +7821,13 @@ T10 Determine necessity to stop indication-complete;case-9920;28.738;6
 Confirmation of receipt-complete;case-9921;0.0;1
 T02 Check confirmation of receipt-complete;case-9921;76.225;2
 T04 Determine confirmation of receipt-complete;case-9921;105.084;3
-T05 Print and send confirmation of receipt-complete;case-9921;9.834;4
-T06 Determine necessity of stop advice-complete;case-9921;135.788;5
-T10 Determine necessity to stop indication-complete;case-9921;13.51;6
-T11 Create document X request unlicensed-complete;case-9921;15.051;7
-T12 Check document X request unlicensed-complete;case-9921;20.864;8
-T14 Determine document X request unlicensed-complete;case-9921;16.704;9
-T15 Print document X request unlicensed-complete;case-9921;14.589;10
+T05 Print and send confirmation of receipt-complete;case-9921;90191.158;4
+T06 Determine necessity of stop advice-complete;case-9921;26.045;5
+T10 Determine necessity to stop indication-complete;case-9921;35.047;6
+T11 Create document X request unlicensed-complete;case-9921;5553.004;7
+T12 Check document X request unlicensed-complete;case-9921;12.022;8
+T14 Determine document X request unlicensed-complete;case-9921;57.49;9
+T15 Print document X request unlicensed-complete;case-9921;9857.011;10
 Confirmation of receipt-complete;case-9923;0.0;1
 T02 Check confirmation of receipt-complete;case-9923;81777.215;2
 T04 Determine confirmation of receipt-complete;case-9923;36.535;3
@@ -8254,10 +7858,6 @@ T04 Determine confirmation of receipt-complete;case-9927;24.166;3
 T05 Print and send confirmation of receipt-complete;case-9927;21.295;4
 T06 Determine necessity of stop advice-complete;case-9927;25.277;5
 T10 Determine necessity to stop indication-complete;case-9927;27.81;6
-T16 Report reasons to hold request-complete;case-9927;45.545;7
-T17 Check report Y to stop indication-complete;case-9927;54.488;8
-T19 Determine report Y to stop indication-complete;case-9927;44.939;9
-T20 Print report Y to stop indication-complete;case-9927;116.582;10
 Confirmation of receipt-complete;case-9928;0.0;1
 T02 Check confirmation of receipt-complete;case-9928;64.148;2
 T04 Determine confirmation of receipt-complete;case-9928;35.932;3
@@ -8348,10 +7948,6 @@ T04 Determine confirmation of receipt-complete;case-9957;19.075;3
 T05 Print and send confirmation of receipt-complete;case-9957;13.534;4
 T06 Determine necessity of stop advice-complete;case-9957;80.777;5
 T10 Determine necessity to stop indication-complete;case-9957;20.975;6
-T16 Report reasons to hold request-complete;case-9957;120.986;7
-T17 Check report Y to stop indication-complete;case-9957;18.272;8
-T19 Determine report Y to stop indication-complete;case-9957;20.068;9
-T20 Print report Y to stop indication-complete;case-9957;13.942;10
 Confirmation of receipt-complete;case-9961;0.0;1
 T02 Check confirmation of receipt-complete;case-9961;26.6;2
 T04 Determine confirmation of receipt-complete;case-9961;19.899;3
@@ -8367,12 +7963,8 @@ T10 Determine necessity to stop indication-complete;case-9963;29.037;6
 Confirmation of receipt-complete;case-9966;0.0;1
 T02 Check confirmation of receipt-complete;case-9966;3340.772;2
 T06 Determine necessity of stop advice-complete;case-9966;118.194;3
-T10 Determine necessity to stop indication-complete;case-9966;33.438;4
-T04 Determine confirmation of receipt-complete;case-9966;2067.166;5
-T03 Adjust confirmation of receipt-complete;case-9966;594353.248;6
-T02 Check confirmation of receipt-complete;case-9966;51.99;7
-T04 Determine confirmation of receipt-complete;case-9966;163.975;8
-T05 Print and send confirmation of receipt-complete;case-9966;531300.728;9
+T04 Determine confirmation of receipt-complete;case-9966;6894.885;4
+T05 Print and send confirmation of receipt-complete;case-9966;40.284;5
 Confirmation of receipt-complete;case-9967;0.0;1
 T06 Determine necessity of stop advice-complete;case-9967;22.709;2
 T02 Check confirmation of receipt-complete;case-9967;24.413;3
@@ -8415,3 +8007,15 @@ T04 Determine confirmation of receipt-complete;case-9997;23.627;3
 T05 Print and send confirmation of receipt-complete;case-9997;17.837;4
 T06 Determine necessity of stop advice-complete;case-9997;31.272;5
 T10 Determine necessity to stop indication-complete;case-9997;19.079;6
+Confirmation of receipt-complete;case-9998;0.0;1
+T02 Check confirmation of receipt-complete;case-9998;16.243;2
+T04 Determine confirmation of receipt-complete;case-9998;32.192;3
+T05 Print and send confirmation of receipt-complete;case-9998;92126.48;4
+T06 Determine necessity of stop advice-complete;case-9998;25.217;5
+T10 Determine necessity to stop indication-complete;case-9998;32.311;6
+Confirmation of receipt-complete;case-9999;0.0;1
+T02 Check confirmation of receipt-complete;case-9999;836.225;2
+T04 Determine confirmation of receipt-complete;case-9999;6239.721;3
+T05 Print and send confirmation of receipt-complete;case-9999;15.434;4
+T06 Determine necessity of stop advice-complete;case-9999;21.628;5
+T10 Determine necessity to stop indication-complete;case-9999;18.068;6

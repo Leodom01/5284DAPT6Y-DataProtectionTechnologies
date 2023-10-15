@@ -1,5 +1,6 @@
 from collections import Counter
 import numpy as np
+from pretsa import Pretsa
 
 
 def get_anon_set_size(dataset, quasi_id_col_indexes):
@@ -169,3 +170,4 @@ def emd_variational_distance(u_values, v_values):
     normalized_emd = emd / max(len(u_values), len(v_values))
 
     return normalized_emd
+

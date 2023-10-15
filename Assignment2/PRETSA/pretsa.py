@@ -6,7 +6,8 @@ from scipy.stats import normaltest
 import pandas as pd
 import numpy as np
 import utils
-
+import random as rnd
+import math
 class Pretsa:
     def __init__(self,eventLog):
         root = AnyNode(id='Root', name="Root", cases=set(), sequence="", annotation=dict(),sequences=set())
@@ -22,7 +23,10 @@ class Pretsa:
         self.__normaltest_alpha = 0.05
         self.__normaltest_result_storage = dict()
         self.__normalTCloseness = True
+
         self.__extendedTCloseness = False
+        self.__synthEnrichmentTreshold = 0.5
+
         for index, row in eventLog.iterrows():
             activity = row[self.__activityColName]
             annotation = row[self.__annotationColName]
@@ -120,10 +124,16 @@ class Pretsa:
         for node in PreOrderIter(self._tree):
             if node != self._tree:
                 node.cases = node.cases.difference(cutOutTraces)
-
-                #print("Length is: ", len(node.cases))
-                if len(node.cases) < k or self._violatesTCloseness(node.name, node.annotations, t, node.cases):
+                if k > len(node.cases) > self.__synthEnrichmentTreshold*k and not self._violatesTCloseness(node.name, node.annotations, t, node.cases):
+                    # Then we have to enrich the data
                     # TODO: If I have slightly less cases than k I can add artificial ones
+                    nodesToAdd = math.ceil((k-len(node.cases))*rnd.uniform(1, 1.4))
+                    print(f"Avoided deleting {len(node.cases)} log by adding {nodesToAdd} "
+                          f"({100*nodesToAdd/len(node.cases)}%) new entries.")
+                    node_to_attach_to, generated_nodes = self.generate_nodes(node, nodesToAdd)
+                    for currentNode in generated_nodes:
+                        self.addNodeToTree(currentNode, node_to_attach_to)
+                if len(node.cases) < k or self._violatesTCloseness(node.name, node.annotations, t, node.cases):
                     cutOutTraces = cutOutTraces.union(node.cases)
                     self._cutCasesOutOfTreeStartingFromNode(node,cutOutTraces)
                     if self._sequentialPrunning:
@@ -200,6 +210,7 @@ class Pretsa:
             self.__combineTracesAndTree(cutOutCases)
         return cutOutCases, self._overallLogDistance
 
+    # TODO Improve the new annotation generation algorithm
     def __generateNewAnnotation(self, activity):
         #normaltest works only with more than 8 samples
         if(len(self.__annotationDataOverAll[activity])) >=8 and activity not in self.__normaltest_result_storage.keys():
@@ -316,3 +327,48 @@ class Pretsa:
         for i in range(1,numberOfBuckets):
             upperLimitsBuckets.append(overallDistribution[min(round(i*divider),len(overallDistribution)-1)])
         return upperLimitsBuckets
+
+    def addNodeToTree(self, node, injectionPoint):
+        sequence = ""
+        for entry in node:
+            sequence = sequence + "@" + entry["activity"]
+        for entry in node:
+            self.__addAnnotation(entry["duration"], entry["activity"])
+        self._addCaseToTree(node[0]["case"], sequence)
+        self._caseToSequenceDict[node[0]["case"]] = sequence
+
+        currentNode = injectionPoint
+        while currentNode.parent is not None:
+            currentNode.cases.add(node[0]["case"])
+            currentNode = currentNode.parent
+
+    def generate_nodes(self, currentNode, numberOfNodes):
+        # Generates in the format of list of list, every inner list is: [activity, case, duration, event]
+        # I need to get to the leaf
+        if not currentNode.is_leaf:
+            child = currentNode.children[0]
+            return self.generate_nodes(child, numberOfNodes)
+        else:
+            # Generate new children
+            # Now I add it to the file and reload the tree, in the future, to optimize the solution
+            # will be better to inject the children, due to garbled code I'm struggling to do it at the moment
+            activities = currentNode.sequence.split("@")[1:]
+
+            lastCaseNum = sorted(self._caseToSequenceDict.keys())[-1]
+            case = case = "case-" + str(int(lastCaseNum.split("-")[1]) + 1)
+
+            # Take random values according to distribution, now taking values from the other
+            durations = list(map(self.__generateNewAnnotation, activities))
+
+        newNodes = []
+        for _ in range(numberOfNodes):
+            newNode = []
+            for event_nr in range(len(activities)):
+                activityToAdd = {"activity": activities[event_nr],
+                                 "case": case,
+                                 "duration": durations[event_nr],
+                                 "event_nr": event_nr}
+                newNode.append(activityToAdd)
+            newNodes.append(newNode)
+
+        return (currentNode, newNodes)
