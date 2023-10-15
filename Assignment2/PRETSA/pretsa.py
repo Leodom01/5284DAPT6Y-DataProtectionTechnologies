@@ -8,9 +8,11 @@ import numpy as np
 import utils
 import random as rnd
 import math
+
+
 class Pretsa:
-    def __init__(self,eventLog):
-        root = AnyNode(id='Root', name="Root", cases=set(), sequence="", annotation=dict(),sequences=set())
+    def __init__(self, eventLog):
+        root = AnyNode(id='Root', name="Root", cases=set(), sequence="", annotation=dict(), sequences=set())
         current = root
         currentCase = ""
         caseToSequenceDict = dict()
@@ -24,8 +26,10 @@ class Pretsa:
         self.__normaltest_result_storage = dict()
         self.__normalTCloseness = True
 
-        self.__extendedTCloseness = False
-        self.__synthEnrichmentTreshold = 0.5
+        # K-pruning saviour settings
+        self.__synthEnrichmentThreshold = 0.5
+        self.__kSaviourEnabled = True
+        self.__synthDataIncreaseBoundaries = (1.1, 1.5)
 
         for index, row in eventLog.iterrows():
             activity = row[self.__activityColName]
@@ -45,12 +49,13 @@ class Pretsa:
                     childAlreadyExists = True
                     current = child
             if not childAlreadyExists:
-                node = AnyNode(id=index, name=activity, parent=current, cases=set(), sequence=sequence, annotations=dict())
+                node = AnyNode(id=index, name=activity, parent=current, cases=set(), sequence=sequence,
+                               annotations=dict())
                 current = node
             current.cases.add(currentCase)
             current.annotations[currentCase] = annotation
             self.__addAnnotation(annotation, activity)
-        #Handle last case
+        # Handle last case
         caseToSequenceDict[currentCase] = sequence
         root.sequences.add(sequence)
         self._tree = root
@@ -92,25 +97,25 @@ class Pretsa:
     def _violatesTCloseness(self, activity, annotations, t, cases):
         distributionActivity = self.__annotationDataOverAll[activity]
         maxDifference = self.annotationMaxDifferences[activity]
-        #Consider only data from cases still in node
+        # Consider only data from cases still in node
         distributionEquivalenceClass = []
         casesInClass = cases.intersection(set(annotations.keys()))
         for caseInClass in casesInClass:
             distributionEquivalenceClass.append(annotations[caseInClass])
-        if len(distributionEquivalenceClass) == 0: #No original annotation is left in the node
+        if len(distributionEquivalenceClass) == 0:  # No original annotation is left in the node
             return False
-        if maxDifference == 0.0: #All annotations have the same value(most likely= 0.0)
+        if maxDifference == 0.0:  # All annotations have the same value(most likely= 0.0)
             return
         distances = []
         # print("Activity: ", distributionActivity)
         # print("Equivalcnce class: ", distributionEquivalenceClass)
         if self.__normalTCloseness == True:
-            wasserstein_dist = wasserstein_distance(distributionActivity,distributionEquivalenceClass)/maxDifference
+            wasserstein_dist = wasserstein_distance(distributionActivity, distributionEquivalenceClass) / maxDifference
             distances.append(wasserstein_dist)
         else:
-            return self._violatesStochasticTCloseness(distributionActivity,distributionEquivalenceClass,t,activity)
-        #if self.__extendedTCloseness == True:
-        #    emd_variational_dist = utils.emd_variational_distance(distributionActivity,distributionEquivalenceClass)
+            return self._violatesStochasticTCloseness(distributionActivity, distributionEquivalenceClass, t, activity)
+            # if self.__extendedTCloseness == True:
+            #    emd_variational_dist = utils.emd_variational_distance(distributionActivity,distributionEquivalenceClass)
             # TODO Quickly patch this thing and make it a feature
             distances.append(emd_variational_dist)
         # Here we can add countless other distances measurements
@@ -119,28 +124,33 @@ class Pretsa:
 
         return any(value > t for value in distances)
 
-    def _treePrunning(self, k,t):
+    def _treePrunning(self, k, t):
         cutOutTraces = set()
         for node in PreOrderIter(self._tree):
             if node != self._tree:
                 node.cases = node.cases.difference(cutOutTraces)
-                if k > len(node.cases) > self.__synthEnrichmentTreshold*k and not self._violatesTCloseness(node.name, node.annotations, t, node.cases):
-                    # Then we have to enrich the data
-                    # TODO: If I have slightly less cases than k I can add artificial ones
-                    nodesToAdd = math.ceil((k-len(node.cases))*rnd.uniform(1, 1.4))
+
+                if (self.__kSaviourEnabled and
+                        k > len(node.cases) > self.__synthEnrichmentThreshold * k and
+                        not self._violatesTCloseness(node.name, node.annotations, t, node.cases)):
+                    # Then we have to enrich the data to have more than k entries in this equivalence class
+                    nodesToAdd = math.ceil((k - len(node.cases)) * rnd.uniform(*self.__synthDataIncreaseBoundaries))
+
                     print(f"Avoided deleting {len(node.cases)} log by adding {nodesToAdd} "
-                          f"({100*nodesToAdd/len(node.cases)}%) new entries.")
-                    node_to_attach_to, generated_nodes = self.generate_nodes(node, nodesToAdd)
+                          f"({100 * nodesToAdd / len(node.cases)}%) new entries.")
+
+                    node_to_attach_to, generated_nodes = self._generate_nodes(node, nodesToAdd)
                     for currentNode in generated_nodes:
-                        self.addNodeToTree(currentNode, node_to_attach_to)
+                        self._addNodeToTree(currentNode, node_to_attach_to)
+
                 if len(node.cases) < k or self._violatesTCloseness(node.name, node.annotations, t, node.cases):
                     cutOutTraces = cutOutTraces.union(node.cases)
-                    self._cutCasesOutOfTreeStartingFromNode(node,cutOutTraces)
+                    self._cutCasesOutOfTreeStartingFromNode(node, cutOutTraces)
                     if self._sequentialPrunning:
                         return cutOutTraces
         return cutOutTraces
 
-    def _cutCasesOutOfTreeStartingFromNode(self,node,cutOutTraces,tree=None):
+    def _cutCasesOutOfTreeStartingFromNode(self, node, cutOutTraces, tree=None):
         if tree == None:
             tree = self._tree
         current = node
@@ -160,7 +170,7 @@ class Pretsa:
     def _getAllPotentialSequencesTree(self, tree):
         return tree.sequences
 
-    def _addCaseToTree(self, trace, sequence,tree=None):
+    def _addCaseToTree(self, trace, sequence, tree=None):
         if tree == None:
             tree = self._tree
         if trace != "":
@@ -175,12 +185,12 @@ class Pretsa:
                         break
 
     def __combineTracesAndTree(self, traces):
-        #We transform the set of sequences into a list and sort it, to discretize the behaviour of the algorithm
+        # We transform the set of sequences into a list and sort it, to discretize the behaviour of the algorithm
         sequencesTree = list(self._getAllPotentialSequencesTree(self._tree))
         sequencesTree.sort()
         for trace in traces:
             bestSequence = ""
-            #initial value as high as possible
+            # initial value as high as possible
             lowestDistance = sys.maxsize
             traceSequence = self._caseToSequenceDict[trace]
             for treeSequence in sequencesTree:
@@ -189,31 +199,32 @@ class Pretsa:
                     bestSequence = treeSequence
                     lowestDistance = currentDistance
             self._overallLogDistance += lowestDistance
-            #print("Fed to addCaseToTree: ", trace)
+            # print("Fed to addCaseToTree: ", trace)
             self._addCaseToTree(trace, bestSequence)
 
-
-    def runPretsa(self,k,t,normalTCloseness=True):
+    def runPretsa(self, k, t, normalTCloseness=True):
         self.__normalTCloseness = normalTCloseness
         if not self.__normalTCloseness:
             self.__haveAllValuesInActivitityDistributionTheSameValue = dict()
         self._overallLogDistance = 0.0
         if self._sequentialPrunning:
             cutOutCases = set()
-            cutOutCase = self._treePrunning(k,t)
+            cutOutCase = self._treePrunning(k, t)
             while len(cutOutCase) > 0:
                 self.__combineTracesAndTree(cutOutCase)
                 cutOutCases = cutOutCases.union(cutOutCase)
-                cutOutCase = self._treePrunning(k,t)
+                cutOutCase = self._treePrunning(k, t)
         else:
-            cutOutCases = self._treePrunning(k,t)
+            cutOutCases = self._treePrunning(k, t)
             self.__combineTracesAndTree(cutOutCases)
         return cutOutCases, self._overallLogDistance
 
     # TODO Improve the new annotation generation algorithm
     def __generateNewAnnotation(self, activity):
-        #normaltest works only with more than 8 samples
-        if(len(self.__annotationDataOverAll[activity])) >=8 and activity not in self.__normaltest_result_storage.keys():
+        # normaltest works only with more than 8 samples
+        if (
+                len(self.__annotationDataOverAll[
+                        activity])) >= 8 and activity not in self.__normaltest_result_storage.keys():
             stat, p = normaltest(self.__annotationDataOverAll[activity])
         else:
             p = 1.0
@@ -228,7 +239,7 @@ class Pretsa:
             randomValue = 0
         return randomValue
 
-    def getEvent(self,case,node):
+    def getEvent(self, case, node):
         event = {
             self.__activityColName: node.name,
             self.__caseIDColName: case,
@@ -254,14 +265,13 @@ class Pretsa:
             eventLog = eventLog.sort_values(by=[self.__caseIDColName, self.__constantEventNr])
         return eventLog
 
-
-    def __generateDistanceMatrixSequences(self,sequences):
+    def __generateDistanceMatrixSequences(self, sequences):
         distanceMatrix = dict()
         for sequence1 in sequences:
             distanceMatrix[sequence1] = dict()
             for sequence2 in sequences:
                 if sequence1 != sequence2:
-                    distanceMatrix[sequence1][sequence2] = levenshtein(sequence1,sequence2)
+                    distanceMatrix[sequence1][sequence2] = levenshtein(sequence1, sequence2)
         print("Generated Distance Matrix")
         return distanceMatrix
 
@@ -283,12 +293,14 @@ class Pretsa:
         else:
             return False
 
-    def _violatesStochasticTCloseness(self,distributionEquivalenceClass,overallDistribution,t,activity):
+    def _violatesStochasticTCloseness(self, distributionEquivalenceClass, overallDistribution, t, activity):
         if activity not in self.__haveAllValuesInActivitityDistributionTheSameValue.keys():
-            self.__haveAllValuesInActivitityDistributionTheSameValue[activity] = self.__areAllValuesInDistributionAreTheSame(overallDistribution)
+            self.__haveAllValuesInActivitityDistributionTheSameValue[
+                activity] = self.__areAllValuesInDistributionAreTheSame(overallDistribution)
         if not self.__haveAllValuesInActivitityDistributionTheSameValue[activity]:
-            upperLimitsBuckets = self._getBucketLimits(t,overallDistribution)
-            return (self._calculateStochasticTCloseness(overallDistribution, distributionEquivalenceClass, upperLimitsBuckets) > t)
+            upperLimitsBuckets = self._getBucketLimits(t, overallDistribution)
+            return (self._calculateStochasticTCloseness(overallDistribution, distributionEquivalenceClass,
+                                                        upperLimitsBuckets) > t)
         else:
             return False
 
@@ -301,74 +313,82 @@ class Pretsa:
         for bucket in upperLimitBuckets:
             lastCounterOverallDistribution = counterOverallDistribution
             lastCounterEquivalenceClass = counterEquivalenceClass
-            while counterOverallDistribution<len(overallDistribution) and overallDistribution[counterOverallDistribution
+            while counterOverallDistribution < len(overallDistribution) and overallDistribution[
+                counterOverallDistribution
             ] < bucket:
                 counterOverallDistribution = counterOverallDistribution + 1
-            while counterEquivalenceClass<len(equivalenceClassDistribution) and equivalenceClassDistribution[counterEquivalenceClass
+            while counterEquivalenceClass < len(equivalenceClassDistribution) and equivalenceClassDistribution[
+                counterEquivalenceClass
             ] < bucket:
                 counterEquivalenceClass = counterEquivalenceClass + 1
-            probabilityOfBucketInEQ = (counterEquivalenceClass-lastCounterEquivalenceClass)/len(equivalenceClassDistribution)
-            probabilityOfBucketInOverallDistribution = (counterOverallDistribution-lastCounterOverallDistribution)/len(overallDistribution)
+            probabilityOfBucketInEQ = (counterEquivalenceClass - lastCounterEquivalenceClass) / len(
+                equivalenceClassDistribution)
+            probabilityOfBucketInOverallDistribution = (
+                                                               counterOverallDistribution - lastCounterOverallDistribution) / len(
+                overallDistribution)
             if probabilityOfBucketInEQ == 0 and probabilityOfBucketInOverallDistribution == 0:
                 distances.append(0)
             elif probabilityOfBucketInOverallDistribution == 0 or probabilityOfBucketInEQ == 0:
                 distances.append(sys.maxsize)
             else:
-                distances.append(max(probabilityOfBucketInEQ/probabilityOfBucketInOverallDistribution,probabilityOfBucketInOverallDistribution/probabilityOfBucketInEQ))
+                distances.append(max(probabilityOfBucketInEQ / probabilityOfBucketInOverallDistribution,
+                                     probabilityOfBucketInOverallDistribution / probabilityOfBucketInEQ))
         return max(distances)
 
-
-
-    def _getBucketLimits(self,t,overallDistribution):
-        numberOfBuckets = round(t+1)
+    def _getBucketLimits(self, t, overallDistribution):
+        numberOfBuckets = round(t + 1)
         overallDistribution.sort()
-        divider = round(len(overallDistribution)/numberOfBuckets)
+        divider = round(len(overallDistribution) / numberOfBuckets)
         upperLimitsBuckets = list()
-        for i in range(1,numberOfBuckets):
-            upperLimitsBuckets.append(overallDistribution[min(round(i*divider),len(overallDistribution)-1)])
+        for i in range(1, numberOfBuckets):
+            upperLimitsBuckets.append(overallDistribution[min(round(i * divider), len(overallDistribution) - 1)])
         return upperLimitsBuckets
 
-    def addNodeToTree(self, node, injectionPoint):
+    def _addNodeToTree(self, node, injectionPoint):
         sequence = ""
         for entry in node:
             sequence = sequence + "@" + entry["activity"]
         for entry in node:
             self.__addAnnotation(entry["duration"], entry["activity"])
+
+        # Updating pretsa level data structures
         self._addCaseToTree(node[0]["case"], sequence)
         self._caseToSequenceDict[node[0]["case"]] = sequence
 
+        # Updating individual nodes
         currentNode = injectionPoint
         while currentNode.parent is not None:
             currentNode.cases.add(node[0]["case"])
             currentNode = currentNode.parent
 
-    def generate_nodes(self, currentNode, numberOfNodes):
-        # Generates in the format of list of list, every inner list is: [activity, case, duration, event]
-        # I need to get to the leaf
-        if not currentNode.is_leaf:
-            child = currentNode.children[0]
-            return self.generate_nodes(child, numberOfNodes)
+    def _generate_nodes(self, current_node, number_of_nodes):
+        # Generates in the format of a list of lists, every inner list is: [activity, case, duration, event]
+
+        # Use recursion to always start from the leaf of the branch
+        if not current_node.is_leaf:
+            child = current_node.children[0]
+            return self._generate_nodes(child, number_of_nodes)
         else:
-            # Generate new children
-            # Now I add it to the file and reload the tree, in the future, to optimize the solution
-            # will be better to inject the children, due to garbled code I'm struggling to do it at the moment
-            activities = currentNode.sequence.split("@")[1:]
+            # The new activity must obviously have the same activities of the branch we want to enrich
+            activities = current_node.sequence.split("@")[1:]
 
-            lastCaseNum = sorted(self._caseToSequenceDict.keys())[-1]
-            case = case = "case-" + str(int(lastCaseNum.split("-")[1]) + 1)
+            # Generate new case number
+            last_case_num = sorted(self._caseToSequenceDict.keys())[-1]
+            case = "case-" + str(int(last_case_num.split("-")[1]) + 1)
 
-            # Take random values according to distribution, now taking values from the other
+            # Take random values according to the previous distribution
             durations = list(map(self.__generateNewAnnotation, activities))
 
-        newNodes = []
-        for _ in range(numberOfNodes):
-            newNode = []
+        new_nodes = []
+        for _ in range(number_of_nodes):
+            new_node = []
+            # Generate every "line" of the new activities to log
             for event_nr in range(len(activities)):
-                activityToAdd = {"activity": activities[event_nr],
-                                 "case": case,
-                                 "duration": durations[event_nr],
-                                 "event_nr": event_nr}
-                newNode.append(activityToAdd)
-            newNodes.append(newNode)
+                activity_to_add = {"activity": activities[event_nr],
+                                   "case": case,
+                                   "duration": durations[event_nr],
+                                   "event_nr": event_nr}
+                new_node.append(activity_to_add)
+            new_nodes.append(new_node)
 
-        return (currentNode, newNodes)
+        return current_node, new_nodes
