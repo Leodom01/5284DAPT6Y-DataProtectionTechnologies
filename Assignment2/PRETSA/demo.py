@@ -2,10 +2,10 @@
     This demo will prove the advantages in using the K saviour during the pretsa sanitization.
     Here's a short overview of the main features implemented, more details can be found in the docstrings in pretsa.py
 
-    Pretsa would delete (then modifiy and merge in a different branch) all the prefix tree nodes that do not follow the
-    t-closeness and k-anonimity constraint.
-    K saviour aims to avoid deleting and losing important data by generating synthetic data to add when the anonimity
-    set size of a set is slightly below the k-anonimity threshold (the self.__synthEnrichmentThreshold field in the
+    Pretsa would delete (then modify and merge in a different branch) all the prefix tree nodes that do not follow the
+    t-closeness and k-anonymity constraint.
+    K saviour aims to avoid deleting and losing important data by generating synthetic data to add when the anonymity
+    set size of a set is slightly below the k-anonymity threshold (the self.__synthEnrichmentThreshold field in the
     pretsa object defines what's the minimum set size for a node not to be deleted (and then merged) but to be
     enriched with synthetic data.
 
