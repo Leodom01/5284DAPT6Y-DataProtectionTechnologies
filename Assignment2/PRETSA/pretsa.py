@@ -1,3 +1,5 @@
+from collections import Counter
+
 from anytree import AnyNode, PreOrderIter, findall
 from levenshtein import levenshtein
 import sys
@@ -7,6 +9,7 @@ import pandas as pd
 import numpy as np
 import random as rnd
 import math
+import matplotlib.pyplot as plt
 
 
 class Pretsa:
@@ -29,6 +32,11 @@ class Pretsa:
         self.__synthEnrichmentThreshold = 0.5
         self.__kSaviourEnabled = k_saviour
         self.__synthDataIncreaseBoundaries = (1.1, 1.5)
+
+        self.__deletedMergedLogs = 0
+        self.__addedLogs = 0
+        self.__deletedMergedCases = 0
+        self.__addedCases = 0
 
         self.__accurateAnnotationGeneration = True
 
@@ -80,6 +88,18 @@ class Pretsa:
 
         return np.min(k_vals), np.mean(k_vals), np.max(k_vals)
 
+    def getAlteredLogs(self):
+        return self.__addedLogs, self.__deletedMergedLogs
+
+    def getAlteredCases(self):
+        return self.__addedCases, self.__deletedMergedCases
+
+    def getNumberOfDifferentSequences(self):
+        sequencesSet = set()
+        for node in PreOrderIter(self._tree):
+            sequencesSet.add(node.sequence)
+        return len(sequencesSet)
+
     def __addAnnotation(self, annotation, activity):
         dataForActivity = self.__annotationDataOverAll.get(activity, None)
         if dataForActivity is None:
@@ -121,20 +141,21 @@ class Pretsa:
         for node in PreOrderIter(self._tree):
             if node != self._tree:
                 node.cases = node.cases.difference(cutOutTraces)
-
                 if (self.__kSaviourEnabled and
                         k > len(node.cases) > self.__synthEnrichmentThreshold * k and
                         not self._violatesTCloseness(node.name, node.annotations, t, node.cases)):
                     # Then we have to enrich the data to have more than k entries in this equivalence class
-                    nodesToAdd = math.ceil((k - len(node.cases)) * rnd.uniform(*self.__synthDataIncreaseBoundaries))
+                    nodes_to_add = math.ceil((k - len(node.cases)) * rnd.uniform(*self.__synthDataIncreaseBoundaries))
+                    self.__addedCases += nodes_to_add
 
-                    node_to_attach_to, generated_nodes = self._generate_nodes(node, nodesToAdd)
+                    node_to_attach_to, generated_nodes = self._generate_nodes(node, nodes_to_add)
                     for currentNode in generated_nodes:
                         self._addNodeToTree(currentNode, node_to_attach_to)
-
                 if len(node.cases) < k or self._violatesTCloseness(node.name, node.annotations, t, node.cases):
+                    self.__deletedMergedCases += len(node.cases)
                     cutOutTraces = cutOutTraces.union(node.cases)
                     self._cutCasesOutOfTreeStartingFromNode(node, cutOutTraces)
+
                     if self._sequentialPrunning:
                         return cutOutTraces
         return cutOutTraces
@@ -149,6 +170,7 @@ class Pretsa:
             pass
         while current != tree:
             current.cases = current.cases.difference(cutOutTraces)
+            self.__deletedMergedLogs += len(cutOutTraces)
             if len(current.cases) == 0:
                 node = current
                 current = current.parent
@@ -188,7 +210,6 @@ class Pretsa:
                     bestSequence = treeSequence
                     lowestDistance = currentDistance
             self._overallLogDistance += lowestDistance
-            # print("Fed to addCaseToTree: ", trace)
             self._addCaseToTree(trace, bestSequence)
 
     def runPretsa(self, k, t, normalTCloseness=True):
@@ -217,7 +238,6 @@ class Pretsa:
         else:
             p = 1.0
         self.__normaltest_result_storage[activity] = p
-        oldRandomValue = None
         # I realize it is quite expensive to do this calculation every time, a caching system with invalidation
         # could be implemented for big datasets
         if self.__accurateAnnotationGeneration and len(sequence) > 1:
@@ -231,9 +251,7 @@ class Pretsa:
 
         if randomValue < 0:
             randomValue = 0
-        if oldRandomValue is not None:
-            print(f"New random: {randomValue}, oldRandom: {oldRandomValue}, difference: {100*abs(randomValue-oldRandomValue)/oldRandomValue}%")
-            oldRandomValue = None
+
         return randomValue
 
     def getEvent(self, case, node):
@@ -271,7 +289,6 @@ class Pretsa:
             for sequence2 in sequences:
                 if sequence1 != sequence2:
                     distanceMatrix[sequence1][sequence2] = levenshtein(sequence1, sequence2)
-        print("Generated Distance Matrix")
         return distanceMatrix
 
     def _getDistanceSequences(self, sequence1, sequence2):
@@ -372,22 +389,20 @@ class Pretsa:
             activities = current_node.sequence.split("@")[1:]
 
             # Generate new case number
-            last_case_num = sorted(self._caseToSequenceDict.keys())[-1]
-            case = "case-" + str(int(last_case_num.split("-")[1]) + 1)
-
-            # Take random values according to the previous distribution
-            #durations = list(map(self.__generateNewAnnotation, activities, activities[-2:]))
+            all_cases_numbers = self._caseToSequenceDict.keys()
+            start_case_num = int(sorted([int(key.split('-')[1]) for key in all_cases_numbers], reverse=True)[0])+1
 
         new_nodes = []
-        for _ in range(number_of_nodes):
+        for node_in_nodelist in range(number_of_nodes):
             new_node = []
             # Generate every "line" of the new activities to log
             for event_nr in range(len(activities)):
                 activity_to_add = {"activity": activities[event_nr],
-                                   "case": case,
+                                   "case": "case-" + str(start_case_num+node_in_nodelist),
                                    "duration": self.__generateNewAnnotation(activities[event_nr], activities[:event_nr+1]),
                                    "event_nr": event_nr}
                 new_node.append(activity_to_add)
+                self.__addedLogs += 1
             new_nodes.append(new_node)
 
         return current_node, new_nodes
@@ -416,13 +431,13 @@ class Pretsa:
                                              if key in cases_match_activities])
 
         # Here are the two distribution that will made up the bimodal distribution
-        mean_last_two = np.mean(annotations_for_two_last)
-        std_last_two = np.std(annotations_for_two_last)
         mean_overall = np.mean(self.__annotationDataOverAll[activity])
         std_overall = np.std(self.__annotationDataOverAll[activity])
-
-        # In case there are no matching nodes with the same sequence
-        if math.isnan(mean_last_two):
+        # In case there are no nodes with sequence similar to mine I'll use the overall distribution as original Pretsa
+        if len(nodes_last_activities) > 0:
+            mean_last_two = np.mean(annotations_for_two_last)
+            std_last_two = np.std(annotations_for_two_last)
+        else:
             mean_last_two = mean_overall
             std_last_two = std_overall
 
