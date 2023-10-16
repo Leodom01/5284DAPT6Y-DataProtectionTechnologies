@@ -1,7 +1,8 @@
 from collections import Counter
 import numpy as np
 from pretsa import Pretsa
-
+import anytree
+from anytree import Node, RenderTree
 
 def get_anon_set_size(dataset, quasi_id_col_indexes):
     """
@@ -133,41 +134,4 @@ def get_l_diversity(dataset, quasi_identifiers_idx):
     l_div_percentage = np.array(l_div_percentage)
 
     return np.min(l_div_percentage), np.mean(l_div_percentage), np.max(l_div_percentage)
-
-def emd_variational_distance(u_values, v_values):
-    """
-    Compute the normalized Earth Mover's Distance (EMD) between two 1D distributions using the variational distance.
-
-    Parameters
-    ----------
-    u_values, v_values : array_like
-        Values observed in the (empirical) distribution.
-
-    Returns
-    -------
-    normalized_emd : float
-        The normalized Earth Mover's Distance between the distributions (in the range [0, 1]).
-
-    """
-
-    # Sort the distributions
-    u_values = np.sort(u_values)
-    v_values = np.sort(v_values)
-
-    # Compute the EMD using variational distance
-    n = len(u_values)
-    m = len(v_values)
-
-    # Extend the shorter distribution to match the length of the longer one with zero values
-    if n < m:
-        u_values = np.append(u_values, np.zeros(m - n))
-    elif m < n:
-        v_values = np.append(v_values, np.zeros(n - m))
-
-    emd = np.sum(np.abs(np.cumsum(u_values) - np.cumsum(v_values)))
-
-    # Normalize the EMD to the range [0, 1]
-    normalized_emd = emd / max(len(u_values), len(v_values))
-
-    return normalized_emd
 

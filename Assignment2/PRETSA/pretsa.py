@@ -1,17 +1,16 @@
-from anytree import AnyNode, PreOrderIter, RenderTree, ContRoundStyle
+from anytree import AnyNode, PreOrderIter, findall
 from levenshtein import levenshtein
 import sys
 from scipy.stats import wasserstein_distance
 from scipy.stats import normaltest
 import pandas as pd
 import numpy as np
-import utils
 import random as rnd
 import math
 
 
 class Pretsa:
-    def __init__(self, eventLog):
+    def __init__(self, eventLog, k_saviour=True):
         root = AnyNode(id='Root', name="Root", cases=set(), sequence="", annotation=dict(), sequences=set())
         current = root
         currentCase = ""
@@ -28,8 +27,11 @@ class Pretsa:
 
         # K-pruning saviour settings
         self.__synthEnrichmentThreshold = 0.5
-        self.__kSaviourEnabled = True
+        self.__kSaviourEnabled = k_saviour
         self.__synthDataIncreaseBoundaries = (1.1, 1.5)
+
+        self.__accurateAnnotationGeneration = True
+
 
         for index, row in eventLog.iterrows():
             activity = row[self.__activityColName]
@@ -65,7 +67,6 @@ class Pretsa:
         self.__setMaxDifferences()
         self.__haveAllValuesInActivitityDistributionTheSameValue = dict()
         self._distanceMatrix = self.__generateDistanceMatrixSequences(self._getAllPotentialSequencesTree(self._tree))
-        # print(RenderTree(root, style=ContRoundStyle()))
 
     def getKvalues(self):
         # Return min, avg and max k anonimity
@@ -107,20 +108,11 @@ class Pretsa:
         if maxDifference == 0.0:  # All annotations have the same value(most likely= 0.0)
             return
         distances = []
-        # print("Activity: ", distributionActivity)
-        # print("Equivalcnce class: ", distributionEquivalenceClass)
         if self.__normalTCloseness == True:
             wasserstein_dist = wasserstein_distance(distributionActivity, distributionEquivalenceClass) / maxDifference
             distances.append(wasserstein_dist)
         else:
             return self._violatesStochasticTCloseness(distributionActivity, distributionEquivalenceClass, t, activity)
-            # if self.__extendedTCloseness == True:
-            #    emd_variational_dist = utils.emd_variational_distance(distributionActivity,distributionEquivalenceClass)
-            # TODO Quickly patch this thing and make it a feature
-            distances.append(emd_variational_dist)
-        # Here we can add countless other distances measurements
-
-        # print("Distances: ", distances)
 
         return any(value > t for value in distances)
 
@@ -135,9 +127,6 @@ class Pretsa:
                         not self._violatesTCloseness(node.name, node.annotations, t, node.cases)):
                     # Then we have to enrich the data to have more than k entries in this equivalence class
                     nodesToAdd = math.ceil((k - len(node.cases)) * rnd.uniform(*self.__synthDataIncreaseBoundaries))
-
-                    print(f"Avoided deleting {len(node.cases)} log by adding {nodesToAdd} "
-                          f"({100 * nodesToAdd / len(node.cases)}%) new entries.")
 
                     node_to_attach_to, generated_nodes = self._generate_nodes(node, nodesToAdd)
                     for currentNode in generated_nodes:
@@ -219,8 +208,7 @@ class Pretsa:
             self.__combineTracesAndTree(cutOutCases)
         return cutOutCases, self._overallLogDistance
 
-    # TODO Improve the new annotation generation algorithm
-    def __generateNewAnnotation(self, activity):
+    def __generateNewAnnotation(self, activity, sequence):
         # normaltest works only with more than 8 samples
         if (
                 len(self.__annotationDataOverAll[
@@ -229,21 +217,38 @@ class Pretsa:
         else:
             p = 1.0
         self.__normaltest_result_storage[activity] = p
-        if self.__normaltest_result_storage[activity] <= self.__normaltest_alpha:
+        oldRandomValue = None
+        # I realize it is quite expensive to do this calculation every time, a caching system with invalidation
+        # could be implemented for big datasets
+        if self.__accurateAnnotationGeneration and len(sequence) > 1:
+            specific_distribution_mean, specific_distribution_std = self._value_from_specific_distribution(activity,
+                                                                                                           sequence)
+            randomValue = np.random.normal(specific_distribution_mean, specific_distribution_std)
+            # Just for reporting purposes
+            mean = np.mean(self.__annotationDataOverAll[activity])
+            std = np.std(self.__annotationDataOverAll[activity])
+            oldRandomValue = np.random.normal(mean, std)
+        elif self.__normaltest_result_storage[activity] <= self.__normaltest_alpha:
             mean = np.mean(self.__annotationDataOverAll[activity])
             std = np.std(self.__annotationDataOverAll[activity])
             randomValue = np.random.normal(mean, std)
         else:
             randomValue = np.random.choice(self.__annotationDataOverAll[activity])
+
         if randomValue < 0:
             randomValue = 0
+        if oldRandomValue is not None:
+            print(f"New random: {randomValue}, oldRandom: {oldRandomValue}, difference: {100*abs(randomValue-oldRandomValue)/oldRandomValue}%")
+            oldRandomValue = None
         return randomValue
 
     def getEvent(self, case, node):
         event = {
             self.__activityColName: node.name,
             self.__caseIDColName: case,
-            self.__annotationColName: node.annotations.get(case, self.__generateNewAnnotation(node.name)),
+            self.__annotationColName: node.annotations.get(case,
+                    self.__generateNewAnnotation(node.name,
+                                                 self._caseToSequenceDict[case].split("@")[1:node.depth+1])),
             self.__constantEventNr: node.depth
         }
         return event
@@ -377,7 +382,7 @@ class Pretsa:
             case = "case-" + str(int(last_case_num.split("-")[1]) + 1)
 
             # Take random values according to the previous distribution
-            durations = list(map(self.__generateNewAnnotation, activities))
+            #durations = list(map(self.__generateNewAnnotation, activities, activities[-2:]))
 
         new_nodes = []
         for _ in range(number_of_nodes):
@@ -386,9 +391,46 @@ class Pretsa:
             for event_nr in range(len(activities)):
                 activity_to_add = {"activity": activities[event_nr],
                                    "case": case,
-                                   "duration": durations[event_nr],
+                                   "duration": self.__generateNewAnnotation(activities[event_nr], activities[:event_nr+1]),
                                    "event_nr": event_nr}
                 new_node.append(activity_to_add)
             new_nodes.append(new_node)
 
         return current_node, new_nodes
+
+    def _value_from_specific_distribution(self, activity, sequence):
+        # Sequence is a list of activities to make a wiser choice in getting an accurate annotation
+        # I could take more than 2 to make the prediction more accurate but for the sake of simplicity I'll take two
+        # Using bimodal distribution
+        two_last_activities = sequence[-2:]
+        # Cases that have a sequence containing consecutive two_last_activities
+        cases_match_activities = set()
+        for key in self._caseToSequenceDict.keys():
+            value = self._caseToSequenceDict[key]
+            if value.__contains__("@"+two_last_activities[0]+"@"+two_last_activities[1]):
+                cases_match_activities.add(key)
+
+        # All the annotations
+        annotations_for_two_last = []
+        # Nodes that have a sequence containing consecutive two_last_activities
+        nodes_last_activities = findall(self._tree,
+                                                     lambda node: node.cases.intersection(cases_match_activities) and
+                                                            node.sequence.endswith("@"+two_last_activities[0]+"@"+two_last_activities[1])
+                                        )
+        for node in nodes_last_activities:
+            annotations_for_two_last.extend([node.annotations[key] for key in node.annotations.keys()
+                                             if key in cases_match_activities])
+
+        # Here are the two distribution that will made up the bimodal distribution
+        mean_last_two = np.mean(annotations_for_two_last)
+        std_last_two = np.std(annotations_for_two_last)
+        mean_overall = np.mean(self.__annotationDataOverAll[activity])
+        std_overall = np.std(self.__annotationDataOverAll[activity])
+
+        # I want to sample from the mean distribution between those two, but the last_two has a double weight
+        last_two_weight = 0.67
+
+        if np.random.uniform() <= last_two_weight:
+            return np.random.normal(mean_last_two, std_last_two)
+        else:
+            return np.random.normal(mean_overall, std_overall)
