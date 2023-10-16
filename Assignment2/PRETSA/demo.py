@@ -21,6 +21,9 @@
     name AND have the same activity name in the previous log. The second distribution has a double weight compared to
     the first one (the classical one). In this way we generate a data starting from a dataset that is much closely
     related to our target (the log we have to generate the annotation for).
+
+    During the tests the file will not be saved since it is not relevant for the graph displaying and since
+    it would take some additional time given the size of the dataset and the number of iteration.
 """
 
 import sys
@@ -30,7 +33,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-filePath="/Users/leodom01/Repos/DataProtectionTechnologies/Assignment2/PRETSA/datasets/GoodEnvironmental/env_duration.csv"
+filePath="./datasets/GoodEnvironmental/env_duration.csv"
 max_t = 0.8
 
 k_values = np.arange(2, 21, 2)
