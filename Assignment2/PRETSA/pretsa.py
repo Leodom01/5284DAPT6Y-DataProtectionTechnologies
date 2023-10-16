@@ -221,13 +221,7 @@ class Pretsa:
         # I realize it is quite expensive to do this calculation every time, a caching system with invalidation
         # could be implemented for big datasets
         if self.__accurateAnnotationGeneration and len(sequence) > 1:
-            specific_distribution_mean, specific_distribution_std = self._value_from_specific_distribution(activity,
-                                                                                                           sequence)
-            randomValue = np.random.normal(specific_distribution_mean, specific_distribution_std)
-            # Just for reporting purposes
-            mean = np.mean(self.__annotationDataOverAll[activity])
-            std = np.std(self.__annotationDataOverAll[activity])
-            oldRandomValue = np.random.normal(mean, std)
+            randomValue = self._value_from_specific_distribution(activity, sequence)
         elif self.__normaltest_result_storage[activity] <= self.__normaltest_alpha:
             mean = np.mean(self.__annotationDataOverAll[activity])
             std = np.std(self.__annotationDataOverAll[activity])
@@ -399,7 +393,7 @@ class Pretsa:
         return current_node, new_nodes
 
     def _value_from_specific_distribution(self, activity, sequence):
-        # Sequence is a list of activities to make a wiser choice in getting an accurate annotation
+        # Sequence is a list of activities, to make a wiser choice in getting an accurate annotation
         # I could take more than 2 to make the prediction more accurate but for the sake of simplicity I'll take two
         # Using bimodal distribution
         two_last_activities = sequence[-2:]
@@ -427,8 +421,13 @@ class Pretsa:
         mean_overall = np.mean(self.__annotationDataOverAll[activity])
         std_overall = np.std(self.__annotationDataOverAll[activity])
 
+        # In case there are no matching nodes with the same sequence
+        if math.isnan(mean_last_two):
+            mean_last_two = mean_overall
+            std_last_two = std_overall
+
         # I want to sample from the mean distribution between those two, but the last_two has a double weight
-        last_two_weight = 0.67
+        last_two_weight = 0.7
 
         if np.random.uniform() <= last_two_weight:
             return np.random.normal(mean_last_two, std_last_two)

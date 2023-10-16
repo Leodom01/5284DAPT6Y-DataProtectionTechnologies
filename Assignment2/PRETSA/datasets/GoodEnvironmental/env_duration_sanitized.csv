@@ -1,12 +1,12 @@
 Activity;Case ID;Duration;Event_Nr
 Confirmation of receipt-complete;case-10011;0.0;1
 T02 Check confirmation of receipt-complete;case-10011;67245.122;2
-T04 Determine confirmation of receipt-complete;case-10011;;3
-T05 Print and send confirmation of receipt-complete;case-10011;;4
-T06 Determine necessity of stop advice-complete;case-10011;;5
-T10 Determine necessity to stop indication-complete;case-10011;;6
+T04 Determine confirmation of receipt-complete;case-10011;8.641716282731906;3
+T05 Print and send confirmation of receipt-complete;case-10011;18.688537858849926;4
+T06 Determine necessity of stop advice-complete;case-10011;220.81824459061596;5
+T10 Determine necessity to stop indication-complete;case-10011;122.00060210724017;6
 Confirmation of receipt-complete;case-10017;0.0;1
-T02 Check confirmation of receipt-complete;case-10017;;2
+T02 Check confirmation of receipt-complete;case-10017;39090.6873412054;2
 Confirmation of receipt-complete;case-10024;0.0;1
 T02 Check confirmation of receipt-complete;case-10024;18.376;2
 T04 Determine confirmation of receipt-complete;case-10024;15.67;3
